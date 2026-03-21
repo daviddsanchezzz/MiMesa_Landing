@@ -826,9 +826,6 @@ h3 { font-size: 1.125rem; }
   /* Container */
   .container { padding: 0 1rem; }
 
-  /* Nav */
-  .nav-logo span { display: none; } /* hide "Tableo" text, keep icon */
-
   /* Hero */
   .hero { padding: 2.5rem 0 2rem; }
 
