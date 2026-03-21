@@ -1,14 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#9B6FF5"/>
-      <stop offset="100%" stop-color="#5B21B6"/>
-    </linearGradient>
-  </defs>
   <!-- Outer circle -->
-  <circle cx="40" cy="40" r="40" fill="url(#grad)"/>
-  <!-- Inner ring shadow (darker band) -->
-  <circle cx="40" cy="40" r="40" fill="none" stroke="#3D1A9E" stroke-width="6" opacity="0.35"/>
+  <circle cx="40" cy="40" r="40" fill="#7C3AED"/>
   <!-- Center white dot -->
   <circle cx="40" cy="40" r="12" fill="white"/>
   <!-- Satellite dots -->

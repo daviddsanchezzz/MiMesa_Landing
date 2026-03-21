@@ -2,9 +2,9 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --primary:       #4f46e5;
-  --primary-dark:  #4338ca;
-  --primary-light: #eef2ff;
+  --primary:       #7C3AED;
+  --primary-dark:  #6D28D9;
+  --primary-light: #f5f3ff;
   --text:          #111827;
   --muted:         #6b7280;
   --light:         #9ca3af;
@@ -747,7 +747,7 @@ h3 { font-size: 1.125rem; }
 .form-group select:focus,
 .form-group textarea:focus {
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(79,70,229,.12);
+  box-shadow: 0 0 0 3px rgba(124,58,237,.12);
 }
 
 .form-group textarea { resize: vertical; min-height: 120px; }
