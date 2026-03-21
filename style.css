@@ -769,26 +769,87 @@ h3 { font-size: 1.125rem; }
 .alert-error   { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
 
 /* ─── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+}
+
 @media (max-width: 768px) {
+  /* Nav */
   .nav-links { display: none; }
+  .nav-actions .btn-outline { display: none; }
 
-  .mockup-content {
-    grid-template-columns: 1fr;
-    min-height: auto;
+  /* Hero */
+  .hero { padding: 3.5rem 0 2.5rem; }
+  .hero h1 { font-size: clamp(1.75rem, 6vw, 2.5rem); }
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* Mockup — hide on tablet/mobile, too complex to scale */
+  .hero-mockup { display: none; }
+
+  /* Sections */
+  .section    { padding: 3.5rem 0; }
+  .section-sm { padding: 2.5rem 0; }
+
+  /* Stats */
+  .stats-grid { flex-direction: column; }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 2rem;
   }
-  .mockup-sidebar { display: none; }
+  .stat-item:last-child { border-bottom: none; }
 
+  /* Features */
+  .features-grid { grid-template-columns: 1fr; }
+
+  /* Steps */
+  .steps-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+
+  /* Pricing */
+  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+
+  /* Footer */
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: .75rem; }
+  .footer-legal { flex-wrap: wrap; gap: 1rem; }
 
+  /* Contact */
   .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
-
   .form-row { grid-template-columns: 1fr; }
 
-  .stat-item { border-right: none; border-bottom: 1px solid var(--border); }
-  .stat-item:last-child { border-bottom: none; }
+  /* Page header */
+  .page-header { padding: 2rem 0 1.75rem; }
 }
 
 @media (max-width: 480px) {
+  /* Container */
+  .container { padding: 0 1rem; }
+
+  /* Nav */
+  .nav-logo span { display: none; } /* hide "Tableo" text, keep icon */
+
+  /* Hero */
+  .hero { padding: 2.5rem 0 2rem; }
+
+  /* Sections */
+  .section    { padding: 2.5rem 0; }
+  .section-sm { padding: 2rem 0; }
+
+  /* Footer */
   .footer-grid { grid-template-columns: 1fr; }
-  .hero-cta .btn-lg { width: 100%; justify-content: center; }
+  .footer { padding: 2.5rem 0 1.5rem; }
+
+  /* Prose */
+  .prose { padding: 2rem 0 3rem; }
+
+  /* Plan cards */
+  .plan-card { padding: 1.5rem; }
+
+  /* Feature cards */
+  .feature-card { padding: 1.25rem; }
+
+  /* CTA section */
+  .cta-section { padding: 3rem 0; }
+  .cta-section .btn { width: 100%; justify-content: center; }
 }
