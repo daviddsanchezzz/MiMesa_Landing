@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de cookies — Tableo</title>
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="18" height="18">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1zm0 5a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H6z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      Tableo
+    </a>
+    <div class="nav-actions">
+      <a href="index.html" class="btn btn-outline" style="padding:.5rem 1.1rem; font-size:.875rem;">← Volver al inicio</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Política de cookies</h1>
+    <p class="meta">Última actualización: marzo de 2025</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="prose">
+
+    <p>Esta política explica qué cookies usa Tableo, para qué sirven y cómo puedes gestionarlas.</p>
+
+    <hr />
+
+    <h2>¿Qué es una cookie?</h2>
+    <p>Una cookie es un pequeño archivo de texto que un sitio web guarda en tu dispositivo cuando lo visitas. Las cookies permiten que el sitio recuerde información sobre tu visita para que no tengas que volver a introducirla.</p>
+
+    <h2>Cookies que usamos</h2>
+
+    <h3>Cookies estrictamente necesarias</h3>
+    <p>Son imprescindibles para que la plataforma funcione correctamente. No se pueden desactivar.</p>
+    <ul>
+      <li><strong>session_token</strong> — Mantiene tu sesión iniciada mientras navegas por la app. Se elimina al cerrar sesión o tras 90 días de inactividad.</li>
+      <li><strong>csrf</strong> — Protege contra ataques de falsificación de solicitudes entre sitios (CSRF).</li>
+    </ul>
+
+    <h3>Cookies analíticas propias</h3>
+    <p>Nos ayudan a entender cómo se usa la plataforma de forma agregada y anónima para mejorar el servicio. No contienen datos personales identificables.</p>
+    <ul>
+      <li>Páginas visitadas y tiempo en cada sección.</li>
+      <li>Tipo de dispositivo y navegador (sin identificar al usuario).</li>
+    </ul>
+    <p>Puedes desactivarlas desde la configuración de tu navegador sin que afecte al funcionamiento de la app.</p>
+
+    <h3>Cookies de terceros</h3>
+    <p>Stripe puede establecer cookies en las páginas de pago para garantizar la seguridad de las transacciones. Consulta la <a href="https://stripe.com/es/privacy" target="_blank" rel="noopener">política de privacidad de Stripe</a> para más información.</p>
+    <p>No usamos cookies de publicidad ni de redes sociales.</p>
+
+    <h2>Cómo gestionar las cookies</h2>
+    <p>Puedes controlar y eliminar las cookies desde la configuración de tu navegador:</p>
+    <ul>
+      <li><a href="https://support.google.com/chrome/answer/95647" target="_blank" rel="noopener">Chrome</a></li>
+      <li><a href="https://support.mozilla.org/es/kb/habilitar-y-deshabilitar-cookies-sitios-web-rastrear-preferencias" target="_blank" rel="noopener">Firefox</a></li>
+      <li><a href="https://support.apple.com/es-es/guide/safari/sfri11471/mac" target="_blank" rel="noopener">Safari</a></li>
+      <li><a href="https://support.microsoft.com/es-es/windows/eliminar-y-administrar-cookies-168dab11-0753-043d-7c16-ede5947fc64d" target="_blank" rel="noopener">Edge</a></li>
+    </ul>
+    <p>Ten en cuenta que bloquear las cookies necesarias puede impedir el correcto funcionamiento de la sesión.</p>
+
+    <hr />
+
+    <p>¿Tienes dudas? <a href="contact.html">Escríbenos</a>.</p>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span id="year"></span> Tableo. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Términos</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

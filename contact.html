@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto — Tableo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="18" height="18">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1zm0 5a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H6z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      Tableo
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#funciones">Funciones</a></li>
+      <li><a href="index.html#precios">Precios</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="js-login" style="font-size:.875rem; font-weight:500; color:var(--muted); transition:color .15s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Iniciar sesión</a>
+      <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>Contacto</h1>
+    <p class="meta">Normalmente respondemos en menos de 24 horas en días laborables.</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="contact-grid">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <h2>¿En qué podemos ayudarte?</h2>
+      <p>Si tienes dudas sobre el servicio, necesitas ayuda técnica o quieres hablar sobre un plan para tu negocio, escríbenos. Somos un equipo pequeño y respondemos personalmente.</p>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Email</strong>
+          <span>hola@tableo.es</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Horario de atención</strong>
+          <span>Lunes a viernes, 9:00 – 18:00 (CET)</span>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-detail-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+          </svg>
+        </div>
+        <div class="contact-detail-text">
+          <strong>Idiomas</strong>
+          <span>Español e inglés</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 2rem; padding: 1.25rem; background: var(--primary-light); border-radius: var(--radius); border: 1px solid #c7d2fe;">
+        <p style="font-size:.875rem; color: #3730a3; margin:0; line-height:1.6;">
+          <strong>¿Problema urgente con tu cuenta?</strong><br>
+          Si tienes un problema que afecta a reservas activas, indícalo en el asunto del formulario y lo atendemos con prioridad.
+        </p>
+      </div>
+    </div>
+
+    <!-- Form -->
+    <div>
+      <div class="form-card">
+        <div id="success-msg" class="alert alert-success" style="display:none;">
+          ✓ Mensaje enviado. Te contestamos lo antes posible.
+        </div>
+        <div id="error-msg" class="alert alert-error" style="display:none;">
+          Algo ha fallado. Por favor, inténtalo de nuevo o escríbenos directamente a hola@tableo.es.
+        </div>
+
+        <form id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Nombre *</label>
+              <input type="text" id="name" name="name" required placeholder="Tu nombre" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="tu@email.com" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Asunto *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Selecciona un tema…</option>
+              <option value="soporte">Soporte técnico</option>
+              <option value="facturacion">Facturación o suscripción</option>
+              <option value="producto">Pregunta sobre el producto</option>
+              <option value="privacidad">Privacidad o datos personales</option>
+              <option value="prensa">Prensa o colaboraciones</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje *</label>
+            <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte…" rows="5"></textarea>
+          </div>
+
+          <div class="form-group" style="margin-bottom:1.5rem;">
+            <label style="display:flex; align-items:flex-start; gap:.625rem; font-weight:400; cursor:pointer;">
+              <input type="checkbox" id="privacy" name="privacy" required style="width:auto; margin-top:3px;" />
+              <span style="font-size:.875rem; color:var(--muted);">
+                He leído y acepto la <a href="privacy.html" target="_blank" style="color:var(--primary);">política de privacidad</a>. Los datos se usarán únicamente para gestionar tu consulta.
+              </span>
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+            Enviar mensaje
+          </button>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <span>© <span id="year"></span> Tableo. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Términos</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  var TABLEO_APP = 'http://localhost:3005';
+  document.querySelectorAll('.js-register').forEach(function(el){ el.href = TABLEO_APP + '/register'; });
+  document.querySelectorAll('.js-login').forEach(function(el){ el.href = TABLEO_APP + '/login'; });
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value;
+    const message = document.getElementById('message').value.trim();
+    const privacy = document.getElementById('privacy').checked;
+
+    if (!name || !email || !subject || !message || !privacy) {
+      document.getElementById('error-msg').textContent = 'Por favor, completa todos los campos obligatorios.';
+      document.getElementById('error-msg').style.display = 'block';
+      return;
+    }
+
+    // TODO: integrar con tu backend o un servicio de formularios (Formspree, EmailJS, etc.)
+    // Por ahora simulamos el envío:
+    document.getElementById('success-msg').style.display = 'block';
+    document.getElementById('error-msg').style.display = 'none';
+    this.reset();
+  });
+</script>
+
+</body>
+</html>

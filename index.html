@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableo — Gestión de reservas para restaurantes</title>
+  <meta name="description" content="Tableo es la herramienta de gestión de reservas y mesas diseñada para restaurantes pequeños. Sin complicaciones, sin comisiones por reserva." />
+  <meta property="og:title" content="Tableo — Gestión de reservas para restaurantes" />
+  <meta property="og:description" content="Gestiona todas tus reservas, mesas y turnos desde un solo panel. Incluye página de reservas online para tus clientes." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%234f46e5'/><text y='22' x='6' font-size='18' fill='white'>T</text></svg>" />
+</head>
+<body>
+
+<!-- ─── Navigation ──────────────────────────────────────────── -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="nav-logo-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="18" height="18">
+          <path fill-rule="evenodd" d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1zm0 5a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H6z" clip-rule="evenodd" />
+        </svg>
+      </div>
+      Tableo
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#funciones">Funciones</a></li>
+      <li><a href="#como-funciona">Cómo funciona</a></li>
+      <li><a href="#precios">Precios</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="#" class="js-login" style="font-size:.875rem; font-weight:500; color:var(--muted); transition:color .15s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Iniciar sesión</a>
+      <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ─── Hero ────────────────────────────────────────────────── -->
+<section class="hero">
+  <div class="container">
+    <span class="label">Gestión de reservas</span>
+    <h1>Tu restaurante, organizado de verdad</h1>
+    <p class="lead">
+      Tableo te ayuda a gestionar reservas, mesas y turnos sin hojas de cálculo ni papel.
+      Incluye una página de reservas online que puedes compartir con tus clientes hoy mismo.
+    </p>
+    <div class="hero-cta">
+      <a href="#" class="btn btn-primary btn-lg js-register">Empezar gratis — es gratuito</a>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div class="hero-mockup">
+      <div class="mockup-bar">
+        <div class="mockup-dot" style="background:#ff5f57"></div>
+        <div class="mockup-dot" style="background:#febc2e"></div>
+        <div class="mockup-dot" style="background:#28c840"></div>
+        <div class="mockup-url">app.tableo.es/reservas</div>
+      </div>
+      <div class="mockup-content">
+        <div class="mockup-sidebar">
+          <div class="mockup-nav-item active"></div>
+          <div class="mockup-nav-item"></div>
+          <div class="mockup-nav-item"></div>
+          <div class="mockup-nav-item"></div>
+          <div class="mockup-nav-item"></div>
+        </div>
+        <div class="mockup-main">
+          <div class="mockup-header-row">
+            <div class="mockup-stat">
+              <div class="mockup-stat-num" style="background:#dbeafe"></div>
+              <div class="mockup-stat-label"></div>
+            </div>
+            <div class="mockup-stat">
+              <div class="mockup-stat-num" style="background:#dcfce7"></div>
+              <div class="mockup-stat-label"></div>
+            </div>
+            <div class="mockup-stat">
+              <div class="mockup-stat-num"></div>
+              <div class="mockup-stat-label"></div>
+            </div>
+          </div>
+          <div class="mockup-table-wrap">
+            <div class="mockup-row">
+              <div class="mockup-pill" style="width:90px; background:#e0e7ff"></div>
+              <div class="mockup-pill" style="width:60px"></div>
+              <div class="mockup-pill" style="width:40px"></div>
+              <div class="mockup-pill" style="width:70px; background:#dcfce7; margin-left:auto"></div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-pill" style="width:110px"></div>
+              <div class="mockup-pill" style="width:60px"></div>
+              <div class="mockup-pill" style="width:40px"></div>
+              <div class="mockup-pill" style="width:70px; background:#fef9c3; margin-left:auto"></div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-pill" style="width:80px"></div>
+              <div class="mockup-pill" style="width:60px"></div>
+              <div class="mockup-pill" style="width:40px"></div>
+              <div class="mockup-pill" style="width:70px; background:#dcfce7; margin-left:auto"></div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-pill" style="width:100px"></div>
+              <div class="mockup-pill" style="width:60px"></div>
+              <div class="mockup-pill" style="width:40px"></div>
+              <div class="mockup-pill" style="width:70px; background:#fee2e2; margin-left:auto"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Stats ────────────────────────────────────────────────── -->
+<div class="stats-bar">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item">
+        <div class="stat-number">Sin comisiones</div>
+        <div class="stat-desc">por cada reserva recibida</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">5 min</div>
+        <div class="stat-desc">para tener tu restaurante configurado</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">100%</div>
+        <div class="stat-desc">tuyo — tus datos, tu página</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">GDPR</div>
+        <div class="stat-desc">cumplimiento incluido</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ─── Features ────────────────────────────────────────────── -->
+<section class="section" id="funciones">
+  <div class="container">
+    <div class="features-intro">
+      <span class="label">Funciones</span>
+      <h2>Todo lo que necesitas para gestionar tu sala</h2>
+      <p class="lead">Sin módulos de más, sin curva de aprendizaje. Listo para usar el mismo día.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+        </div>
+        <h3>Reservas en tiempo real</h3>
+        <p>Consulta, crea y modifica reservas al instante. Vista por día con todos los turnos y el estado de cada mesa.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h3>Mesas y salas</h3>
+        <p>Organiza tu restaurante por salas (terraza, interior, privado) y define la capacidad de cada mesa.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+        </div>
+        <h3>Turnos configurables</h3>
+        <p>Define los horarios de comida y cena, la duración de cada reserva y el máximo de personas por franja.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+          </svg>
+        </div>
+        <h3>Página de reservas pública</h3>
+        <p>Comparte un enlace con tus clientes para que reserven directamente desde su móvil, sin aplicación ni cuenta.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+          </svg>
+        </div>
+        <h3>Base de clientes</h3>
+        <p>Historial de visitas por cliente, notas internas y búsqueda rápida para identificarlos al reservar.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <h3>Confirmaciones por email</h3>
+        <p>Los clientes reciben un correo automático al confirmar su reserva, con opción de cancelarla con un clic.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+        </div>
+        <h3>Equipo y roles</h3>
+        <p>Invita a tu equipo con diferentes permisos. El personal de sala accede sin ver la configuración ni la facturación.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+        <h3>Cierres y vacaciones</h3>
+        <p>Bloquea días o periodos para que no se puedan recibir reservas cuando estás cerrado o de vacaciones.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── How it works ─────────────────────────────────────────── -->
+<section class="section how-section" id="como-funciona">
+  <div class="container">
+    <div class="how-intro">
+      <span class="label">Cómo funciona</span>
+      <h2>Funcionando en menos de 10 minutos</h2>
+      <p class="lead">Sin instalaciones, sin formación. Solo accede y empieza.</p>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Crea tu restaurante</h3>
+        <p>Regístrate con tu correo y configura el nombre, horarios, salas y mesas de tu establecimiento.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Comparte el enlace</h3>
+        <p>Copia tu página pública de reservas y ponla en tu Instagram, Google Maps o página web.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Gestiona desde el panel</h3>
+        <p>Las reservas entran en tiempo real. Confirma, modifica o cancela con un par de clics desde cualquier dispositivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Pricing ──────────────────────────────────────────────── -->
+<section class="section" id="precios">
+  <div class="container">
+    <div class="pricing-intro">
+      <span class="label">Precios</span>
+      <h2>Simple y sin sorpresas</h2>
+      <p class="lead">Sin comisiones por reserva. Sin letra pequeña. Cancela cuando quieras.</p>
+    </div>
+
+    <div class="pricing-grid" id="pricing-grid">
+      <div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted); font-size:.9rem;">
+        Cargando planes…
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:1.75rem; font-size:.875rem; color:var(--muted);">
+      Todos los planes incluyen 14 días de prueba gratuita. No se requiere tarjeta de crédito.
+    </p>
+  </div>
+</section>
+
+<!-- ─── FAQ ──────────────────────────────────────────────────── -->
+<section class="section faq-section" id="faq">
+  <div class="container">
+    <div class="faq-intro">
+      <span class="label">FAQ</span>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Necesito instalar algo?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          No. Tableo funciona directamente en el navegador, tanto en ordenador como en móvil o tablet. No hay apps que instalar ni actualizaciones manuales.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo reciben las reservas mis clientes?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Al completar la reserva, el cliente recibe un correo de confirmación con todos los detalles y un enlace para cancelarla si fuera necesario. Tú también recibes una notificación con cada nueva reserva.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Puedo usar Tableo si ya tengo página web propia?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Sí. Puedes enlazar tu página de reservas de Tableo desde tu web existente, tu perfil de Google, Instagram o cualquier otro canal. No necesitas mover ni cambiar nada de lo que ya tienes.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Qué pasa con los datos de mis clientes?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Los datos son suyos. Tableo los almacena para gestionar las reservas y no los comparte con terceros ni los usa para publicidad. La página de reservas pública incluye el aviso de privacidad requerido por el RGPD.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Puedo cambiar de plan o cancelar?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Sí, en cualquier momento. Si cancelas, tu cuenta pasa al plan gratuito automáticamente al terminar el periodo pagado. No hay permanencia ni penalizaciones.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Funciona para bares, cafeterías o negocios que no son restaurantes?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Tableo está diseñado principalmente para establecimientos de restauración, pero cualquier negocio que gestione reservas con aforo puede usarlo: bares con zona gastronómica, salas de eventos, caterings, etc.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA banner ───────────────────────────────────────────── -->
+<section class="cta-section">
+  <div class="container">
+    <h2>¿Listo para poner orden en tu sala?</h2>
+    <p>Crea tu cuenta en un minuto y recibe reservas hoy mismo. Sin tarjeta de crédito.</p>
+    <a href="#" class="btn btn-white btn-lg js-register">Empezar gratis</a>
+  </div>
+</section>
+
+<!-- ─── Footer ───────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div style="width:28px;height:28px;background:var(--primary);border-radius:7px;display:flex;align-items:center;justify-content:center;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" width="16" height="16">
+              <path fill-rule="evenodd" d="M6 2a1 1 0 0 0-1 1v1H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1V3a1 1 0 1 0-2 0v1H7V3a1 1 0 0 0-1-1zm0 5a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H6z" clip-rule="evenodd" />
+            </svg>
+          </div>
+          Tableo
+        </div>
+        <p>Gestión de reservas y mesas para restaurantes pequeños. Sin complicaciones.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <ul>
+          <li><a href="#funciones">Funciones</a></li>
+          <li><a href="#precios">Precios</a></li>
+          <li><a href="#como-funciona">Cómo funciona</a></li>
+          <li><a href="#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Empresa</h4>
+        <ul>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy.html">Política de privacidad</a></li>
+          <li><a href="terms.html">Términos de servicio</a></li>
+          <li><a href="cookies.html">Política de cookies</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Tableo. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacidad</a>
+        <a href="terms.html">Términos</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contacto</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ── Config — update these URLs for production ────────────────────────────
+  var TABLEO_API = 'http://localhost:5000';   // Backend API
+  var TABLEO_APP = 'http://localhost:3005';   // Frontend app
+  // ─────────────────────────────────────────────────────────────────────────
+
+  // Wire auth links
+  document.querySelectorAll('.js-register').forEach(function (el) {
+    el.href = TABLEO_APP + '/register';
+  });
+  document.querySelectorAll('.js-login').forEach(function (el) {
+    el.href = TABLEO_APP + '/login';
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    item.classList.toggle('open');
+  }
+
+  // ── Pricing ───────────────────────────────────────────────────────────────
+  var CHECK_SVG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  function renderPlan(plan) {
+    var features = (plan.features || []).map(function (f) {
+      return '<li' + (f.included ? '' : ' class="disabled"') + '>' + CHECK_SVG + f.text + '</li>';
+    }).join('');
+
+    var badge    = plan.featured && plan.featuredLabel
+      ? '<div class="plan-badge">' + plan.featuredLabel + '</div>'
+      : '';
+    var price    = plan.price === 0
+      ? '€0'
+      : '€' + plan.price;
+    var btnClass = plan.ctaStyle === 'primary' ? 'btn btn-primary' : 'btn btn-outline';
+
+    return (
+      '<div class="plan-card' + (plan.featured ? ' featured' : '') + '">' +
+        badge +
+        '<div class="plan-name">' + plan.name + '</div>' +
+        '<div class="plan-price">' + price + ' <span>/ ' + (plan.period || 'mes') + '</span></div>' +
+        '<p class="plan-desc">' + (plan.description || '') + '</p>' +
+        '<ul class="plan-features">' + features + '</ul>' +
+        '<a href="#" class="' + btnClass + '" style="text-align:center; justify-content:center;">' + plan.cta + '</a>' +
+      '</div>'
+    );
+  }
+
+  fetch(TABLEO_API + '/api/pricing/public')
+    .then(function (r) { return r.json(); })
+    .then(function (plans) {
+      var grid = document.getElementById('pricing-grid');
+      if (!plans || plans.length === 0) {
+        grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted);">Sin planes disponibles.</div>';
+        return;
+      }
+      grid.innerHTML = plans.map(renderPlan).join('');
+    })
+    .catch(function () {
+      // Silently keep the loading placeholder if the API is unreachable
+      document.getElementById('pricing-grid').innerHTML =
+        '<div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted); font-size:.875rem;">No se pudieron cargar los planes. Inténtalo de nuevo más tarde.</div>';
+    });
+</script>
+
+</body>
+</html>
