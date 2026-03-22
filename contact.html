@@ -44,46 +44,10 @@
       <h2>¿En qué podemos ayudarte?</h2>
       <p>Si tienes dudas sobre el servicio, necesitas ayuda técnica o quieres hablar sobre un plan para tu negocio, escríbenos. Somos un equipo pequeño y respondemos personalmente.</p>
 
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
-          </svg>
-        </div>
-        <div class="contact-detail-text">
-          <strong>Email</strong>
-          <span>hola@tableo.es</span>
-        </div>
-      </div>
-
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <div class="contact-detail-text">
-          <strong>Horario de atención</strong>
-          <span>Lunes a viernes, 9:00 – 18:00 (CET)</span>
-        </div>
-      </div>
-
-      <div class="contact-detail">
-        <div class="contact-detail-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-          </svg>
-        </div>
-        <div class="contact-detail-text">
-          <strong>Idiomas</strong>
-          <span>Español e inglés</span>
-        </div>
-      </div>
-
-      <div style="margin-top: 2rem; padding: 1.25rem; background: var(--primary-light); border-radius: var(--radius); border: 1px solid #c7d2fe;">
-        <p style="font-size:.875rem; color: #3730a3; margin:0; line-height:1.6;">
+      <div style="margin-top: 1rem; padding: 1.25rem; background: var(--primary-light); border-radius: var(--radius); border: 1px solid rgba(124,58,237,.2);">
+        <p style="font-size:.875rem; color: var(--primary); margin:0; line-height:1.6;">
           <strong>¿Problema urgente con tu cuenta?</strong><br>
-          Si tienes un problema que afecta a reservas activas, indícalo en el asunto del formulario y lo atendemos con prioridad.
+          Indícalo en el asunto y lo atendemos con prioridad.
         </p>
       </div>
     </div>
@@ -162,31 +126,53 @@
 </footer>
 
 <script>
-  var TABLEO_APP = 'http://localhost:3005';
+  var TABLEO_API = 'https://mimesa-backend.onrender.com';
+  var TABLEO_APP = 'http://app.tableo.app';
   document.querySelectorAll('.js-register').forEach(function(el){ el.href = TABLEO_APP + '/register'; });
   document.querySelectorAll('.js-login').forEach(function(el){ el.href = TABLEO_APP + '/login'; });
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  document.getElementById('contact-form').addEventListener('submit', function (e) {
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
     e.preventDefault();
 
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value.trim();
-    const privacy = document.getElementById('privacy').checked;
+    var name    = document.getElementById('name').value.trim();
+    var email   = document.getElementById('email').value.trim();
+    var subject = document.getElementById('subject').value;
+    var message = document.getElementById('message').value.trim();
+    var privacy = document.getElementById('privacy').checked;
+
+    var errorEl   = document.getElementById('error-msg');
+    var successEl = document.getElementById('success-msg');
+    var submitBtn = this.querySelector('button[type="submit"]');
+
+    errorEl.style.display = 'none';
+    successEl.style.display = 'none';
 
     if (!name || !email || !subject || !message || !privacy) {
-      document.getElementById('error-msg').textContent = 'Por favor, completa todos los campos obligatorios.';
-      document.getElementById('error-msg').style.display = 'block';
+      errorEl.textContent = 'Por favor, completa todos los campos obligatorios.';
+      errorEl.style.display = 'block';
       return;
     }
 
-    // TODO: integrar con tu backend o un servicio de formularios (Formspree, EmailJS, etc.)
-    // Por ahora simulamos el envío:
-    document.getElementById('success-msg').style.display = 'block';
-    document.getElementById('error-msg').style.display = 'none';
-    this.reset();
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Enviando...';
+
+    try {
+      var res = await fetch(TABLEO_API + '/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, subject, message }),
+      });
+      if (!res.ok) throw new Error('error');
+      successEl.style.display = 'block';
+      this.reset();
+    } catch {
+      errorEl.textContent = 'Algo ha fallado. Inténtalo de nuevo en unos minutos.';
+      errorEl.style.display = 'block';
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Enviar mensaje';
+    }
   });
 </script>
 
