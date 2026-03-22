@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tableo — Gestión de reservas para restaurantes</title>
-  <meta name="description" content="Tableo es la herramienta de gestión de reservas y mesas diseñada para restaurantes pequeños. Sin complicaciones, sin comisiones por reserva." />
-  <meta property="og:title" content="Tableo — Gestión de reservas para restaurantes" />
-  <meta property="og:description" content="Gestiona todas tus reservas, mesas y turnos desde un solo panel. Incluye página de reservas online para tus clientes." />
+  <meta name="description" content="Tableo organiza las reservas de tu restaurante: página pública, emails automáticos, marketing y códigos promo. Sin comisiones. Listo en 5 minutos." />
+  <meta property="og:title" content="Tableo — Reservas sin drama" />
+  <meta property="og:description" content="Gestiona reservas, mesas, turnos, emails y promos desde un solo panel. Prueba gratis 14 días." />
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="logo.svg" />
 </head>
@@ -26,13 +26,14 @@
 
     <ul class="nav-links">
       <li><a href="#funciones">Funciones</a></li>
+      <li><a href="#marketing-promo">Marketing</a></li>
       <li><a href="#como-funciona">Cómo funciona</a></li>
       <li><a href="#precios">Precios</a></li>
       <li><a href="contact.html">Contacto</a></li>
     </ul>
 
     <div class="nav-actions">
-      <a href="#" class="js-login" style="font-size:.875rem; font-weight:500; color:var(--muted); transition:color .15s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Iniciar sesión</a>
+      <a href="#" class="js-login nav-login">Iniciar sesión</a>
       <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
     </div>
   </div>
@@ -41,14 +42,18 @@
 <!-- ─── Hero ────────────────────────────────────────────────── -->
 <section class="hero">
   <div class="container">
-    <span class="label">Gestión de reservas</span>
-    <h1>Tu restaurante, organizado de verdad</h1>
+    <div class="hero-badge">✨ Gestión de reservas para restaurantes</div>
+    <h1>Reservas sin drama</h1>
     <p class="lead">
-      Tableo te ayuda a gestionar reservas, mesas y turnos sin hojas de cálculo ni papel.
-      Incluye una página de reservas online que puedes compartir con tus clientes hoy mismo.
+      Panel de reservas en tiempo real, página pública para tus clientes, emails automáticos,
+      códigos promo y email marketing. Todo en uno. Sin comisiones.
     </p>
     <div class="hero-cta">
-      <a href="#" class="btn btn-primary btn-lg js-register">Empezar gratis</a>
+      <a href="#" class="btn btn-primary btn-lg js-register">
+        Empezar gratis
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <p class="hero-sub">14 días gratis · Sin tarjeta de crédito · Listo en 5 minutos</p>
     </div>
 
     <!-- Dashboard mockup -->
@@ -61,7 +66,12 @@
       </div>
       <div class="mockup-content">
         <div class="mockup-sidebar">
+          <div class="mockup-logo-row">
+            <div style="width:22px;height:22px;background:var(--primary);border-radius:5px;"></div>
+            <div style="width:50px;height:12px;background:#e5e7eb;border-radius:4px;"></div>
+          </div>
           <div class="mockup-nav-item active"></div>
+          <div class="mockup-nav-item"></div>
           <div class="mockup-nav-item"></div>
           <div class="mockup-nav-item"></div>
           <div class="mockup-nav-item"></div>
@@ -70,42 +80,53 @@
         <div class="mockup-main">
           <div class="mockup-header-row">
             <div class="mockup-stat">
-              <div class="mockup-stat-num" style="background:#dbeafe"></div>
+              <div class="mockup-stat-num" style="background:#ede9fe;"></div>
               <div class="mockup-stat-label"></div>
             </div>
             <div class="mockup-stat">
-              <div class="mockup-stat-num" style="background:#dcfce7"></div>
+              <div class="mockup-stat-num" style="background:#dcfce7;"></div>
               <div class="mockup-stat-label"></div>
             </div>
             <div class="mockup-stat">
-              <div class="mockup-stat-num"></div>
+              <div class="mockup-stat-num" style="background:#fef9c3;"></div>
               <div class="mockup-stat-label"></div>
             </div>
           </div>
           <div class="mockup-table-wrap">
             <div class="mockup-row">
-              <div class="mockup-pill" style="width:90px; background:#e0e7ff"></div>
-              <div class="mockup-pill" style="width:60px"></div>
-              <div class="mockup-pill" style="width:40px"></div>
-              <div class="mockup-pill" style="width:70px; background:#dcfce7; margin-left:auto"></div>
+              <div class="mockup-pill" style="width:90px;background:#ede9fe;"></div>
+              <div class="mockup-pill" style="width:55px;"></div>
+              <div class="mockup-pill" style="width:35px;"></div>
+              <div class="mockup-pill" style="width:20px;background:#fde68a;"></div>
+              <div class="mockup-pill" style="width:65px;background:#dcfce7;margin-left:auto;"></div>
             </div>
             <div class="mockup-row">
-              <div class="mockup-pill" style="width:110px"></div>
-              <div class="mockup-pill" style="width:60px"></div>
-              <div class="mockup-pill" style="width:40px"></div>
-              <div class="mockup-pill" style="width:70px; background:#fef9c3; margin-left:auto"></div>
+              <div class="mockup-pill" style="width:110px;"></div>
+              <div class="mockup-pill" style="width:55px;"></div>
+              <div class="mockup-pill" style="width:35px;"></div>
+              <div style="margin-left:auto;"></div>
+              <div class="mockup-pill" style="width:65px;background:#fef9c3;"></div>
             </div>
             <div class="mockup-row">
-              <div class="mockup-pill" style="width:80px"></div>
-              <div class="mockup-pill" style="width:60px"></div>
-              <div class="mockup-pill" style="width:40px"></div>
-              <div class="mockup-pill" style="width:70px; background:#dcfce7; margin-left:auto"></div>
+              <div class="mockup-pill" style="width:80px;"></div>
+              <div class="mockup-pill" style="width:55px;"></div>
+              <div class="mockup-pill" style="width:35px;"></div>
+              <div class="mockup-pill" style="width:28px;background:#ede9fe;"></div>
+              <div class="mockup-pill" style="width:65px;background:#dcfce7;margin-left:auto;"></div>
             </div>
             <div class="mockup-row">
-              <div class="mockup-pill" style="width:100px"></div>
-              <div class="mockup-pill" style="width:60px"></div>
-              <div class="mockup-pill" style="width:40px"></div>
-              <div class="mockup-pill" style="width:70px; background:#fee2e2; margin-left:auto"></div>
+              <div class="mockup-pill" style="width:100px;"></div>
+              <div class="mockup-pill" style="width:55px;"></div>
+              <div class="mockup-pill" style="width:35px;"></div>
+              <div style="margin-left:auto;"></div>
+              <div class="mockup-pill" style="width:65px;background:#fee2e2;"></div>
+            </div>
+            <div class="mockup-row">
+              <div class="mockup-pill" style="width:95px;"></div>
+              <div class="mockup-pill" style="width:55px;"></div>
+              <div class="mockup-pill" style="width:35px;"></div>
+              <div class="mockup-pill" style="width:20px;background:#fde68a;"></div>
+              <div class="mockup-pill" style="width:65px;background:#dcfce7;margin-left:auto;"></div>
             </div>
           </div>
         </div>
@@ -119,20 +140,20 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item">
-        <div class="stat-number">Sin comisiones</div>
-        <div class="stat-desc">por cada reserva recibida</div>
+        <div class="stat-number">0€</div>
+        <div class="stat-desc">comisiones por reserva</div>
       </div>
       <div class="stat-item">
         <div class="stat-number">5 min</div>
-        <div class="stat-desc">para tener tu restaurante configurado</div>
+        <div class="stat-desc">para configurar tu restaurante</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">100%</div>
-        <div class="stat-desc">tuyo — tus datos, tu página</div>
+        <div class="stat-number">∞</div>
+        <div class="stat-desc">reservas, mesas y clientes</div>
       </div>
       <div class="stat-item">
-        <div class="stat-number">GDPR</div>
-        <div class="stat-desc">cumplimiento incluido</div>
+        <div class="stat-number">RGPD</div>
+        <div class="stat-desc">cumplimiento legal incluido</div>
       </div>
     </div>
   </div>
@@ -143,7 +164,7 @@
   <div class="container">
     <div class="features-intro">
       <span class="label">Funciones</span>
-      <h2>Todo lo que necesitas para gestionar tu sala</h2>
+      <h2>Todo lo que necesita tu sala, nada que no necesites</h2>
       <p class="lead">Sin módulos de más, sin curva de aprendizaje. Listo para usar el mismo día.</p>
     </div>
 
@@ -156,7 +177,7 @@
           </svg>
         </div>
         <h3>Reservas en tiempo real</h3>
-        <p>Consulta, crea y modifica reservas al instante. Vista por día con todos los turnos y el estado de cada mesa.</p>
+        <p>Vista por día con todos los turnos, estado de cada mesa y acciones rápidas. Confirma, sienta o cancela en dos toques.</p>
       </div>
 
       <div class="feature-card">
@@ -166,7 +187,8 @@
           </svg>
         </div>
         <h3>Mesas y salas</h3>
-        <p>Organiza tu restaurante por salas (terraza, interior, privado) y define la capacidad de cada mesa.</p>
+        <p>Organiza por salas (terraza, interior, privado) con capacidades. Crea rangos de mesas de golpe — de la Mesa 1 a la 20 en segundos.</p>
+        <span class="feature-chip">Nuevo: creación rápida</span>
       </div>
 
       <div class="feature-card">
@@ -176,7 +198,7 @@
           </svg>
         </div>
         <h3>Turnos configurables</h3>
-        <p>Define los horarios de comida y cena, la duración de cada reserva y el máximo de personas por franja.</p>
+        <p>Define horarios de comida y cena, duración de reserva y el máximo de personas por franja horaria.</p>
       </div>
 
       <div class="feature-card">
@@ -186,7 +208,8 @@
           </svg>
         </div>
         <h3>Página de reservas pública</h3>
-        <p>Comparte un enlace con tus clientes para que reserven directamente desde su móvil, sin aplicación ni cuenta.</p>
+        <p>Un enlace que puedes poner en Instagram, Google Maps o tu web. O incrusta el widget directamente en tu página con un iframe.</p>
+        <span class="feature-chip">Embeddable</span>
       </div>
 
       <div class="feature-card">
@@ -196,7 +219,7 @@
           </svg>
         </div>
         <h3>Base de clientes</h3>
-        <p>Historial de visitas por cliente, notas internas y búsqueda rápida para identificarlos al reservar.</p>
+        <p>Historial de visitas, notas internas y búsqueda rápida. Reconoce a tus habituales antes de que lleguen.</p>
       </div>
 
       <div class="feature-card">
@@ -205,8 +228,8 @@
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
           </svg>
         </div>
-        <h3>Confirmaciones por email</h3>
-        <p>Los clientes reciben un correo automático al confirmar su reserva, con opción de cancelarla con un clic.</p>
+        <h3>Emails automáticos</h3>
+        <p>Confirmación, cambio de estado y cancelación se envían solos con el nombre de tu restaurante como remitente. Cero trabajo manual.</p>
       </div>
 
       <div class="feature-card">
@@ -216,7 +239,7 @@
           </svg>
         </div>
         <h3>Equipo y roles</h3>
-        <p>Invita a tu equipo con diferentes permisos. El personal de sala accede sin ver la configuración ni la facturación.</p>
+        <p>Invita a tu equipo. El personal de sala gestiona reservas sin acceder a configuración ni facturación.</p>
       </div>
 
       <div class="feature-card">
@@ -226,7 +249,116 @@
           </svg>
         </div>
         <h3>Cierres y vacaciones</h3>
-        <p>Bloquea días o periodos para que no se puedan recibir reservas cuando estás cerrado o de vacaciones.</p>
+        <p>Bloquea días concretos o periodos enteros. Los clientes verán los días no disponibles al intentar reservar.</p>
+      </div>
+
+      <div class="feature-card feature-card--new">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Email marketing</h3>
+        <p>Envía campañas a los clientes que aceptaron recibir noticias. Con enlace de baja automático y cumplimiento RGPD completo.</p>
+        <span class="feature-chip feature-chip--new">Nuevo</span>
+      </div>
+
+      <div class="feature-card feature-card--new">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <h3>Códigos promocionales</h3>
+        <p>Crea códigos de descuento con fecha de expiración y usos máximos. Aparecen automáticamente en tu página de reservas.</p>
+        <span class="feature-chip feature-chip--new">Nuevo</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── Marketing + Promo spotlight ─────────────────────────── -->
+<section class="section spotlight-section" id="marketing-promo">
+  <div class="container">
+    <div class="spotlight-intro">
+      <span class="label">Fidelización</span>
+      <h2>Convierte reservas en clientes de por vida</h2>
+      <p class="lead">Las herramientas que antes solo tenían las grandes cadenas, ahora en tu panel.</p>
+    </div>
+
+    <div class="spotlight-grid">
+
+      <div class="spotlight-card">
+        <div class="spotlight-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <h3>Campañas de email</h3>
+        <p>Redacta y envía un email a todos tus suscriptores en dos clics. Ellos se suscribieron voluntariamente al reservar — tú solo tienes que escribir el mensaje.</p>
+        <ul class="spotlight-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Consentimiento RGPD documentado automáticamente
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Enlace de baja incluido en cada email
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Historial de campañas y métricas de envío
+          </li>
+        </ul>
+      </div>
+
+      <div class="spotlight-card">
+        <div class="spotlight-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <h3>Códigos promo</h3>
+        <p>Crea códigos con un límite de usos y fecha de caducidad. Cuando hay alguno activo, aparece automáticamente un campo en tu página de reservas.</p>
+        <ul class="spotlight-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Activa y desactiva códigos en cualquier momento
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Ves qué reservas se hicieron con cada código
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Control de usos máximos y expiración
+          </li>
+        </ul>
+      </div>
+
+      <div class="spotlight-card spotlight-card--public">
+        <div class="spotlight-card-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
+          </svg>
+        </div>
+        <h3>El cliente reserva en 30 segundos</h3>
+        <p>Tu página pública es un formulario en pasos, optimizado para móvil. Sin crear cuenta, sin descargar nada. Elige día → hora → personas → datos. Hecho.</p>
+        <ul class="spotlight-list">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Disponible en español, catalán e inglés
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Se puede incrustar en tu web con iframe
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8l3 3 7-6" stroke="#7C3AED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Cancela con un clic desde el email de confirmación
+          </li>
+        </ul>
       </div>
 
     </div>
@@ -239,24 +371,64 @@
     <div class="how-intro">
       <span class="label">Cómo funciona</span>
       <h2>Funcionando en menos de 10 minutos</h2>
-      <p class="lead">Sin instalaciones, sin formación. Solo accede y empieza.</p>
+      <p class="lead">Sin instalaciones. Sin formación. Sin llamar a nadie.</p>
     </div>
 
     <div class="steps-grid">
       <div class="step">
         <div class="step-number">1</div>
         <h3>Crea tu restaurante</h3>
-        <p>Regístrate con tu correo y configura el nombre, horarios, salas y mesas de tu establecimiento.</p>
+        <p>Regístrate con tu correo. Pon el nombre, configura las salas, mesas y turnos. Con el creador rápido lo tienes en minutos, no en horas.</p>
       </div>
       <div class="step">
         <div class="step-number">2</div>
         <h3>Comparte el enlace</h3>
-        <p>Copia tu página pública de reservas y ponla en tu Instagram, Google Maps o página web.</p>
+        <p>Copia tu página de reservas y ponla en Instagram, Google Maps, tu web o donde quieras. También puedes incrustarla con un iframe.</p>
       </div>
       <div class="step">
         <div class="step-number">3</div>
-        <h3>Gestiona desde el panel</h3>
-        <p>Las reservas entran en tiempo real. Confirma, modifica o cancela con un par de clics desde cualquier dispositivo.</p>
+        <h3>Gestiona y fideliza</h3>
+        <p>Las reservas llegan en tiempo real. Confirma, sienta o cancela desde cualquier dispositivo. Y cuando quieras, lanza una promo o una campaña de email.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Why different ────────────────────────────────────────── -->
+<section class="section diff-section">
+  <div class="container">
+    <div class="diff-intro">
+      <span class="label">¿Por qué Tableo?</span>
+      <h2>No eres una cadena. No deberías pagar como si lo fueras.</h2>
+    </div>
+    <div class="diff-grid">
+      <div class="diff-item">
+        <div class="diff-icon">🚫</div>
+        <div>
+          <h3>Sin comisiones</h3>
+          <p>Cobrar por cada reserva que recibes es de mal gusto. Nosotros no lo hacemos.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">📱</div>
+        <div>
+          <h3>Funciona en el móvil</h3>
+          <p>Tanto el panel de gestión como la página de reservas están diseñados para funcionar perfectamente desde el teléfono.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">🔒</div>
+        <div>
+          <h3>Tus datos son tuyos</h3>
+          <p>La base de clientes, los datos de reservas y los suscriptores de marketing son exclusivamente tuyos. Nunca los usamos para nada más.</p>
+        </div>
+      </div>
+      <div class="diff-item">
+        <div class="diff-icon">⚡</div>
+        <div>
+          <h3>Sin módulos de pago extra</h3>
+          <p>Marketing, códigos promo, página pública, equipo, notificaciones por email — todo incluido en el plan. Sin sorpresas.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -309,7 +481,27 @@
           <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-answer">
-          Al completar la reserva, el cliente recibe un correo de confirmación con todos los detalles y un enlace para cancelarla si fuera necesario. Tú también recibes una notificación con cada nueva reserva.
+          Al completar la reserva, el cliente recibe un correo de confirmación con todos los detalles y un enlace para cancelarla con un clic. El email aparece enviado con el nombre de tu restaurante, no con el de Tableo.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Cómo funcionan los códigos promocionales?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Creas el código desde el panel (por ejemplo, VERANO2024), le defines una fecha de expiración y un máximo de usos si quieres. Mientras esté activo, aparece automáticamente un campo opcional en tu página de reservas para que los clientes lo introduzcan. Tú ves en cada reserva si se usó algún código.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" onclick="toggleFaq(this)">
+          ¿Es legal enviar emails de marketing a mis clientes?
+          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        </button>
+        <div class="faq-answer">
+          Sí, siempre que el cliente haya dado su consentimiento explícito. En Tableo, cuando el cliente reserva online puede marcar voluntariamente la casilla de marketing. Guardamos la fecha exacta, el texto del consentimiento y el medio — todo lo que exige el RGPD. Cada email incluye un enlace de baja automático y permanente.
         </div>
       </div>
 
@@ -319,7 +511,7 @@
           <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-answer">
-          Sí. Puedes enlazar tu página de reservas de Tableo desde tu web existente, tu perfil de Google, Instagram o cualquier otro canal. No necesitas mover ni cambiar nada de lo que ya tienes.
+          Sí. Puedes enlazar tu página de reservas desde tu web o incrustar el formulario directamente con un iframe, de forma que parece parte de tu web. Nada que mover ni cambiar.
         </div>
       </div>
 
@@ -329,7 +521,7 @@
           <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-answer">
-          Los datos son suyos. Tableo los almacena para gestionar las reservas y no los comparte con terceros ni los usa para publicidad. La página de reservas pública incluye el aviso de privacidad requerido por el RGPD.
+          Son tuyos al 100%. Tableo los almacena para gestionar las reservas y no los comparte con terceros ni los usa para publicidad. Puedes exportarlos cuando quieras.
         </div>
       </div>
 
@@ -339,17 +531,7 @@
           <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-answer">
-          Sí, en cualquier momento. Si cancelas, tu cuenta pasa al plan gratuito automáticamente al terminar el periodo pagado. No hay permanencia ni penalizaciones.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Funciona para bares, cafeterías o negocios que no son restaurantes?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          Tableo está diseñado principalmente para establecimientos de restauración, pero cualquier negocio que gestione reservas con aforo puede usarlo: bares con zona gastronómica, salas de eventos, caterings, etc.
+          Sí, en cualquier momento. Si cancelas, tu cuenta pasa al plan gratuito al terminar el periodo pagado. No hay permanencia ni penalizaciones.
         </div>
       </div>
 
@@ -360,9 +542,14 @@
 <!-- ─── CTA banner ───────────────────────────────────────────── -->
 <section class="cta-section">
   <div class="container">
-    <h2>¿Listo para poner orden en tu sala?</h2>
-    <p>Crea tu cuenta en un minuto y recibe reservas hoy mismo. Sin tarjeta de crédito.</p>
-    <a href="#" class="btn btn-white btn-lg js-register">Empezar gratis</a>
+    <div class="cta-inner">
+      <h2>¿Seguimos gestionando las reservas en papel?</h2>
+      <p>Crea tu cuenta en un minuto, importa tus mesas y recibe tu primera reserva online hoy mismo.</p>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-white btn-lg js-register">Empezar gratis — 14 días</a>
+        <span class="cta-note">Sin tarjeta · Sin permanencia · Cancela cuando quieras</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -375,13 +562,14 @@
           <img src="logo.svg" alt="Tableo" width="26" height="26" />
           Tableo
         </div>
-        <p>Gestión de reservas y mesas para restaurantes pequeños. Sin complicaciones.</p>
+        <p>Gestión de reservas para restaurantes. Sin comisiones, sin complicaciones.</p>
       </div>
 
       <div class="footer-col">
         <h4>Producto</h4>
         <ul>
           <li><a href="#funciones">Funciones</a></li>
+          <li><a href="#marketing-promo">Marketing y promos</a></li>
           <li><a href="#precios">Precios</a></li>
           <li><a href="#como-funciona">Cómo funciona</a></li>
           <li><a href="#faq">Preguntas frecuentes</a></li>
@@ -418,12 +606,9 @@
 </footer>
 
 <script>
-  // ── Config — update these URLs for production ────────────────────────────
-  var TABLEO_API = 'https://mimesa-backend.onrender.com';   // Backend API
-  var TABLEO_APP = 'http://app.tableo.app';   // Frontend app
-  // ─────────────────────────────────────────────────────────────────────────
+  var TABLEO_API = 'https://mimesa-backend.onrender.com';
+  var TABLEO_APP = 'http://app.tableo.app';
 
-  // Wire auth links
   document.querySelectorAll('.js-register').forEach(function (el) {
     el.href = TABLEO_APP + '/register';
   });
@@ -438,22 +623,16 @@
     item.classList.toggle('open');
   }
 
-  // ── Pricing ───────────────────────────────────────────────────────────────
   var CHECK_SVG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
   function renderPlan(plan) {
     var features = (plan.features || []).map(function (f) {
       return '<li' + (f.included ? '' : ' class="disabled"') + '>' + CHECK_SVG + f.text + '</li>';
     }).join('');
-
     var badge    = plan.featured && plan.featuredLabel
-      ? '<div class="plan-badge">' + plan.featuredLabel + '</div>'
-      : '';
-    var price    = plan.price === 0
-      ? '€0'
-      : '€' + plan.price;
+      ? '<div class="plan-badge">' + plan.featuredLabel + '</div>' : '';
+    var price    = plan.price === 0 ? '€0' : '€' + plan.price;
     var btnClass = plan.ctaStyle === 'primary' ? 'btn btn-primary' : 'btn btn-outline';
-
     return (
       '<div class="plan-card' + (plan.featured ? ' featured' : '') + '">' +
         badge +
@@ -461,7 +640,7 @@
         '<div class="plan-price">' + price + ' <span>/ ' + (plan.period || 'mes') + '</span></div>' +
         '<p class="plan-desc">' + (plan.description || '') + '</p>' +
         '<ul class="plan-features">' + features + '</ul>' +
-        '<a href="#" class="' + btnClass + '" style="text-align:center; justify-content:center;">' + plan.cta + '</a>' +
+        '<a href="#" class="' + btnClass + ' js-register" style="text-align:center;justify-content:center;">' + plan.cta + '</a>' +
       '</div>'
     );
   }
@@ -471,15 +650,18 @@
     .then(function (plans) {
       var grid = document.getElementById('pricing-grid');
       if (!plans || plans.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted);">Sin planes disponibles.</div>';
+        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);">Sin planes disponibles.</div>';
         return;
       }
       grid.innerHTML = plans.map(renderPlan).join('');
+      // Wire register links inside plans
+      grid.querySelectorAll('.js-register').forEach(function (el) {
+        el.href = TABLEO_APP + '/register';
+      });
     })
     .catch(function () {
-      // Silently keep the loading placeholder if the API is unreachable
       document.getElementById('pricing-grid').innerHTML =
-        '<div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted); font-size:.875rem;">No se pudieron cargar los planes. Inténtalo de nuevo más tarde.</div>';
+        '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);font-size:.875rem;">No se pudieron cargar los planes. Inténtalo de nuevo más tarde.</div>';
     });
 </script>
 
