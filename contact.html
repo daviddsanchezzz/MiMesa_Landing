@@ -29,83 +29,73 @@
   </div>
 </nav>
 
-<div class="page-header">
+<section class="contact-hero">
   <div class="container">
-    <h1>Contacto</h1>
-    <p class="meta">Normalmente respondemos en menos de 24 horas en días laborables.</p>
+    <div class="contact-hero-inner">
+      <span class="label">Contacto</span>
+      <h1>¿En qué podemos ayudarte?</h1>
+      <p>Somos un equipo pequeño y respondemos personalmente.<br>Normalmente en menos de 24 horas en días laborables.</p>
+    </div>
   </div>
-</div>
+</section>
 
 <div class="container">
-  <div class="contact-grid">
+  <div class="contact-form-wrap">
 
-    <!-- Info -->
-    <div class="contact-info">
-      <h2>¿En qué podemos ayudarte?</h2>
-      <p>Si tienes dudas sobre el servicio, necesitas ayuda técnica o quieres hablar sobre un plan para tu negocio, escríbenos. Somos un equipo pequeño y respondemos personalmente.</p>
-
-      <div style="margin-top: 1rem; padding: 1.25rem; background: var(--primary-light); border-radius: var(--radius); border: 1px solid rgba(124,58,237,.2);">
-        <p style="font-size:.875rem; color: var(--primary); margin:0; line-height:1.6;">
-          <strong>¿Problema urgente con tu cuenta?</strong><br>
-          Indícalo en el asunto y lo atendemos con prioridad.
-        </p>
+    <div id="success-screen" style="display:none; text-align:center; padding:3rem 1rem;">
+      <div style="width:64px;height:64px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
       </div>
+      <h2 style="font-size:1.25rem;margin-bottom:.5rem;">Mensaje enviado</h2>
+      <p style="color:var(--muted);font-size:.9375rem;">Te contestamos lo antes posible. Revisa también tu carpeta de spam.</p>
     </div>
 
-    <!-- Form -->
-    <div>
-      <div class="form-card">
-        <div id="success-msg" class="alert alert-success" style="display:none;">
-          ✓ Mensaje enviado. Te contestamos lo antes posible.
-        </div>
-        <div id="error-msg" class="alert alert-error" style="display:none;">
-          Algo ha fallado. Por favor, inténtalo de nuevo o escríbenos directamente a hola@tableo.es.
-        </div>
+    <div id="form-section">
+      <div id="error-msg" class="alert alert-error" style="display:none;margin-bottom:1.5rem;"></div>
 
-        <form id="contact-form" novalidate>
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Nombre *</label>
-              <input type="text" id="name" name="name" required placeholder="Tu nombre" />
-            </div>
-            <div class="form-group">
-              <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required placeholder="tu@email.com" />
-            </div>
-          </div>
-
+      <form id="contact-form" novalidate>
+        <div class="form-row">
           <div class="form-group">
-            <label for="subject">Asunto *</label>
-            <select id="subject" name="subject" required>
-              <option value="">Selecciona un tema…</option>
-              <option value="soporte">Soporte técnico</option>
-              <option value="facturacion">Facturación o suscripción</option>
-              <option value="producto">Pregunta sobre el producto</option>
-              <option value="privacidad">Privacidad o datos personales</option>
-              <option value="prensa">Prensa o colaboraciones</option>
-              <option value="otro">Otro</option>
-            </select>
+            <label for="name">Nombre *</label>
+            <input type="text" id="name" name="name" required placeholder="Tu nombre" />
           </div>
-
           <div class="form-group">
-            <label for="message">Mensaje *</label>
-            <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte…" rows="5"></textarea>
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" required placeholder="tu@email.com" />
           </div>
+        </div>
 
-          <div class="form-group" style="margin-bottom:1.5rem;">
-            <label style="display:flex; align-items:flex-start; gap:.625rem; font-weight:400; cursor:pointer;">
-              <input type="checkbox" id="privacy" name="privacy" required style="width:auto; margin-top:3px;" />
-              <span style="font-size:.875rem; color:var(--muted);">
-                He leído y acepto la <a href="privacy.html" target="_blank" style="color:var(--primary);">política de privacidad</a>. Los datos se usarán únicamente para gestionar tu consulta.
-              </span>
-            </label>
-          </div>
+        <div class="form-group">
+          <label for="subject">Asunto *</label>
+          <select id="subject" name="subject" required>
+            <option value="">Selecciona un tema…</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="facturacion">Facturación o suscripción</option>
+            <option value="producto">Pregunta sobre el producto</option>
+            <option value="privacidad">Privacidad o datos personales</option>
+            <option value="prensa">Prensa o colaboraciones</option>
+            <option value="otro">Otro</option>
+          </select>
+        </div>
 
-          <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
-            Enviar mensaje
-          </button>
-        </form>
-      </div>
+        <div class="form-group">
+          <label for="message">Mensaje *</label>
+          <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte…" rows="5"></textarea>
+        </div>
+
+        <div class="form-group" style="margin-bottom:1.5rem;">
+          <label style="display:flex;align-items:flex-start;gap:.625rem;font-weight:400;cursor:pointer;">
+            <input type="checkbox" id="privacy" name="privacy" required style="width:auto;margin-top:3px;accent-color:var(--primary);" />
+            <span style="font-size:.875rem;color:var(--muted);">
+              He leído y acepto la <a href="privacy.html" target="_blank" style="color:var(--primary);">política de privacidad</a>. Los datos se usarán únicamente para gestionar tu consulta.
+            </span>
+          </label>
+        </div>
+
+        <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:.85rem;">
+          Enviar mensaje
+        </button>
+      </form>
     </div>
 
   </div>
@@ -142,11 +132,9 @@
     var privacy = document.getElementById('privacy').checked;
 
     var errorEl   = document.getElementById('error-msg');
-    var successEl = document.getElementById('success-msg');
-    var submitBtn = this.querySelector('button[type="submit"]');
+    var submitBtn = document.getElementById('submit-btn');
 
     errorEl.style.display = 'none';
-    successEl.style.display = 'none';
 
     if (!name || !email || !subject || !message || !privacy) {
       errorEl.textContent = 'Por favor, completa todos los campos obligatorios.';
@@ -164,12 +152,11 @@
         body: JSON.stringify({ name, email, subject, message }),
       });
       if (!res.ok) throw new Error('error');
-      successEl.style.display = 'block';
-      this.reset();
+      document.getElementById('form-section').style.display = 'none';
+      document.getElementById('success-screen').style.display = 'block';
     } catch {
       errorEl.textContent = 'Algo ha fallado. Inténtalo de nuevo en unos minutos.';
       errorEl.style.display = 'block';
-    } finally {
       submitBtn.disabled = false;
       submitBtn.textContent = 'Enviar mensaje';
     }

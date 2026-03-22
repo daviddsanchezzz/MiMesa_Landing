@@ -873,6 +873,24 @@ h3 { font-size: 1.125rem; }
   margin: 2.5rem 0;
 }
 
+/* ─── Contact page ──────────────────────────────────────────── */
+.contact-hero {
+  padding: 5rem 0 4rem;
+  text-align: center;
+  background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(124,58,237,.07) 0%, transparent 70%);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-hero-inner { max-width: 520px; margin: 0 auto; }
+.contact-hero-inner h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin: .5rem 0 .875rem; }
+.contact-hero-inner p  { font-size: 1rem; color: var(--muted); line-height: 1.7; margin: 0; }
+
+.contact-form-wrap {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 3.5rem 0 5rem;
+}
+
 /* ─── Contact form ──────────────────────────────────────────── */
 .contact-grid {
   display: grid;
