@@ -443,15 +443,98 @@
       <p class="lead">Sin comisiones por reserva. Sin letra pequeña. Cancela cuando quieras.</p>
     </div>
 
-    <div class="pricing-grid" id="pricing-grid">
-      <div style="grid-column:1/-1; text-align:center; padding:2rem; color:var(--muted); font-size:.9rem;">
-        Cargando planes…
-      </div>
-    </div>
+    <div class="pricing-grid" style="max-width:780px;">
 
-    <p style="text-align:center; margin-top:1.75rem; font-size:.875rem; color:var(--muted);">
-      Todos los planes incluyen 14 días de prueba gratuita. No se requiere tarjeta de crédito.
-    </p>
+      <!-- Free -->
+      <div class="plan-card">
+        <p class="plan-name">Free</p>
+        <p class="plan-price">0€ <span>/ mes</span></p>
+        <p class="plan-desc">Para probar Tableo sin fricciones. Sin tarjeta.</p>
+        <ul class="plan-features">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Hasta 30 reservas al mes
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Página pública de reservas
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Mesas, salas y turnos
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Cierres y vacaciones
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Emails automáticos
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Marketing por email
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Códigos promocionales
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Equipo y roles
+          </li>
+        </ul>
+        <a href="#" class="btn btn-outline js-register" style="text-align:center;justify-content:center;">Empezar gratis</a>
+      </div>
+
+      <!-- Basic -->
+      <div class="plan-card featured">
+        <div class="plan-badge">14 días gratis</div>
+        <p class="plan-name">Basic</p>
+        <!-- Precio: cambia el número si cambias el precio en Stripe -->
+        <p class="plan-price">39€ <span>/ mes</span></p>
+        <p class="plan-desc">Para gestionar tu restaurante sin límites ni comisiones.</p>
+        <ul class="plan-features">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>Reservas ilimitadas</strong>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Página pública de reservas
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Mesas, salas y turnos
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Cierres y vacaciones
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>Emails automáticos</strong> (confirmación, cancelación)
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>Marketing por email</strong> a suscriptores
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>Códigos promocionales</strong>
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>Equipo y roles</strong>
+          </li>
+        </ul>
+        <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Prueba Basic 14 días gratis</a>
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">
+          Tarjeta requerida · Sin cargo durante el trial · Cancela cuando quieras
+        </p>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -623,46 +706,6 @@
     item.classList.toggle('open');
   }
 
-  var CHECK_SVG = '<svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-
-  function renderPlan(plan) {
-    var features = (plan.features || []).map(function (f) {
-      return '<li' + (f.included ? '' : ' class="disabled"') + '>' + CHECK_SVG + f.text + '</li>';
-    }).join('');
-    var badge    = plan.featured && plan.featuredLabel
-      ? '<div class="plan-badge">' + plan.featuredLabel + '</div>' : '';
-    var price    = plan.price === 0 ? '€0' : '€' + plan.price;
-    var btnClass = plan.ctaStyle === 'primary' ? 'btn btn-primary' : 'btn btn-outline';
-    return (
-      '<div class="plan-card' + (plan.featured ? ' featured' : '') + '">' +
-        badge +
-        '<div class="plan-name">' + plan.name + '</div>' +
-        '<div class="plan-price">' + price + ' <span>/ ' + (plan.period || 'mes') + '</span></div>' +
-        '<p class="plan-desc">' + (plan.description || '') + '</p>' +
-        '<ul class="plan-features">' + features + '</ul>' +
-        '<a href="#" class="' + btnClass + ' js-register" style="text-align:center;justify-content:center;">' + plan.cta + '</a>' +
-      '</div>'
-    );
-  }
-
-  fetch(TABLEO_API + '/api/pricing/public')
-    .then(function (r) { return r.json(); })
-    .then(function (plans) {
-      var grid = document.getElementById('pricing-grid');
-      if (!plans || plans.length === 0) {
-        grid.innerHTML = '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);">Sin planes disponibles.</div>';
-        return;
-      }
-      grid.innerHTML = plans.map(renderPlan).join('');
-      // Wire register links inside plans
-      grid.querySelectorAll('.js-register').forEach(function (el) {
-        el.href = TABLEO_APP + '/register';
-      });
-    })
-    .catch(function () {
-      document.getElementById('pricing-grid').innerHTML =
-        '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--muted);font-size:.875rem;">No se pudieron cargar los planes. Inténtalo de nuevo más tarde.</div>';
-    });
 </script>
 
 </body>
