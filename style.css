@@ -369,10 +369,71 @@ h3 { font-size: 1.125rem; }
 .features-intro { text-align: center; margin-bottom: 3.5rem; }
 .features-intro .lead { margin: .75rem auto 0; }
 
+/* Legacy grid (kept in case referenced elsewhere) */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1.5rem;
+}
+
+/* New 3-column area layout */
+.features-areas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.feature-area {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.feature-area-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius);
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 1.25rem;
+}
+
+.feature-area h3 {
+  font-size: 1.0625rem;
+  margin-bottom: .4rem;
+}
+
+.feature-area > p {
+  font-size: .875rem;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+  line-height: 1.55;
+}
+
+.feature-area-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+}
+
+.feature-area-list li {
+  font-size: .875rem;
+  color: var(--text);
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.feature-area-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: 700;
 }
 
 .feature-card {
@@ -990,6 +1051,7 @@ h3 { font-size: 1.125rem; }
 @media (max-width: 900px) {
   .spotlight-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
   .diff-grid { grid-template-columns: 1fr; max-width: 520px; }
+  .features-areas { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
 }
 
 @media (max-width: 768px) {
