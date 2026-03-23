@@ -1564,22 +1564,245 @@ h3 { font-size: 1.125rem; }
 .sf-ph-name   { font-size: .68rem; font-weight: 600; color: #111827; }
 .sf-ph-meta   { font-size: .58rem; color: #9ca3af; }
 
-/* Real screenshot images */
-.sf-screenshot {
-  width: 100%;
-  display: block;
-  border-radius: 0 0 11px 11px;
+/* ─── Mobile mockup (sfm) ────────────────────────────────────── */
+
+/* Phone shell */
+.sf-phone {
+  background: #1c1b26;
+  border-radius: 38px;
+  padding: 14px 9px 20px;
+  box-shadow:
+    0 24px 64px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.08),
+    inset 0 1px 0 rgba(255,255,255,.14);
+  width: 240px;
+}
+
+.sf-phone-pill {
+  width: 80px; height: 6px;
+  background: rgba(255,255,255,.15);
+  border-radius: 3px;
+  margin: 0 auto 10px;
 }
 
 .sf-phone-screen {
-  border-radius: 20px;
+  background: #f3f4f6;
+  border-radius: 26px;
   overflow: hidden;
+}
+
+/* Status bar */
+.sfm-statusbar {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 14px 4px;
+  font-size: .6rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.sfm-icons { font-size: .48rem; letter-spacing: 1px; color: #374151; }
+
+/* Top nav bar */
+.sfm-topbar {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px 10px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.sfm-hamburger { font-size: .9rem; color: #6b7280; margin-right: 2px; }
+
+.sfm-brand { display: flex; align-items: center; gap: 6px; }
+
+.sfm-logo {
+  width: 20px; height: 20px;
+  background: var(--primary);
+  border-radius: 6px;
+}
+
+.sfm-appname { font-size: .8rem; font-weight: 700; color: #111827; }
+
+/* Toolbar row */
+.sfm-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
   background: #f3f4f6;
 }
 
-.sf-phone-img {
-  width: 100%;
-  display: block;
+.sfm-week-select {
+  flex: 1;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: .72rem;
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sfm-chevron { color: #9ca3af; font-size: .7rem; }
+
+.sfm-add-btn {
+  width: 36px; height: 36px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+
+/* Stats row */
+.sfm-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  padding: 0 12px 10px;
+  background: #f3f4f6;
+}
+
+.sfm-stat {
+  background: #fff;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 8px 4px;
+  text-align: center;
+}
+
+.sfm-stat--yellow { border-color: #fde68a; background: #fffbeb; }
+.sfm-stat--purple { border-color: #ddd6fe; background: #f5f3ff; }
+.sfm-stat--green  { border-color: #bbf7d0; background: #f0fdf4; }
+
+.sfm-stat-n {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.sfm-stat--yellow .sfm-stat-n { color: #d97706; }
+.sfm-stat--purple .sfm-stat-n { color: var(--primary); }
+.sfm-stat--green  .sfm-stat-n { color: #16a34a; }
+
+.sfm-stat-l {
+  font-size: .5rem;
+  color: #6b7280;
+  margin-top: 3px;
+  white-space: nowrap;
+}
+
+/* Date row */
+.sfm-date-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px 4px;
+}
+
+.sfm-date-label {
+  font-size: .55rem;
+  font-weight: 700;
+  color: #9ca3af;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+
+.sfm-date-count {
+  font-size: .55rem;
+  color: #9ca3af;
+}
+
+/* Reservation card */
+.sfm-card {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: #fff;
+  margin: 0 10px 6px;
+  border-radius: 12px;
+  border-left: 4px solid #e5e7eb;
+  overflow: hidden;
+  padding: 0;
+}
+
+.sfm-card--green  { border-left-color: #16a34a; }
+.sfm-card--purple { border-left-color: var(--primary); }
+
+.sfm-card-left {
+  padding: 10px 10px 10px 11px;
+  min-width: 68px;
+  border-right: 1px solid #f3f4f6;
+}
+
+.sfm-card-time {
+  font-size: .9rem;
+  font-weight: 800;
+  color: #111827;
+  line-height: 1;
+}
+
+.sfm-card-status {
+  font-size: .55rem;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
+.sfm-card-status--green  { color: #16a34a; }
+.sfm-card-status--purple { color: var(--primary); }
+
+.sfm-card-right {
+  flex: 1;
+  padding: 9px 8px;
+  min-width: 0;
+}
+
+.sfm-card-name {
+  font-size: .72rem;
+  font-weight: 600;
+  color: #111827;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sfm-card-meta {
+  font-size: .58rem;
+  color: #9ca3af;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sfm-card-arrow {
+  font-size: 1rem;
+  color: #d1d5db;
+  padding: 0 10px 0 4px;
+  flex-shrink: 0;
+}
+
+/* URL bar at bottom */
+.sfm-urlbar {
+  background: #fff;
+  border-top: 1px solid #f3f4f6;
+  margin-top: 8px;
+  padding: 7px 14px;
+  font-size: .6rem;
+  color: #9ca3af;
+  text-align: center;
 }
 
 /* Showcase responsive */
