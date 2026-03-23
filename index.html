@@ -132,16 +132,234 @@
   </div>
 </section>
 
-<!-- ─── Product showcase ─────────────────────────────────────── -->
-<section class="section showcase-section">
+<!-- ─── Feature blocks ───────────────────────────────────────── -->
+<section class="section fb-section">
   <div class="container">
-    <div class="showcase-intro">
+
+    <div class="fb-intro">
       <span class="label">El producto</span>
-      <h2>Así se ve en tu día a día</h2>
-      <p class="lead">Panel limpio, información exacta, sin ruido.</p>
+      <h2>Hecho para el día a día de un restaurante</h2>
     </div>
 
-    <div class="showcase-wrap">
+    <div class="fb-blocks">
+
+    <!-- Block 1: Desktop reservation panel -->
+    <div class="fb-block">
+      <div class="fb-copy">
+        <span class="fb-label">Panel de reservas</span>
+        <h3>Tu sala entera, de un vistazo</h3>
+        <p>Sin buscar en papel ni en WhatsApp. Todas las reservas del día, organizadas por turno, con estado en tiempo real.</p>
+        <ul class="fb-list">
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Confirma, sienta o cancela con un clic</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mesas, salas y aforo en tiempo real</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aviso instantáneo cuando llega una reserva</li>
+        </ul>
+      </div>
+      <div class="fb-visual">
+        <div class="sf-browser">
+          <div class="sf-browser-bar">
+            <div class="sf-dot" style="background:#ff5f57"></div>
+            <div class="sf-dot" style="background:#febc2e"></div>
+            <div class="sf-dot" style="background:#28c840"></div>
+            <div class="sf-url">app.tableo.app/reservas</div>
+          </div>
+          <div class="sf-app">
+            <div class="sf-sidebar">
+              <div class="sf-sb-brand">
+                <div class="sf-sb-logo"></div>
+                <div><div class="sf-sb-title">Tableo</div><div class="sf-sb-sub">La Brasserie</div></div>
+              </div>
+              <div class="sf-sb-section-label">Menú</div>
+              <div class="sf-sb-item">Dashboard</div>
+              <div class="sf-sb-item sf-sb-item--active">Reservas</div>
+              <div class="sf-sb-item">Clientes</div>
+              <div class="sf-sb-item">Mesas</div>
+              <div class="sf-sb-item">Equipo</div>
+              <div class="sf-sb-bottom">
+                <div class="sf-sb-item">Configuración</div>
+                <div class="sf-sb-user">
+                  <div class="sf-sb-avatar">M</div>
+                  <div><div class="sf-sb-uname">Marc Soler</div><div class="sf-sb-uemail">marc@labrasserie...</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="sf-main">
+              <div class="sf-main-header">
+                <div><div class="sf-main-title">Reservas</div><div class="sf-main-sub">5 reservas · miércoles, 26 mar 2026</div></div>
+                <div class="sf-main-actions">
+                  <div class="sf-select">Hoy ▾</div>
+                  <div class="sf-btn-primary">+ Nueva reserva</div>
+                </div>
+              </div>
+              <div class="sf-chips">
+                <div class="sf-chip sf-chip--purple">2 Confirmadas</div>
+                <div class="sf-chip sf-chip--green">2 Sentadas</div>
+                <div class="sf-chip sf-chip--red">0 No show</div>
+                <div class="sf-chip sf-chip--gray">1 Cancelada</div>
+              </div>
+              <div class="sf-shift-block">
+                <div class="sf-shift-header">
+                  <span class="sf-shift-name">Mediodía</span>
+                  <span class="sf-shift-count">2 reservas activas</span>
+                  <span class="sf-shift-pax">👤 7 pax</span>
+                </div>
+                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
+                <div class="sf-row">
+                  <div class="sf-client"><div class="sf-avatar sf-avatar--teal">S</div><div><div class="sf-cname">Sara Puig</div><div class="sf-cphone">+34 612 341 782</div></div></div>
+                  <div>13:00</div><div>👤 3</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa">T-3</span></div>
+                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
+                </div>
+                <div class="sf-row">
+                  <div class="sf-client"><div class="sf-avatar sf-avatar--blue">M</div><div><div class="sf-cname">Miquel Font</div><div class="sf-cphone">+34 699 234 156</div></div></div>
+                  <div>14:00</div><div>👤 4</div><div><span class="sf-tag">Interior</span></div><div><span class="sf-mesa">M-5</span></div>
+                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
+                </div>
+              </div>
+              <div class="sf-shift-block">
+                <div class="sf-shift-header">
+                  <span class="sf-shift-name">Noche</span>
+                  <span class="sf-shift-count">2 reservas activas</span>
+                  <span class="sf-shift-pax">👤 9 pax</span>
+                </div>
+                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
+                <div class="sf-row">
+                  <div class="sf-client"><div class="sf-avatar sf-avatar--violet">E</div><div><div class="sf-cname">Elena Ros</div><div class="sf-cphone">+34 635 812 447</div></div></div>
+                  <div>20:00</div><div>👤 5</div><div><span class="sf-tag">Interior</span></div><div><span class="sf-mesa">M-7</span></div>
+                  <div><span class="sf-status sf-status--purple">Confirmada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
+                </div>
+                <div class="sf-row">
+                  <div class="sf-client"><div class="sf-avatar sf-avatar--amber">J</div><div><div class="sf-cname">Jordi Mas</div><div class="sf-cphone">+34 617 592 334</div></div></div>
+                  <div>21:30</div><div>👤 4</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa">T-6</span></div>
+                  <div><span class="sf-status sf-status--purple">Confirmada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 2: Mobile (reversed) -->
+    <div class="fb-block fb-block--rev">
+      <div class="fb-copy">
+        <span class="fb-label">Desde el móvil</span>
+        <h3>Gestiona desde donde estés</h3>
+        <p>En la barra, en la terraza o fuera del local. El panel funciona igual de bien en el teléfono que en el ordenador.</p>
+        <ul class="fb-list">
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Toda la semana de un vistazo</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pendientes, confirmadas y sentadas en una pantalla</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin instalar nada — funciona desde el navegador</li>
+        </ul>
+      </div>
+      <div class="fb-visual fb-visual--center">
+        <div class="sf-phone">
+          <div class="sf-phone-pill"></div>
+          <div class="sf-phone-screen">
+            <div class="sfm-statusbar"><span>22:14</span><span class="sfm-icons">▲ ▲ ▮▮▮</span></div>
+            <div class="sfm-topbar">
+              <span class="sfm-hamburger">☰</span>
+              <div class="sfm-brand"><div class="sfm-logo"></div><span class="sfm-appname">Tableo</span></div>
+            </div>
+            <div class="sfm-toolbar">
+              <div class="sfm-week-select">Esta semana <span class="sfm-chevron">⌃</span></div>
+              <div class="sfm-add-btn">+</div>
+            </div>
+            <div class="sfm-stats">
+              <div class="sfm-stat"><div class="sfm-stat-n">3</div><div class="sfm-stat-l">Total</div></div>
+              <div class="sfm-stat sfm-stat--yellow"><div class="sfm-stat-n">0</div><div class="sfm-stat-l">Pend.</div></div>
+              <div class="sfm-stat sfm-stat--purple"><div class="sfm-stat-n">2</div><div class="sfm-stat-l">Conf.</div></div>
+              <div class="sfm-stat sfm-stat--green"><div class="sfm-stat-n">1</div><div class="sfm-stat-l">Sentadas</div></div>
+            </div>
+            <div class="sfm-date-row"><span class="sfm-date-label">MIÉRCOLES, 26 DE MARZO</span><span class="sfm-date-count">2 reservas</span></div>
+            <div class="sfm-card sfm-card--green">
+              <div class="sfm-card-left"><div class="sfm-card-time">20:00</div><div class="sfm-card-status sfm-card-status--green">Sentada</div></div>
+              <div class="sfm-card-right"><div class="sfm-card-name">Sara Puig</div><div class="sfm-card-meta">👤 3 pax · T-3 · Terraza</div></div>
+              <div class="sfm-card-arrow">›</div>
+            </div>
+            <div class="sfm-card sfm-card--purple">
+              <div class="sfm-card-left"><div class="sfm-card-time">21:30</div><div class="sfm-card-status sfm-card-status--purple">Confirmada</div></div>
+              <div class="sfm-card-right"><div class="sfm-card-name">Miquel Font</div><div class="sfm-card-meta">👤 4 pax · M-5 · Interior</div></div>
+              <div class="sfm-card-arrow">›</div>
+            </div>
+            <div class="sfm-date-row"><span class="sfm-date-label">VIERNES, 28 DE MARZO</span><span class="sfm-date-count">1 reserva</span></div>
+            <div class="sfm-card sfm-card--purple">
+              <div class="sfm-card-left"><div class="sfm-card-time">13:30</div><div class="sfm-card-status sfm-card-status--purple">Confirmada</div></div>
+              <div class="sfm-card-right"><div class="sfm-card-name">Elena Ros</div><div class="sfm-card-meta">👤 6 pax · sin mesa</div></div>
+              <div class="sfm-card-arrow">›</div>
+            </div>
+            <div class="sfm-urlbar">app.tableo.app</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Block 3: Public booking page -->
+    <div class="fb-block">
+      <div class="fb-copy">
+        <span class="fb-label">Reservas online</span>
+        <h3>El cliente reserva solo.<br>Tú recibes la reserva.</h3>
+        <p>Tu página pública funciona las 24h. El cliente elige día, hora y personas en 30 segundos — sin crear cuenta, sin descargar nada.</p>
+        <ul class="fb-list">
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Con el nombre y colores de tu restaurante</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Email de confirmación automático al cliente</li>
+          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Se incrusta en tu web con una línea de código</li>
+        </ul>
+      </div>
+      <div class="fb-visual fb-visual--center">
+        <!-- Public booking widget mockup -->
+        <div class="bw">
+          <div class="bw-header">
+            <div class="bw-langs"><span class="bw-lang bw-lang--active">ES</span><span class="bw-lang">CA</span><span class="bw-lang">EN</span></div>
+          </div>
+          <div class="bw-body">
+            <h4 class="bw-title">Reservar mesa</h4>
+            <p class="bw-rest">La Brasserie</p>
+            <div class="bw-steps">
+              <div class="bw-step bw-step--active">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Fecha
+              </div>
+              <div class="bw-step-sep">›</div>
+              <div class="bw-step">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+                Hora
+              </div>
+              <div class="bw-step-sep">›</div>
+              <div class="bw-step">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                Personas
+              </div>
+            </div>
+            <p class="bw-sub">Elige el día que desees</p>
+            <div class="bw-cal">
+              <div class="bw-cal-header">
+                <span class="bw-cal-nav">‹</span>
+                <span class="bw-cal-month">Marzo 2026</span>
+                <span class="bw-cal-nav">›</span>
+              </div>
+              <div class="bw-cal-days">
+                <span>lun</span><span>mar</span><span>mié</span><span>jue</span><span>vie</span><span>sáb</span><span>dom</span>
+              </div>
+              <div class="bw-cal-grid">
+                <span></span><span></span><span></span><span></span><span></span><span class="bw-day">1</span><span class="bw-day">2</span>
+                <span class="bw-day">3</span><span class="bw-day">4</span><span class="bw-day">5</span><span class="bw-day">6</span><span class="bw-day">7</span><span class="bw-day">8</span><span class="bw-day">9</span>
+                <span class="bw-day bw-day--today">26</span><span class="bw-day bw-day--sel">27</span><span class="bw-day">28</span><span class="bw-day">29</span><span class="bw-day">30</span><span class="bw-day">31</span><span></span>
+              </div>
+            </div>
+          </div>
+          <div class="bw-footer">
+            <span>+34 612 341 782 · labrasserie@gmail.com</span>
+            <span class="bw-powered">Powered by <strong>Tableo</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div><!-- /fb-blocks -->
+  </div>
+</section>
+
+<!-- ─── Cómo funciona ────────────────────────────────────────── -->
 
       <!-- Desktop: browser frame -->
       <div class="sf-browser">
