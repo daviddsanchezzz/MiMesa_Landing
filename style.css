@@ -198,29 +198,17 @@ h3 { font-size: 1.125rem; }
   overflow: hidden;
 }
 
-/* Hero mockup: hide SALA column (4th) to gain space */
+/* Hero mockup: show SALA, hide ACCIONES (7th col) */
 .hero-right .sf-thead,
 .hero-right .sf-row {
-  grid-template-columns: 2fr .75fr .5fr .85fr .9fr .75fr;
+  grid-template-columns: 2fr .75fr .5fr .85fr .6fr .95fr;
 }
-.hero-right .sf-thead span:nth-child(4),
-.hero-right .sf-row > *:nth-child(4) { display: none; }
+.hero-right .sf-thead span:nth-child(7),
+.hero-right .sf-row > *:nth-child(7) { display: none; }
 
 /* Slightly smaller sidebar in hero context */
 .hero-right .sf-sidebar { width: 130px; }
 
-/* Fade-out gradient overlay at the bottom */
-.hero-right::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 180px;
-  background: linear-gradient(to bottom, transparent 0%, #ffffff 100%);
-  pointer-events: none;
-  border-radius: 0 0 12px 12px;
-}
 
 .hero-badge {
   display: inline-flex;
