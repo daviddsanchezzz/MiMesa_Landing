@@ -266,7 +266,7 @@
             <div class="sf-dot" style="background:#ff5f57"></div>
             <div class="sf-dot" style="background:#febc2e"></div>
             <div class="sf-dot" style="background:#28c840"></div>
-            <div class="sf-url">app.tableo.app/reservas</div>
+            <div class="sf-url">app.tableo.app/calendario</div>
           </div>
           <div class="sf-app">
             <div class="sf-sidebar">
@@ -277,8 +277,8 @@
               <div class="sf-new-rsv-btn">+ Nueva reserva</div>
               <div class="sf-sb-section-label">Menú</div>
               <div class="sf-sb-item">Dashboard</div>
-              <div class="sf-sb-item sf-sb-item--active">Reservas</div>
-              <div class="sf-sb-item">Calendario</div>
+              <div class="sf-sb-item">Reservas</div>
+              <div class="sf-sb-item sf-sb-item--active">Calendario</div>
               <div class="sf-sb-item">Clientes</div>
               <div class="sf-sb-item">Equipo</div>
               <div class="sf-sb-item">Finanzas</div>
@@ -292,55 +292,42 @@
                 </div>
               </div>
             </div>
-            <div class="sf-main">
-              <div class="sf-main-header">
-                <div><div class="sf-main-title">Reservas</div><div class="sf-main-sub">7 reservas · 18/04/2026</div></div>
-                <div class="sf-main-actions">
-                  <div class="sf-select">Día concreto ▾</div>
-                  <div class="sf-select">18/04/2026</div>
+            <!-- Calendar / timeline view -->
+            <div class="sf-cal-main">
+              <div class="sf-cal-topbar">
+                <div class="sf-cal-nav">
+                  <span class="sf-cal-nav-arrow">‹</span>
+                  <div>
+                    <div class="sf-cal-date-title">Sábado, 18 De Abril</div>
+                    <div class="sf-cal-today">Volver a hoy</div>
+                  </div>
+                  <span class="sf-cal-nav-arrow">›</span>
                 </div>
+                <div class="sf-select">18/04/2026</div>
               </div>
-              <div class="sf-chips">
-                <div class="sf-chip sf-chip--outline">0 Confirmadas</div>
-                <div class="sf-chip sf-chip--green">6 Sentadas</div>
-                <div class="sf-chip sf-chip--red">1 No show</div>
-                <div class="sf-chip sf-chip--outline">0 Canceladas</div>
-              </div>
-              <div class="sf-shift-block">
-                <div class="sf-shift-header">
-                  <span class="sf-shift-name">Mediodía</span>
-                  <span class="sf-shift-count">1 reserva activa</span>
-                  <span class="sf-shift-pax">👤 6 pax</span>
+              <div class="sf-cal-scroll">
+                <div class="sf-cal-times-row">
+                  <div class="sf-cal-time-empty"></div>
+                  <div class="sf-cal-time-cell">16:00</div>
+                  <div class="sf-cal-time-cell">17:00</div>
+                  <div class="sf-cal-time-cell">18:00</div>
+                  <div class="sf-cal-time-cell">19:00</div>
+                  <div class="sf-cal-time-cell">20:00</div>
+                  <div class="sf-cal-time-cell">21:00</div>
+                  <div class="sf-cal-time-cell">22:00</div>
                 </div>
-                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--amber">P</div><div><div class="sf-cname">Pedro</div><div class="sf-cphone">665 930 365</div></div></div>
-                  <div>13:30</div><div>👤 7</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">—</span></div>
-                  <div><span class="sf-status sf-status--red">No show</span></div><div><span class="sf-actions">Acciones ▾</span></div>
-                </div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--teal">A</div><div><div class="sf-cname">Albert Nasarre</div><div class="sf-cphone">678 814 960</div></div></div>
-                  <div>14:00</div><div>👤 6</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">12</span></div>
-                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
-                </div>
-              </div>
-              <div class="sf-shift-block">
-                <div class="sf-shift-header">
-                  <span class="sf-shift-name">Noche</span>
-                  <span class="sf-shift-count">2 reservas activas</span>
-                  <span class="sf-shift-pax">👤 13 pax</span>
-                </div>
-                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--teal">R</div><div><div class="sf-cname">Ruben</div><div class="sf-cphone">635 821 906</div></div></div>
-                  <div>20:00</div><div>👤 8</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">9</span></div>
-                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
-                </div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--violet">L</div><div><div class="sf-cname">Lucia</div><div class="sf-cphone">629 374 736</div></div></div>
-                  <div>20:30</div><div>👤 5</div><div><span class="sf-tag">Interior</span></div><div><span class="sf-mesa-num">4</span></div>
-                  <div><span class="sf-status sf-status--purple">Confirmada</span></div><div><span class="sf-actions">Acciones ▾</span></div>
-                </div>
+                <div class="sf-cal-section-hdr">Interior</div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">51</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">52</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">53</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:83.3%;width:15.5%"><span>Carol</span><span class="sf-cal-block-time">21:00 · 5 pax</span></div></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">54</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:83.3%;width:15.5%"><span>Carol</span><span class="sf-cal-block-time">21:00 · 5 pax</span></div></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">55</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">56</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-section-hdr">Terraza</div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">1</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:83.3%;width:15.5%"><span>Elsa</span><span class="sf-cal-block-time">21:00 · 13 pax</span></div></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">2</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">3</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"></div></div>
+                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">4</div><div class="sf-cal-row-pax">2 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:75%;width:15.5%"><span>Lucia</span><span class="sf-cal-block-time">20:30 · 2 pax</span></div></div></div>
               </div>
             </div>
           </div>

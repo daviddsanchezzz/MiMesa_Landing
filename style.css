@@ -2280,3 +2280,145 @@ h3 { font-size: 1.125rem; }
   .bw { width: 100%; }
   .fb-blocks { gap: 3rem; }
 }
+
+/* ─── Calendar mockup (sf-cal) ───────────────────────────────── */
+.sf-cal-main {
+  flex: 1;
+  min-width: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  font-size: .72rem;
+}
+
+.sf-cal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #fff;
+  flex-shrink: 0;
+  gap: 8px;
+}
+
+.sf-cal-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sf-cal-nav-arrow { color: #6b7280; font-size: .85rem; cursor: default; }
+
+.sf-cal-date-title {
+  font-size: .78rem;
+  font-weight: 700;
+  color: #111827;
+  line-height: 1.2;
+}
+
+.sf-cal-today {
+  font-size: .58rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+.sf-cal-scroll {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Time header row */
+.sf-cal-times-row {
+  display: grid;
+  grid-template-columns: 48px repeat(7, 1fr);
+  background: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+.sf-cal-time-empty {
+  border-right: 1px solid #e5e7eb;
+}
+
+.sf-cal-time-cell {
+  font-size: .56rem;
+  color: #9ca3af;
+  padding: 3px 0 3px 3px;
+  border-right: 1px solid #f3f4f6;
+}
+
+/* Room section label */
+.sf-cal-section-hdr {
+  font-size: .55rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  padding: 4px 8px;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+  border-top: 1px solid #e5e7eb;
+  flex-shrink: 0;
+}
+
+/* Table row */
+.sf-cal-row {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  border-bottom: 1px solid #f3f4f6;
+  min-height: 32px;
+  flex-shrink: 0;
+}
+
+.sf-cal-row-label {
+  padding: 4px 6px;
+  border-right: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.sf-cal-row-num { font-size: .65rem; font-weight: 700; color: #374151; }
+.sf-cal-row-pax { font-size: .52rem; color: #9ca3af; }
+
+/* Timeline area — vertical grid lines via repeating gradient */
+.sf-cal-row-timeline {
+  position: relative;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent 0,
+    transparent calc(100% / 7 - 1px),
+    #f3f4f6 calc(100% / 7 - 1px),
+    #f3f4f6 calc(100% / 7)
+  );
+}
+
+/* Reservation block */
+.sf-cal-block {
+  position: absolute;
+  top: 3px;
+  bottom: 3px;
+  background: #d1fae5;
+  border: 1px solid #6ee7b7;
+  border-radius: 5px;
+  padding: 2px 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.sf-cal-block span:first-child {
+  font-size: .6rem;
+  font-weight: 700;
+  color: #065f46;
+}
+
+.sf-cal-block-time {
+  font-size: .52rem;
+  color: #059669;
+  font-weight: 400;
+}
