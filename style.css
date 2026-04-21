@@ -198,6 +198,17 @@ h3 { font-size: 1.125rem; }
   overflow: hidden;
 }
 
+/* Hero mockup: hide SALA column (4th) to gain space */
+.hero-right .sf-thead,
+.hero-right .sf-row {
+  grid-template-columns: 2fr .75fr .5fr .85fr .9fr .75fr;
+}
+.hero-right .sf-thead span:nth-child(4),
+.hero-right .sf-row > *:nth-child(4) { display: none; }
+
+/* Slightly smaller sidebar in hero context */
+.hero-right .sf-sidebar { width: 130px; }
+
 /* Fade-out gradient overlay at the bottom */
 .hero-right::after {
   content: '';
