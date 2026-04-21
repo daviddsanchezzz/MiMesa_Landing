@@ -1290,6 +1290,19 @@ h3 { font-size: 1.125rem; }
 .sf-sb-title { font-weight: 700; font-size: .78rem; }
 .sf-sb-sub   { font-size: .62rem; color: #9ca3af; }
 
+/* "+ Nueva reserva" button in sidebar */
+.sf-new-rsv-btn {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: .7rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 4px 4px 8px;
+  cursor: default;
+}
+
 .sf-sb-section-label {
   font-size: .58rem;
   color: #6b7280;
@@ -1394,10 +1407,11 @@ h3 { font-size: 1.125rem; }
   border: 1.5px solid;
 }
 
-.sf-chip--purple { background: #f5f3ff; color: var(--primary); border-color: #ddd6fe; }
-.sf-chip--green  { background: #f0fdf4; color: #16a34a;        border-color: #bbf7d0; }
-.sf-chip--red    { background: #fef2f2; color: #dc2626;        border-color: #fecaca; }
-.sf-chip--gray   { background: #f9fafb; color: #6b7280;        border-color: #e5e7eb; }
+.sf-chip--purple  { background: #f5f3ff; color: var(--primary); border-color: #ddd6fe; }
+.sf-chip--green   { background: #dcfce7; color: #16a34a;        border-color: #86efac; }
+.sf-chip--red     { background: #fee2e2; color: #dc2626;        border-color: #fca5a5; }
+.sf-chip--gray    { background: #f9fafb; color: #6b7280;        border-color: #e5e7eb; }
+.sf-chip--outline { background: #fff;    color: #6b7280;        border-color: #d1d5db; }
 
 /* Shift blocks */
 .sf-shift-block {
@@ -1497,6 +1511,22 @@ h3 { font-size: 1.125rem; }
 
 .sf-status--green  { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
 .sf-status--purple { background: #f5f3ff; color: var(--primary); border: 1px solid #ddd6fe; }
+.sf-status--red    { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+
+/* Mesa as a small purple dot/number badge */
+.sf-mesa-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #ede9fe;
+  color: var(--primary);
+  font-size: .6rem;
+  font-weight: 700;
+  border: 1px solid #ddd6fe;
+}
 
 .sf-actions {
   font-size: .62rem;
