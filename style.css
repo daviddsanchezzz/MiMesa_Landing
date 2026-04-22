@@ -198,6 +198,9 @@ h3 { font-size: 1.125rem; }
   overflow: hidden;
 }
 
+/* Feature block calendar: smaller height */
+.fb-visual .sf-app { min-height: 320px; }
+
 /* Hero mockup: show SALA, hide ACCIONES (7th col) */
 .hero-right .sf-thead,
 .hero-right .sf-row {
