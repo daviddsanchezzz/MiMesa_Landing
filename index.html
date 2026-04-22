@@ -535,7 +535,7 @@
       <p class="lead">Sin comisiones por reserva. Sin letra pequeña. Cancela cuando quieras.</p>
     </div>
 
-    <div class="pricing-grid" style="max-width:780px;">
+    <div class="pricing-grid">
 
       <!-- Free -->
       <div class="plan-card">
@@ -569,27 +569,27 @@
           </li>
           <li class="disabled">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Equipo y múltiples usuarios
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
             Marketing y códigos promo
           </li>
           <li class="disabled">
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Estadísticas
+            No-shows con pagos (Stripe)
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Estadísticas avanzadas
           </li>
         </ul>
         <a href="#" class="btn btn-outline js-register" style="text-align:center;justify-content:center;">Empezar gratis</a>
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">Sin tarjeta · Sin compromiso.</p>
       </div>
 
       <!-- Basic -->
       <div class="plan-card featured">
         <div class="plan-badge">14 días gratis</div>
         <p class="plan-name">Basic</p>
-        <!-- Precio: cambia el número si cambias el precio en Stripe -->
         <p class="plan-price">19€ <span>/ mes</span></p>
-        <p class="plan-desc">Para gestionar tu restaurante sin límites ni comisiones.</p>
+        <p class="plan-desc">Organiza tus reservas sin caos.</p>
         <ul class="plan-features">
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
@@ -605,11 +605,62 @@
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Emails automáticos a clientes</strong>
+            <strong>Emails automáticos básicos</strong>
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Recordatorios automáticos</strong>
+            Recordatorios automáticos
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            1 usuario
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            No-shows con pagos (Stripe)
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Marketing y códigos promo
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Estadísticas avanzadas
+          </li>
+          <li class="disabled">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Equipo y múltiples usuarios
+          </li>
+        </ul>
+        <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Probar Basic 14 días gratis</a>
+        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">
+          Tarjeta requerida · Sin cargo durante el trial · Cancela cuando quieras
+        </p>
+      </div>
+
+      <!-- Pro -->
+      <div class="plan-card plan-card--pro">
+        <div class="plan-badge plan-badge--gold">Más popular ⭐</div>
+        <p class="plan-name">Pro</p>
+        <p class="plan-price">39€ <span>/ mes</span></p>
+        <p class="plan-desc">Evita no-shows y controla todo tu negocio.</p>
+
+        <div class="plan-noshow-box">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div>
+            <strong>Incluye No-shows con Stripe</strong>
+            <span>Cobros automáticos ante cancelación o no presentación.</span>
+          </div>
+        </div>
+
+        <ul class="plan-features">
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Todo lo de Basic
+          </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            <strong>No-shows con pagos (Stripe)</strong>
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
@@ -617,18 +668,22 @@
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Equipo y roles</strong>
+            <strong>Estadísticas avanzadas</strong>
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Estadísticas avanzadas</strong>
+            <strong>Equipo y roles ilimitados</strong>
           </li>
           <li>
             <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
             Sin branding de Tableo
           </li>
+          <li>
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
+            Soporte prioritario
+          </li>
         </ul>
-        <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Prueba Basic 14 días gratis</a>
+        <a href="#" class="btn btn-pro js-register" style="text-align:center;justify-content:center;">Probar Pro 14 días gratis</a>
         <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">
           Tarjeta requerida · Sin cargo durante el trial · Cancela cuando quieras
         </p>

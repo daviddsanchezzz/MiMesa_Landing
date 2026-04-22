@@ -606,10 +606,11 @@ h3 { font-size: 1.125rem; }
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
-  max-width: 900px;
+  max-width: 1020px;
   margin: 0 auto;
+  align-items: start;
 }
 
 .plan-card {
@@ -628,6 +629,12 @@ h3 { font-size: 1.125rem; }
   position: relative;
 }
 
+.plan-card--pro {
+  border-color: #d97706;
+  box-shadow: 0 0 0 1px #d97706;
+  position: relative;
+}
+
 .plan-badge {
   position: absolute;
   top: -13px;
@@ -641,7 +648,47 @@ h3 { font-size: 1.125rem; }
   text-transform: uppercase;
   padding: .25rem .9rem;
   border-radius: 20px;
+  white-space: nowrap;
 }
+
+.plan-badge--gold {
+  background: #d97706;
+}
+
+/* No-shows callout box inside Pro card */
+.plan-noshow-box {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  border-radius: 8px;
+  padding: .75rem 1rem;
+  margin-bottom: 1.25rem;
+}
+.plan-noshow-box svg { flex-shrink: 0; margin-top: 2px; color: #d97706; }
+.plan-noshow-box div { display: flex; flex-direction: column; gap: .2rem; }
+.plan-noshow-box strong { font-size: .825rem; color: #92400e; }
+.plan-noshow-box span { font-size: .775rem; color: #b45309; line-height: 1.4; }
+
+/* Pro CTA button */
+.btn-pro {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  background: #d97706;
+  color: #fff;
+  font-weight: 700;
+  font-size: .9375rem;
+  padding: .75rem 1.5rem;
+  border-radius: var(--radius);
+  border: none;
+  cursor: pointer;
+  transition: background .2s;
+  width: 100%;
+}
+.btn-pro:hover { background: #b45309; }
 
 .plan-name {
   font-size: .9rem;
@@ -1211,8 +1258,9 @@ h3 { font-size: 1.125rem; }
   /* Diff */
   .diff-grid { grid-template-columns: 1fr; }
 
-  /* Pricing */
-  .pricing-grid { grid-template-columns: 1fr; max-width: 420px; }
+  /* Pricing: tablet → Free arriba centrado, Basic+Pro lado a lado */
+  .pricing-grid { grid-template-columns: 1fr 1fr; max-width: 680px; }
+  .pricing-grid .plan-card:first-child { grid-column: 1 / -1; max-width: 340px; margin: 0 auto; width: 100%; }
 
   /* Footer */
   .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -1225,6 +1273,12 @@ h3 { font-size: 1.125rem; }
 
   /* Page header */
   .page-header { padding: 2rem 0 1.75rem; }
+}
+
+@media (max-width: 600px) {
+  /* Pricing: móvil → 1 columna */
+  .pricing-grid { grid-template-columns: 1fr; max-width: 440px; }
+  .pricing-grid .plan-card:first-child { grid-column: auto; max-width: none; margin: 0; }
 }
 
 @media (max-width: 480px) {
