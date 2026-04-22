@@ -610,7 +610,7 @@ h3 { font-size: 1.125rem; }
   gap: 1.5rem;
   max-width: 1020px;
   margin: 0 auto;
-  align-items: start;
+  align-items: stretch;
 }
 
 .plan-card {
