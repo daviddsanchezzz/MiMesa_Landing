@@ -198,6 +198,252 @@ h3 { font-size: 1.125rem; }
   overflow: hidden;
 }
 
+/* Phone mockup — hidden on desktop, shown on mobile */
+.phone-mock { display: none; }
+
+/* ── Phone mock styles ─────────────────────────────────────── */
+.phone-mock {
+  background: #f3f4f6;
+  border-radius: 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.16), 0 0 0 1px rgba(0,0,0,.07);
+  overflow: hidden;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+  font-size: .82rem;
+}
+
+.pm-topbar {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+.pm-hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 20px;
+  cursor: default;
+}
+.pm-hamburger span {
+  display: block;
+  height: 2px;
+  background: #374151;
+  border-radius: 1px;
+}
+.pm-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 700;
+  font-size: .875rem;
+  flex: 1;
+}
+.pm-logo-icon { line-height: 0; }
+.pm-add-btn {
+  background: var(--primary);
+  color: #fff;
+  border-radius: 20px;
+  padding: 6px 14px;
+  font-size: .75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pm-biz {
+  background: #fff;
+  padding: 14px 16px 6px;
+}
+.pm-biz-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111827;
+}
+.pm-biz-date {
+  font-size: .75rem;
+  color: #9ca3af;
+  margin-top: 2px;
+  text-transform: capitalize;
+}
+
+.pm-tabs {
+  background: #fff;
+  display: flex;
+  gap: 6px;
+  padding: 8px 16px 12px;
+}
+.pm-tab {
+  padding: 7px 16px;
+  border-radius: 20px;
+  font-size: .78rem;
+  font-weight: 500;
+  color: #9ca3af;
+  background: #f3f4f6;
+}
+.pm-tab--active {
+  background: #fff;
+  box-shadow: 0 1px 5px rgba(0,0,0,.13);
+  color: #111827;
+  font-weight: 600;
+}
+
+.pm-section-badge {
+  margin: 8px 16px;
+  display: inline-block;
+  background: #e5e7eb;
+  color: #6b7280;
+  font-size: .72rem;
+  font-weight: 600;
+  padding: 3px 11px;
+  border-radius: 12px;
+}
+
+.pm-day-card {
+  margin: 0 10px 10px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.07);
+  overflow: hidden;
+}
+.pm-day-hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px 8px;
+  font-size: .8rem;
+  color: #111827;
+}
+.pm-day-date { color: #9ca3af; font-weight: 400; }
+.pm-day-count { font-size: .72rem; color: #9ca3af; }
+
+.pm-rsv {
+  display: flex;
+  border-top: 1px solid #f3f4f6;
+}
+.pm-rsv-bar {
+  width: 4px;
+  background: var(--primary);
+  flex-shrink: 0;
+}
+.pm-rsv-body { flex: 1; }
+.pm-rsv-main {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px 10px 10px;
+}
+.pm-rsv-time {
+  font-size: .9rem;
+  font-weight: 700;
+  color: #111827;
+  width: 38px;
+  flex-shrink: 0;
+  padding-top: 1px;
+}
+.pm-rsv-info { flex: 1; }
+.pm-rsv-name {
+  font-size: .85rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 4px;
+}
+.pm-rsv-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.pm-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #6b7280;
+  font-size: .72rem;
+}
+.pm-text-muted { color: #9ca3af; }
+
+.pm-status {
+  font-size: .65rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+.pm-status--confirmed { background: #d1fae5; color: #065f46; }
+
+.pm-mesa-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ede9fe;
+  color: var(--primary);
+  font-size: .6rem;
+  font-weight: 700;
+}
+
+.pm-chevron {
+  color: #9ca3af;
+  font-size: 1.1rem;
+  line-height: 1;
+  margin-top: 1px;
+}
+.pm-chevron--right { font-size: 1rem; margin-top: 3px; }
+
+/* Expanded detail */
+.pm-rsv-detail {
+  padding: 8px 12px 12px calc(10px + 4px + 38px + 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid #f3f4f6;
+}
+.pm-detail-phone {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--primary);
+  font-weight: 600;
+  font-size: .78rem;
+}
+.pm-detail-mesa {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .75rem;
+  color: #6b7280;
+}
+.pm-mesa-tag {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 1px 9px;
+  font-size: .72rem;
+  color: #374151;
+}
+.pm-actions {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin-top: 2px;
+}
+.pm-action {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: .68rem;
+  font-weight: 600;
+  border: 1px solid #e5e7eb;
+  background: #f9fafb;
+  color: #374151;
+  cursor: default;
+}
+.pm-action--noshow { background: #fffbeb; color: #d97706; border-color: #fcd34d; }
+.pm-action--cancel  { background: #fef2f2; color: #dc2626; border-color: #fecaca; }
+
 /* Feature block calendar: clip after Terraza row 2
    topbar≈42 + times≈22 + hdr-interior≈18 + 6rows×32=192 + hdr-terraza≈18 + 2rows×32=64 = 356px */
 .fb-visual .sf-app {
@@ -1421,30 +1667,13 @@ h3 { font-size: 1.125rem; }
   .hero-cta { align-items: center; }
   .hero-sub { text-align: center; }
 
-  /* Mockup: peek del producto con fade en la parte inferior */
+  /* Mockup: ocultar desktop browser, mostrar phone mock */
   .hero-right {
-    display: block;
-    width: 100%;
-    height: 240px;
-    overflow: hidden;
-    position: relative;
-    border-radius: 12px;
+    display: flex;
+    justify-content: center;
   }
-  .hero-right::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 100px;
-    background: linear-gradient(transparent, #fff);
-    pointer-events: none;
-  }
-  .hero-right .sf-browser {
-    transform-origin: top left;
-    transform: scale(0.58);
-    width: calc(100% / 0.58);
-    max-height: none;
-    margin: 0;
-  }
+  .hero-right .sf-browser { display: none; }
+  .phone-mock              { display: block; }
 }
 
 @media (max-width: 768px) {
@@ -1515,13 +1744,7 @@ h3 { font-size: 1.125rem; }
   .hero-bullets { max-width: 100%; }
   .hero-bullets li { font-size: .9rem; }
 
-  .hero-right {
-    height: 200px;
-  }
-  .hero-right .sf-browser {
-    transform: scale(0.48);
-    width: calc(100% / 0.48);
-  }
+  .phone-mock { max-width: 320px; }
 
   .section    { padding: 2.5rem 0; }
   .section-sm { padding: 2rem 0; }
