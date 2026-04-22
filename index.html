@@ -34,9 +34,29 @@
     <div class="nav-actions">
       <a href="#" class="js-login nav-login">Iniciar sesión</a>
       <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
+      <button class="nav-burger" onclick="openMobileNav()" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
 </nav>
+
+<!-- ─── Mobile nav drawer ────────────────────────────────────── -->
+<div id="mobile-nav" class="mobile-nav-overlay" onclick="closeMobileNav()">
+  <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
+    <button class="mobile-nav-close" onclick="closeMobileNav()">✕</button>
+    <ul class="mobile-nav-links">
+      <li><a href="#funciones" onclick="closeMobileNav()">Funciones</a></li>
+      <li><a href="#como-funciona" onclick="closeMobileNav()">Cómo funciona</a></li>
+      <li><a href="#precios" onclick="closeMobileNav()">Precios</a></li>
+      <li><a href="contact.html">Contacto</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <a href="#" class="js-login mobile-nav-login" onclick="closeMobileNav()">Iniciar sesión</a>
+      <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Empezar gratis</a>
+    </div>
+  </div>
+</div>
 
 <!-- ─── Hero ────────────────────────────────────────────────── -->
 <section class="hero">
@@ -753,6 +773,16 @@
   function toggleFaq(btn) {
     const item = btn.closest('.faq-item');
     item.classList.toggle('open');
+  }
+
+  function openMobileNav() {
+    document.getElementById('mobile-nav').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileNav() {
+    document.getElementById('mobile-nav').classList.remove('open');
+    document.body.style.overflow = '';
   }
 
 </script>
