@@ -209,6 +209,13 @@ h3 { font-size: 1.125rem; }
 /* Slightly smaller sidebar in hero context */
 .hero-right .sf-sidebar { width: 130px; }
 
+/* Force button to single line in hero */
+.hero-right .sf-new-rsv-btn {
+  white-space: nowrap;
+  font-size: .64rem;
+  padding: 6px 8px;
+}
+
 
 .hero-badge {
   display: inline-flex;
@@ -2422,3 +2429,11 @@ h3 { font-size: 1.125rem; }
   color: #059669;
   font-weight: 400;
 }
+
+/* Confirmada variant (purple) */
+.sf-cal-block--purple {
+  background: #ede9fe;
+  border-color: #c4b5fd;
+}
+.sf-cal-block--purple span:first-child { color: #5b21b6; }
+.sf-cal-block--purple .sf-cal-block-time { color: #7c3aed; }
