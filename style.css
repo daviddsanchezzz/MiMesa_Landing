@@ -1140,9 +1140,8 @@ h3 { font-size: 1.125rem; }
   .hero { padding: 3.5rem 0 3rem; }
   .hero-split {
     grid-template-columns: 1fr;
-    gap: 0;
+    gap: 2rem;
   }
-  .hero-right { display: none; }
   .hero-left {
     align-items: center;
     text-align: center;
@@ -1152,7 +1151,6 @@ h3 { font-size: 1.125rem; }
     margin-bottom: 1.25rem;
   }
   .hero-badge { align-self: center; }
-  /* Bullets: container centered, text left-aligned inside */
   .hero-bullets {
     max-width: 400px;
     margin: 0 auto 1.75rem;
@@ -1160,6 +1158,20 @@ h3 { font-size: 1.125rem; }
   }
   .hero-cta { align-items: center; }
   .hero-sub { text-align: center; }
+
+  /* Mockup: show below text, scaled to fit viewport */
+  .hero-right {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero-right .sf-browser {
+    transform-origin: top center;
+    transform: scale(0.72);
+    width: 138%;
+    margin-left: -19%;
+    max-height: 340px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1222,6 +1234,13 @@ h3 { font-size: 1.125rem; }
   .hero-left h1 { font-size: clamp(1.6rem, 8vw, 2rem); }
   .hero-bullets { max-width: 100%; }
   .hero-bullets li { font-size: .9rem; }
+
+  .hero-right .sf-browser {
+    transform: scale(0.58);
+    width: 172%;
+    margin-left: -36%;
+    max-height: 280px;
+  }
 
   .section    { padding: 2.5rem 0; }
   .section-sm { padding: 2rem 0; }
