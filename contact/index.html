@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto — Tableo</title>
+  <title>Contacto — Vetra</title>
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.tableo.app/contact" />
+  <link rel="canonical" href="https://www.vetra.app/contact" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -17,8 +17,8 @@
 <nav class="nav">
   <div class="container nav-inner">
     <a href="/" class="nav-logo">
-      <img src="/logo.svg" alt="Tableo" width="28" height="28" />
-      Tableo
+      <img src="/logo.svg" alt="Vetra" width="28" height="28" />
+      Vetra
     </a>
     <ul class="nav-links">
       <li><a href="/#funciones">Funciones</a></li>
@@ -108,7 +108,7 @@
 <footer class="footer">
   <div class="container">
     <div class="footer-bottom" style="border-top:none; padding-top:0;">
-      <span>© <span id="year"></span> Tableo. Todos los derechos reservados.</span>
+      <span>© <span id="year"></span> Vetra. Todos los derechos reservados.</span>
       <div class="footer-legal">
         <a href="/privacy">Privacidad</a>
         <a href="/terms">Términos</a>
@@ -120,10 +120,10 @@
 </footer>
 
 <script>
-  var TABLEO_API = 'https://mimesa-backend.onrender.com';
-  var TABLEO_APP = 'http://app.tableo.app';
-  document.querySelectorAll('.js-register').forEach(function(el){ el.href = TABLEO_APP + '/register'; });
-  document.querySelectorAll('.js-login').forEach(function(el){ el.href = TABLEO_APP + '/login'; });
+  var VETRA_API = 'https://mimesa-backend.onrender.com';
+  var VETRA_APP = 'http://app.vetra.app';
+  document.querySelectorAll('.js-register').forEach(function(el){ el.href = VETRA_APP + '/register'; });
+  document.querySelectorAll('.js-login').forEach(function(el){ el.href = VETRA_APP + '/login'; });
   document.getElementById('year').textContent = new Date().getFullYear();
 
   document.getElementById('contact-form').addEventListener('submit', async function (e) {
@@ -150,7 +150,7 @@
     submitBtn.textContent = 'Enviando...';
 
     try {
-      var res = await fetch(TABLEO_API + '/api/contact', {
+      var res = await fetch(VETRA_API + '/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, subject, message }),
