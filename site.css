@@ -213,7 +213,13 @@ body.menu-open .nav { backdrop-filter: none; -webkit-backdrop-filter: none; back
 }
 
 /* ── Pricing ─────────────────────────────── */
+.sector-tabs { display: flex; width: fit-content; max-width: 100%; margin: 0 auto 28px; padding: 4px; gap: 4px; background: var(--violet-50); border: 1px solid var(--violet-100); border-radius: 14px; }
+.sector-tabs button { appearance: none; border: 0; background: transparent; color: var(--muted); font: inherit; font-weight: 600; font-size: .95rem; padding: .6rem 1.1rem; border-radius: 10px; cursor: pointer; transition: background-color .2s var(--ease-out), color .2s var(--ease-out); }
+.sector-tabs button[aria-selected="true"] { background: #fff; color: var(--ink); box-shadow: 0 1px 2px rgba(22, 18, 31, .08), 0 0 0 1px var(--line); }
+.sector-tabs button:active { transform: scale(.97); }
+@media (prefers-reduced-motion: reduce) { .sector-tabs button { transition: none; } .sector-tabs button:active { transform: none; } }
 .plans { display: grid; gap: 16px; max-width: 760px; margin: 0 auto; }
+.plans[hidden] { display: none; }
 .plan { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-lg); padding: 28px 24px 24px; display: flex; flex-direction: column; }
 .plan h3 { font-size: 1.1rem; font-weight: 600; display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
 .plan-flag { font-size: .75rem; font-weight: 600; color: var(--violet); background: var(--violet-50); border: 1px solid var(--violet-line); padding: 2px 8px; border-radius: 6px; letter-spacing: 0; }

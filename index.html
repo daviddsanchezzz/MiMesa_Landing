@@ -298,6 +298,7 @@
         <li><b>Pagos por adelantado</b> para cenas especiales, shows y eventos.</li>
         <li><b>Personal y finanzas</b>: turnos del equipo, gastos y caja diaria.</li>
       </ul>
+      <p><a href="#precios-restaurante">Ver precios para restaurantes</a></p>
     </div>
     <div class="stack">
       <figure class="shot shot-card">
@@ -376,7 +377,12 @@
       <h2>Precios sin comisiones por reserva ni permanencia</h2>
       <p class="section-lead">Precio por negocio y mes. Pruébalo 14 días gratis, sin tarjeta; luego eliges plan. Cancela cuando quieras.</p>
     </div>
-    <div class="plans">
+    <div class="sector-tabs" role="tablist" aria-label="Tipo de negocio">
+      <button type="button" role="tab" id="tab-citas" aria-selected="true" aria-controls="precios-citas" data-sector="citas">Negocio con citas</button>
+      <button type="button" role="tab" id="tab-restaurante" aria-selected="false" aria-controls="precios-restaurante" data-sector="restaurante" tabindex="-1">Restaurante</button>
+    </div>
+
+    <div class="plans" id="precios-citas" role="tabpanel" aria-labelledby="tab-citas">
       <article class="plan">
         <div class="plan-top">
           <h3>Basic</h3>
@@ -385,7 +391,7 @@
         </div>
         <ul>
           <li>1 profesional</li>
-          <li>Citas, reservas y clientes ilimitados</li>
+          <li>Citas y clientes ilimitados</li>
           <li>Página de reservas online con tu marca</li>
           <li>Recordatorios automáticos por email</li>
           <li>Tus clientes cambian o cancelan su cita solos</li>
@@ -408,7 +414,43 @@
           <li>Reseñas de Google pedidas automáticamente</li>
           <li>Estadísticas por profesional</li>
           <li>Roles y permisos del equipo</li>
-          <li>En restaurantes: cobro por adelantado y por no presentarse</li>
+        </ul>
+        <a href="#acceso" class="btn btn-primary js-plan" data-plan="Pro">Solicitar acceso</a>
+      </article>
+    </div>
+
+    <div class="plans" id="precios-restaurante" role="tabpanel" aria-labelledby="tab-restaurante" hidden>
+      <article class="plan">
+        <div class="plan-top">
+          <h3>Basic</h3>
+          <p class="price"><b>24,99 €</b><span>/ mes + IVA</span></p>
+          <p class="plan-for">Para recibir reservas a diario sin límites.</p>
+        </div>
+        <ul>
+          <li>Reservas ilimitadas</li>
+          <li>Salas, mesas y turnos ilimitados</li>
+          <li>Página de reservas online con tu marca</li>
+          <li>Reserva dentro de tu web</li>
+          <li>Emails de confirmación y cancelación</li>
+          <li>Aprobación manual de solicitudes</li>
+          <li>Ficha de clientes y control de no presentados</li>
+        </ul>
+        <a href="#acceso" class="btn btn-outline js-plan" data-plan="Basic">Solicitar acceso</a>
+      </article>
+      <article class="plan plan-pro">
+        <div class="plan-top">
+          <h3>Pro <span class="plan-flag">El más completo</span></h3>
+          <p class="price"><b>39,99 €</b><span>/ mes + IVA</span></p>
+          <p class="plan-for">Para llenar mesas y que no te dejen plantado.</p>
+        </div>
+        <ul>
+          <li><b>Todo lo de Basic</b></li>
+          <li>Recordatorios automáticos antes de la reserva</li>
+          <li>Señal o garantía con tarjeta contra los que no se presentan</li>
+          <li>Campañas de email y códigos promocionales</li>
+          <li>Estadísticas avanzadas</li>
+          <li>Personal, turnos y finanzas</li>
+          <li>Equipo con roles</li>
         </ul>
         <a href="#acceso" class="btn btn-primary js-plan" data-plan="Pro">Solicitar acceso</a>
       </article>
@@ -548,6 +590,35 @@
 </footer>
 
 <script>
+  // Pricing: "Negocio con citas" / "Restaurante" tabs (arrow keys move between them)
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll('.sector-tabs [role=tab]'));
+    if (!tabs.length) return;
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        t.tabIndex = on ? 0 : -1;
+        document.getElementById(t.getAttribute('aria-controls')).hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (t, i) {
+      t.addEventListener('click', function () { select(t); });
+      t.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          select(tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length], true);
+        }
+      });
+    });
+    // Visitors coming from the restaurant section or a link with #precios-restaurante
+    function toRestaurant() { select(tabs[1]); document.getElementById('precios').scrollIntoView({ behavior: 'smooth' }); }
+    document.querySelectorAll('a[href="#precios-restaurante"]').forEach(function (a) {
+      a.addEventListener('click', function (e) { e.preventDefault(); history.replaceState(null, '', '#precios-restaurante'); toRestaurant(); });
+    });
+    if (location.hash === '#precios-restaurante') toRestaurant();
+  })();
 (function () {
   var API = 'https://api.vetrareserve.com';
 
