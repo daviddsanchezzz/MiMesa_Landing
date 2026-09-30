@@ -3,29 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vetra — Reservas, agenda y clientes para restaurantes y negocios con cita</title>
+  <title>Vetra | Reservas, agenda y clientes para restaurantes y negocios con cita</title>
   <meta name="description" content="Software de reservas y agenda para restaurantes, peluquerías, centros de estética y cualquier negocio que trabaje con cita. Reserva online con tu marca, recordatorios, clientes y caja. Sin comisiones por reserva." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://vetrareserve.com/" />
-  <meta name="theme-color" content="#7c3aed" />
+  <meta name="theme-color" content="#ffffff" />
 
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vetrareserve.com/" />
   <meta property="og:site_name" content="Vetra" />
-  <meta property="og:title" content="Vetra — Reservas, agenda y clientes en un solo sitio" />
+  <meta property="og:title" content="Vetra | Reservas, agenda y clientes en un solo sitio" />
   <meta property="og:description" content="Para restaurantes y negocios con cita. Reserva online con tu marca, recordatorios y clientes. Sin comisiones por reserva." />
   <meta property="og:image" content="https://vetrareserve.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vetra — Reservas, agenda y clientes en un solo sitio" />
+  <meta name="twitter:title" content="Vetra | Reservas, agenda y clientes en un solo sitio" />
   <meta name="twitter:description" content="Para restaurantes y negocios con cita. Sin comisiones por reserva." />
   <meta name="twitter:image" content="https://vetrareserve.com/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="/img/agenda-dia.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="/site.css" />
   <link rel="icon" href="/logo.svg" />
 
@@ -47,12 +48,12 @@
   </script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 
-<!-- ───────────────────────── Navigation ───────────────────────── -->
-<header class="nav" id="top">
+<header class="nav">
   <div class="wrap nav-inner">
     <a href="/" class="brand" aria-label="Vetra, inicio">
-      <img src="/logo.svg" alt="" width="30" height="30" />
+      <img src="/logo.svg" alt="" width="28" height="28" />
       <span>Vetra</span>
     </a>
     <nav class="nav-links" aria-label="Principal">
@@ -79,309 +80,165 @@
   </div>
 </header>
 
-<main>
+<main id="main">
 
-<!-- ───────────────────────── Hero ───────────────────────── -->
+<!-- Hero: the promise, then the real product -->
 <section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow">Para restaurantes y negocios con cita</p>
-      <h1>Reservas, agenda y clientes. <span class="grad">En un solo sitio.</span></h1>
-      <p class="lead">
-        Vetra es el programa con el que restaurantes, peluquerías, centros de estética y cualquier negocio que trabaje con cita
-        llenan su agenda sin comisiones por reserva, sin papel y sin perseguir a nadie por WhatsApp.
-      </p>
-      <div class="hero-ctas">
-        <a href="#acceso" class="btn btn-primary btn-lg">Solicitar acceso</a>
-        <a href="#como-empezar" class="btn btn-ghost btn-lg">Cómo empezar</a>
-      </div>
-      <ul class="hero-points">
-        <li>Sin comisiones por reserva</li>
-        <li>Te lo dejamos configurado</li>
-        <li>Desde el móvil o el ordenador</li>
-      </ul>
-    </div>
-
-    <!-- Product: the agenda of one day, coloured by state -->
-    <div class="hero-visual" aria-hidden="true">
-      <div class="browser">
-        <div class="browser-bar"><i></i><i></i><i></i><span>app.vetrareserve.com/agenda</span></div>
-        <div class="app">
-          <div class="app-top">
-            <div>
-              <p class="app-title">Agenda</p>
-              <p class="app-sub">Miércoles, 14 de octubre · 14 citas · 412 €</p>
-            </div>
-            <span class="app-btn">+ Cita</span>
-          </div>
-          <div class="grid-day">
-            <div class="gd-times"><span>9:00</span><span>10:00</span><span>11:00</span><span>12:00</span><span>13:00</span></div>
-            <div class="gd-col">
-              <div class="gd-head"><b class="av" style="background:#7c3aed">M</b>Marta</div>
-              <div class="blk st-paid" style="top:0;height:62px"><b>9:00 · Laia Font</b><span>Corte y color</span></div>
-              <div class="blk st-unpaid" style="top:70px;height:44px"><b>10:15 · Nerea G.</b><span>Peinado</span></div>
-              <div class="blk st-next" style="top:150px;height:58px"><b>11:30 · Clara Puig</b><span>Mechas</span></div>
-              <div class="blk st-other" style="top:218px;height:40px"><b>12:45 · Sergi R.</b><span>Corte hombre</span></div>
-            </div>
-            <div class="gd-col">
-              <div class="gd-head"><b class="av" style="background:#db2777">L</b>Laura</div>
-              <div class="blk st-paid" style="top:20px;height:40px"><b>9:15 · Pol V.</b><span>Barba</span></div>
-              <div class="blk st-lost" style="top:70px;height:40px"><b>10:15 · Iván M.</b><span>Corte hombre</span></div>
-              <div class="blk st-away" style="top:118px;height:140px"><b>Ausente</b><span>Formación</span></div>
-            </div>
-            <div class="gd-col hide-sm">
-              <div class="gd-head"><b class="av" style="background:#0891b2">P</b>Pau</div>
-              <div class="blk st-paid" style="top:40px;height:58px"><b>9:30 · Anna R.</b><span>Tratamiento facial</span></div>
-              <div class="blk st-other" style="top:150px;height:40px"><b>11:30 · Joan C.</b><span>Masaje 30 min</span></div>
-              <div class="blk st-pending" style="top:200px;height:58px"><b>12:15 · Marta V.</b><span>Por confirmar</span></div>
-            </div>
-            <div class="gd-now" style="top:132px"></div>
-          </div>
-          <div class="legend">
-            <span><i style="background:#7c3aed"></i>Siguiente</span>
-            <span><i style="background:#10b981"></i>Cobrada</span>
-            <span><i style="background:#f59e0b"></i>Sin cobrar</span>
-            <span><i style="background:#f43f5e"></i>No vino</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- The customer's side: the public booking page on a phone -->
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="bp-head">
-            <b class="bp-logo">E</b>
-            <div><p class="bp-name">Estudio Marta</p><p class="bp-sub">Reserva tu cita</p></div>
-          </div>
-          <p class="bp-label">Servicio</p>
-          <div class="bp-service sel"><span>Corte y color</span><em>75 min · 55 €</em></div>
-          <div class="bp-service"><span>Corte mujer</span><em>45 min · 28 €</em></div>
-          <p class="bp-label">Jueves 15</p>
-          <div class="bp-slots"><span>10:00</span><span class="sel">10:30</span><span>11:45</span><span>16:00</span><span>17:15</span><span>18:30</span></div>
-          <span class="bp-cta">Confirmar cita</span>
-        </div>
-      </div>
+  <div class="wrap hero-copy">
+    <h1>Reservas, agenda y clientes <span>en un solo sitio.</span></h1>
+    <p class="lead">Para restaurantes y negocios con cita. Tus clientes reservan online con tu marca y tú lo llevas todo desde el móvil.</p>
+    <div class="hero-ctas">
+      <a href="#acceso" class="btn btn-primary btn-lg">Solicitar acceso</a>
+      <a href="#precios" class="btn btn-ghost btn-lg">Ver precios</a>
     </div>
   </div>
-</section>
-
-<!-- ───────────────────────── Who it's for ───────────────────────── -->
-<section class="sectors-strip" aria-label="Para quién es Vetra">
-  <div class="wrap">
-    <p>Pensado para</p>
-    <ul>
-      <li>Restaurantes</li>
-      <li>Peluquerías y barberías</li>
-      <li>Centros de estética</li>
-      <li>Uñas y pestañas</li>
-      <li>Fisioterapia y masajes</li>
-      <li>Estudios y academias</li>
-    </ul>
+  <div class="wrap hero-stage">
+    <figure class="shot shot-browser">
+      <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+      <img src="/img/agenda-dia.webp" width="1600" height="945" fetchpriority="high"
+           alt="Agenda de Vetra de una peluquería: una columna por profesional y cada cita coloreada según su estado." />
+    </figure>
+    <figure class="shot shot-phone">
+      <img src="/img/reserva-online.webp" width="780" height="1600" fetchpriority="high"
+           alt="Página de reserva online de la peluquería en el móvil: el cliente elige el servicio y ve precio y duración." />
+    </figure>
   </div>
+  <p class="wrap sectors">Pensado para restaurantes, peluquerías y barberías, centros de estética, uñas y pestañas, fisioterapia y masajes, estudios y academias.</p>
 </section>
 
-<!-- ───────────────────────── Appointments ───────────────────────── -->
+<!-- Appointments -->
 <section class="section" id="citas">
   <div class="wrap split">
     <div class="split-copy">
-      <p class="eyebrow">Negocios con cita</p>
-      <h2>La agenda de todo tu equipo, clara de un vistazo</h2>
-      <p class="section-lead">
-        Cada profesional con su columna, cada cita con un color que te dice cómo va: la siguiente, la cobrada, la que falta por cobrar,
-        la que no vino. Sin leyendas raras ni hojas de cálculo.
-      </p>
+      <h2>Negocios con cita: la agenda de todo tu equipo, clara de un vistazo</h2>
+      <p class="section-lead">El color de cada cita te dice cómo va. Lila, la siguiente. Verde, cobrada. Ámbar, atendida sin cobrar. Rojo, no vino.</p>
       <ul class="checks">
         <li><b>Agenda por profesional</b> en vista día, semana o lista, también en el móvil.</li>
-        <li><b>Servicios encadenados</b>: corte + color seguidos, con la misma persona.</li>
-        <li><b>«Cualquiera disponible»</b> reparte las citas según la carga de cada uno.</li>
-        <li><b>Ausencias</b>: cada empleado bloquea su tiempo y mueves sus citas a otro compañero.</li>
-        <li><b>Caja y cierre del día</b>: cobra en efectivo o tarjeta y cuadra al final.</li>
-        <li><b>Cada empleado ve su agenda</b> desde su propio móvil.</li>
+        <li><b>Servicios seguidos</b> con la misma persona: corte y después color.</li>
+        <li><b>Reparto justo</b>: si el cliente elige «Me da igual», la cita va a quien tenga menos trabajo ese día.</li>
+        <li><b>Ausencias</b>: cada empleado bloquea su tiempo y sus citas pasan a un compañero.</li>
+        <li><b>Caja y cierre del día</b> en efectivo o con tarjeta.</li>
       </ul>
     </div>
-    <div class="split-visual" aria-hidden="true">
-      <div class="card-app">
-        <div class="ca-head">
-          <p class="app-title">Hoy</p>
-          <div class="ca-chips"><span class="on">Todo el equipo</span><span>Mi agenda</span></div>
-        </div>
-        <ul class="list-rows">
-          <li><div class="lr-time">9:00<small>9:45</small></div><i style="background:#10b981"></i><div class="lr-main"><b>Laia Font</b><span>Corte y color</span></div><b class="av" style="background:#7c3aed">M</b></li>
-          <li><div class="lr-time">10:15<small>10:45</small></div><i style="background:#f59e0b"></i><div class="lr-main"><b>Nerea Gil</b><span>Peinado</span></div><b class="av" style="background:#7c3aed">M</b></li>
-          <li class="lost"><div class="lr-time">10:15<small>10:45</small></div><i style="background:#f43f5e"></i><div class="lr-main"><b>Iván Martí</b><span>Corte hombre</span></div><b class="av" style="background:#db2777">L</b></li>
-          <li class="next"><div class="lr-time">11:30<small>12:30</small></div><i style="background:#7c3aed"></i><div class="lr-main"><b>Clara Puig</b><span>Mechas</span></div><b class="av" style="background:#7c3aed">M</b></li>
-          <li><div class="lr-time">12:15<small>13:00</small></div><i class="dashed"></i><div class="lr-main"><b>Marta Vidal</b><span>Tratamiento facial · por confirmar</span></div><b class="av" style="background:#0891b2">P</b></li>
-        </ul>
-      </div>
-      <div class="float-note">
-        <b>Te toca volver</b>
-        <span>Hace 6 semanas de tu último corte. ¿Reservamos?</span>
-      </div>
-    </div>
+    <figure class="shot shot-phone shot-phone-lg">
+      <img src="/img/agenda-lista-movil.webp" width="780" height="1688" loading="lazy" decoding="async"
+           alt="Lista de citas del día en el móvil, con una línea de color que indica el estado de cada una." />
+    </figure>
   </div>
-  <div class="wrap mini-grid">
-    <div class="mini">
-      <b>Clientes que vuelven</b>
-      <p>Cuando a alguien le toca repetir, Vetra le manda un email para que reserve. Solo a quien lo aceptó.</p>
+  <div class="wrap trio">
+    <div>
+      <h3>Clientes que vuelven</h3>
+      <p>Cuando a alguien le toca repetir, recibe un email para reservar. Solo quien lo aceptó.</p>
     </div>
-    <div class="mini">
-      <b>Más reseñas en Google</b>
-      <p>Tras la cita, un email amable pidiendo la reseña con tu enlace. Tú decides si activarlo.</p>
+    <div>
+      <h3>Más reseñas en Google</h3>
+      <p>Después de la cita, un email amable con tu enlace de reseñas. Lo activas si quieres.</p>
     </div>
-    <div class="mini">
-      <b>Menos citas perdidas</b>
-      <p>Confirmación con invitación al calendario del cliente y recordatorio antes de la cita.</p>
+    <div>
+      <h3>Menos citas perdidas</h3>
+      <p>Confirmación con la cita lista para su calendario y recordatorio antes de venir.</p>
     </div>
   </div>
 </section>
 
-<!-- ───────────────────────── Restaurants ───────────────────────── -->
+<!-- Restaurants -->
 <section class="section section-tint" id="restaurantes">
   <div class="wrap split reverse">
     <div class="split-copy">
-      <p class="eyebrow">Restaurantes</p>
-      <h2>Tu sala, tus turnos y tus reservas, sin libreta</h2>
-      <p class="section-lead">
-        Vetra nació en un restaurante. Todas las reservas del día ordenadas por turno, con su mesa y su estado,
-        y una página donde tus clientes reservan solos a cualquier hora.
-      </p>
+      <h2>Restaurantes: tu sala, tus turnos y tus reservas, sin libreta</h2>
+      <p class="section-lead">Vetra nació en un restaurante. Todas las reservas del día con su mesa y su estado, y una página donde tus clientes reservan solos a cualquier hora.</p>
       <ul class="checks">
-        <li><b>Reservas por turno</b>: mediodía y noche, con personas, mesa y estado.</li>
-        <li><b>Salas y mesas</b> con capacidades, y plano de sala.</li>
+        <li><b>Reservas por turno</b>, con personas, sala, mesa y estado.</li>
+        <li><b>Plano de sala</b> con lo que está libre, confirmado o sentado.</li>
         <li><b>Aprobación manual</b> para grupos grandes o días especiales.</li>
         <li><b>Pagos por adelantado</b> para cenas especiales, shows y eventos.</li>
-        <li><b>Campañas y códigos promo</b> a quien aceptó recibirlos.</li>
         <li><b>Personal y finanzas</b>: turnos del equipo, gastos y caja diaria.</li>
       </ul>
     </div>
-    <div class="split-visual" aria-hidden="true">
-      <div class="card-app">
-        <div class="ca-head">
-          <p class="app-title">Reservas · sábado</p>
-          <p class="app-sub">9 reservas · 34 personas</p>
-        </div>
-        <p class="shift">Mediodía <span>3 reservas · 11 pax</span></p>
-        <ul class="res-rows">
-          <li><span class="rt">13:30</span><div><b>Pedro Gómez</b><small>Terraza · mesa 7</small></div><span class="pax">4</span><span class="pill p-seated">Sentada</span></li>
-          <li><span class="rt">14:00</span><div><b>Albert Nasarre</b><small>Interior · mesa 12</small></div><span class="pax">6</span><span class="pill p-conf">Confirmada</span></li>
-          <li><span class="rt">14:30</span><div><b>Sara Puig</b><small>Terraza · sin mesa</small></div><span class="pax">1</span><span class="pill p-pend">Pendiente</span></li>
-        </ul>
-        <p class="shift">Noche <span>6 reservas · 23 pax</span></p>
-        <ul class="res-rows">
-          <li><span class="rt">20:30</span><div><b>Lucía Mas</b><small>Interior · mesa 4</small></div><span class="pax">2</span><span class="pill p-conf">Confirmada</span></li>
-          <li><span class="rt">21:00</span><div><b>Cumpleaños Elsa</b><small>Terraza · mesas 1-2</small></div><span class="pax">13</span><span class="pill p-paid">Pagada</span></li>
-        </ul>
-      </div>
+    <div class="stack">
+      <figure class="shot shot-card">
+        <img src="/img/restaurante-reservas.webp" width="1600" height="719" loading="lazy" decoding="async"
+             alt="Reservas del día de un restaurante con hora, personas, sala, mesa y estado de cada una." />
+      </figure>
+      <figure class="shot shot-card shot-float">
+        <img src="/img/restaurante-plano.webp" width="900" height="538" loading="lazy" decoding="async"
+             alt="Plano de sala con las mesas y su ocupación." />
+      </figure>
     </div>
   </div>
 </section>
 
-<!-- ───────────────────────── Shared features ───────────────────────── -->
+<!-- What both get -->
 <section class="section" id="funciones">
-  <div class="wrap">
-    <div class="section-head">
-      <p class="eyebrow">Para todos</p>
-      <h2>Lo que necesita cualquier negocio que vive de sus reservas</h2>
-    </div>
-    <div class="features">
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
-        </span>
-        <h3>Reserva online con tu marca</h3>
-        <p>Tu página con tu logo y tus colores. Tus clientes reservan en 30 segundos, sin crear cuenta ni descargar nada. La enlazas en Instagram, Google o tu web.</p>
-      </article>
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
-        </span>
-        <h3>Emails que parecen tuyos</h3>
-        <p>Confirmación, cambios y cancelaciones con el nombre de tu negocio, un diseño cuidado y la cita lista para añadir al calendario del cliente.</p>
-      </article>
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
-        </span>
-        <h3>Clientes con historial</h3>
-        <p>Quién viene, cada cuánto, qué se hace y cuánto gasta. Las notas de cada cliente, a mano cuando las necesitas.</p>
-      </article>
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
-        </span>
-        <h3>Equipo con permisos</h3>
-        <p>Propietario, encargado y personal. Cada uno ve lo que le toca, y cada profesional su propia agenda.</p>
-      </article>
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
-        </span>
-        <h3>Tus números del día</h3>
-        <p>Previsto, cobrado, ocupación y lo que llega por la reserva online, en el panel de inicio.</p>
-      </article>
-      <article class="feature">
-        <span class="f-ico">
-          <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
-        </span>
-        <h3>RGPD de serie</h3>
-        <p>Consentimiento guardado con fecha y texto, baja con un clic en cada email y contrato de encargado del tratamiento incluido.</p>
-      </article>
-    </div>
+  <div class="wrap shared">
+    <h2>Lo que tienen los dos</h2>
+    <dl class="shared-list">
+      <div>
+        <dt>Reserva online con tu marca</dt>
+        <dd>Tu logo y tus colores. Reservan en treinta segundos, sin crear cuenta, y lo enlazas en Instagram, Google o tu web.</dd>
+      </div>
+      <div>
+        <dt>Emails que parecen tuyos</dt>
+        <dd>Confirmaciones, cambios y cancelaciones con el nombre de tu negocio y la cita lista para el calendario del cliente.</dd>
+      </div>
+      <div>
+        <dt>Clientes con historial</dt>
+        <dd>Quién viene, cada cuánto y qué se hace. Con sus notas a mano cuando las necesitas.</dd>
+      </div>
+      <div>
+        <dt>Equipo con permisos</dt>
+        <dd>Propietario, encargado y personal. Cada uno ve lo suyo, y cada profesional su propia agenda.</dd>
+      </div>
+      <div>
+        <dt>Tus números del día</dt>
+        <dd>Previsto, cobrado, ocupación y lo que entra por la reserva online, en el panel de inicio.</dd>
+      </div>
+      <div>
+        <dt>RGPD de serie</dt>
+        <dd>Consentimiento guardado con fecha y texto, baja con un clic y contrato de encargado del tratamiento.</dd>
+      </div>
+    </dl>
   </div>
 </section>
 
-<!-- ───────────────────────── Stats band ───────────────────────── -->
-<section class="band" aria-label="Vetra en cifras">
-  <div class="wrap band-grid">
-    <div><b>0 €</b><span>de comisión por reserva</span></div>
-    <div><b>24 h</b><span>reservando solos, también de noche</span></div>
-    <div><b>Tu marca</b><span>en tu página de reservas y en cada email</span></div>
-    <div><b>Sin app</b><span>funciona en el navegador del móvil y del ordenador</span></div>
-  </div>
-</section>
-
-<!-- ───────────────────────── How to start ───────────────────────── -->
-<section class="section" id="como-empezar">
+<!-- How to start -->
+<section class="section section-tint" id="como-empezar">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Cómo empezar</p>
       <h2>Tú nos cuentas tu negocio. Nosotros te lo dejamos listo.</h2>
-      <p class="section-lead">Sin instalaciones y sin pasarte una tarde configurando.</p>
+      <p class="section-lead">Sin instalar nada y sin pasarte una tarde configurando.</p>
     </div>
     <ol class="steps">
       <li>
-        <span class="step-n">1</span>
         <h3>Solicita acceso</h3>
         <p>Rellena el formulario de abajo. Te escribimos en menos de 24 horas laborables.</p>
       </li>
       <li>
-        <span class="step-n">2</span>
         <h3>Te lo preparamos</h3>
         <p>Creamos tu negocio con tus servicios, profesionales y horarios, o tus salas, mesas y turnos.</p>
       </li>
       <li>
-        <span class="step-n">3</span>
         <h3>Activas y compartes</h3>
-        <p>Te llega un email para activar tu cuenta. Pones tu enlace de reservas donde quieras y a trabajar.</p>
+        <p>Activas tu cuenta desde el email, pones tu enlace de reservas donde quieras y a trabajar.</p>
       </li>
     </ol>
   </div>
 </section>
 
-<!-- ───────────────────────── Pricing ───────────────────────── -->
-<section class="section section-tint" id="precios">
+<!-- Pricing -->
+<section class="section" id="precios">
   <div class="wrap">
     <div class="section-head">
-      <p class="eyebrow">Precios</p>
       <h2>Sin comisiones por reserva. Sin permanencia.</h2>
       <p class="section-lead">Precio por negocio y mes. Cambia de plan o cancela cuando quieras.</p>
     </div>
     <div class="plans">
       <article class="plan">
-        <h3>Free</h3>
-        <p class="price"><b>0 €</b><span>/ mes</span></p>
-        <p class="plan-for">Para probar Vetra sin compromiso.</p>
+        <div class="plan-top">
+          <h3>Free</h3>
+          <p class="price"><b>0 €</b><span>/ mes</span></p>
+          <p class="plan-for">Para probar Vetra sin compromiso.</p>
+        </div>
         <ul>
           <li>Página de reservas online</li>
           <li>Hasta 30 reservas al mes</li>
@@ -391,9 +248,11 @@
         <a href="#acceso" class="btn btn-outline js-plan" data-plan="Free">Solicitar acceso</a>
       </article>
       <article class="plan">
-        <h3>Basic</h3>
-        <p class="price"><b>19 €</b><span>/ mes</span></p>
-        <p class="plan-for">Para trabajar a diario sin límites.</p>
+        <div class="plan-top">
+          <h3>Basic</h3>
+          <p class="price"><b>19 €</b><span>/ mes</span></p>
+          <p class="plan-for">Para trabajar a diario sin límites.</p>
+        </div>
         <ul>
           <li>Reservas y citas ilimitadas</li>
           <li>Emails automáticos a tus clientes</li>
@@ -406,10 +265,11 @@
         <a href="#acceso" class="btn btn-outline js-plan" data-plan="Basic">Solicitar acceso</a>
       </article>
       <article class="plan plan-pro">
-        <span class="plan-badge">El más completo</span>
-        <h3>Pro</h3>
-        <p class="price"><b>39 €</b><span>/ mes</span></p>
-        <p class="plan-for">Para negocios con equipo que quieren crecer.</p>
+        <div class="plan-top">
+          <h3>Pro <span class="plan-flag">El más completo</span></h3>
+          <p class="price"><b>39 €</b><span>/ mes</span></p>
+          <p class="plan-for">Para negocios con equipo que quieren crecer.</p>
+        </div>
         <ul>
           <li><b>Todo lo de Basic</b></li>
           <li>Equipo y usuarios ilimitados</li>
@@ -423,15 +283,14 @@
         <a href="#acceso" class="btn btn-primary js-plan" data-plan="Pro">Solicitar acceso</a>
       </article>
     </div>
-    <p class="plans-note">Basic y Pro incluyen 14 días de prueba. ¿Tienes varios locales o necesitas algo a medida? <a href="#acceso">Escríbenos</a>.</p>
+    <p class="plans-note">Basic y Pro incluyen 14 días de prueba. ¿Varios locales o algo a medida? <a href="#acceso">Escríbenos</a>.</p>
   </div>
 </section>
 
-<!-- ───────────────────────── FAQ ───────────────────────── -->
-<section class="section" id="faq">
+<!-- FAQ -->
+<section class="section section-tint" id="faq">
   <div class="wrap faq-wrap">
-    <div class="section-head left">
-      <p class="eyebrow">Preguntas</p>
+    <div>
       <h2>Preguntas frecuentes</h2>
       <p class="section-lead">¿No encuentras la tuya? <a href="/contact">Escríbenos</a>.</p>
     </div>
@@ -442,11 +301,11 @@
       </details>
       <details>
         <summary>¿Sirve para mi tipo de negocio?</summary>
-        <p>Si trabajas con reservas o citas, casi seguro que sí: restaurantes, peluquerías, barberías, estética, uñas, fisioterapia, masajes, estudios… Si tienes dudas, cuéntanos cómo trabajas en el formulario.</p>
+        <p>Si trabajas con reservas o citas, casi seguro que sí: restaurantes, peluquerías, barberías, estética, uñas, fisioterapia, masajes, estudios. Si tienes dudas, cuéntanos cómo trabajas en el formulario.</p>
       </details>
       <details>
         <summary>¿Necesito instalar algo?</summary>
-        <p>No. Vetra funciona en el navegador del ordenador, la tablet y el móvil. Si quieres, la puedes añadir a la pantalla de inicio del móvil como una app más.</p>
+        <p>No. Vetra funciona en el navegador del ordenador, la tablet y el móvil. Si quieres, la añades a la pantalla de inicio del móvil como una app más.</p>
       </details>
       <details>
         <summary>¿Mis clientes tienen que crearse una cuenta?</summary>
@@ -472,14 +331,13 @@
   </div>
 </section>
 
-<!-- ───────────────────────── Request access ───────────────────────── -->
+<!-- Request access -->
 <section class="section access" id="acceso">
   <div class="wrap access-grid">
     <div class="access-copy">
-      <p class="eyebrow light">Solicitar acceso</p>
       <h2>Cuéntanos tu negocio y te lo dejamos listo</h2>
-      <p>Te respondemos en menos de 24 horas laborables para ver qué necesitas y preparar tu cuenta.</p>
-      <ul class="access-points">
+      <p class="section-lead">Te respondemos en menos de 24 horas laborables para ver qué necesitas y preparar tu cuenta.</p>
+      <ul class="checks">
         <li>Sin compromiso</li>
         <li>Configuración incluida</li>
         <li>Te ayudamos a pasar tus clientes y reservas</li>
@@ -517,7 +375,7 @@
           <label>Teléfono <span class="opt">(opcional)</span><input name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="600 00 00 00" /></label>
         </div>
         <label>¿Algo que debamos saber? <span class="opt">(opcional)</span>
-          <textarea name="message" rows="3" maxlength="2000" placeholder="Cuántas personas sois, qué usáis ahora, qué te gustaría mejorar…"></textarea>
+          <textarea name="message" rows="3" maxlength="2000" placeholder="Cuántas personas sois, qué usáis ahora, qué te gustaría mejorar"></textarea>
         </label>
         <label class="consent">
           <input type="checkbox" name="consent" required />
@@ -526,11 +384,11 @@
         <p class="form-error" id="access-error" role="alert" hidden></p>
         <button type="submit" class="btn btn-primary btn-lg btn-block" id="access-submit">Enviar solicitud</button>
       </div>
-      <div class="form-ok" id="access-ok" hidden>
-        <span class="ok-ico">
+      <div class="form-ok" id="access-ok" hidden tabindex="-1">
+        <span class="ok-ico" aria-hidden="true">
           <svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>
         </span>
-        <h3>¡Recibido!</h3>
+        <h3>Solicitud recibida</h3>
         <p>Te escribimos en menos de 24 horas laborables al email que nos has dejado.</p>
       </div>
     </form>
@@ -539,36 +397,25 @@
 
 </main>
 
-<!-- ───────────────────────── Footer ───────────────────────── -->
 <footer class="footer">
   <div class="wrap footer-grid">
     <div>
-      <a href="/" class="brand"><img src="/logo.svg" alt="" width="26" height="26" /><span>Vetra</span></a>
+      <a href="/" class="brand"><img src="/logo.svg" alt="" width="24" height="24" /><span>Vetra</span></a>
       <p class="footer-tag">Reservas, agenda y clientes para restaurantes y negocios con cita.</p>
     </div>
-    <nav aria-label="Producto">
-      <p>Producto</p>
-      <a href="#citas">Negocios con cita</a>
-      <a href="#restaurantes">Restaurantes</a>
+    <nav aria-label="Enlaces">
       <a href="#precios">Precios</a>
+      <a href="#faq">Preguntas</a>
+      <a href="/contact">Contacto</a>
       <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
     </nav>
-    <nav aria-label="Ayuda">
-      <p>Ayuda</p>
-      <a href="#faq">Preguntas frecuentes</a>
-      <a href="/contact">Contacto</a>
-      <a href="#acceso">Solicitar acceso</a>
-    </nav>
     <nav aria-label="Legal">
-      <p>Legal</p>
       <a href="/terms">Términos</a>
       <a href="/privacy">Privacidad</a>
       <a href="/cookies">Cookies</a>
     </nav>
   </div>
-  <div class="wrap footer-bottom">
-    <span>© <span id="year">2026</span> Vetra</span>
-  </div>
+  <div class="wrap footer-bottom">© <span id="year">2026</span> Vetra</div>
 </footer>
 
 <script>
@@ -583,13 +430,15 @@
   function setMenu(open) {
     menu.hidden = !open;
     toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
     toggle.classList.toggle('open', open);
     document.body.classList.toggle('menu-open', open);
   }
   toggle.addEventListener('click', function () { setMenu(menu.hidden); });
   menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); } });
 
-  // Nav gets a border once you scroll
+  // Nav gets a hairline once you scroll
   var nav = document.querySelector('.nav');
   function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
   window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
@@ -607,9 +456,9 @@
     e.preventDefault();
     err.hidden = true;
     var v = function (k) { return (form[k].value || '').trim(); };
-    if (!v('name') || !v('business') || !v('email')) { return showError('Rellena tu nombre, el del negocio y tu email.'); }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) { return showError('Revisa el email.'); }
-    if (!form.consent.checked) { return showError('Necesitamos tu permiso para responderte.'); }
+    if (!v('name') || !v('business') || !v('email')) { return showError('Rellena tu nombre, el del negocio y tu email.', !v('name') ? 'name' : !v('business') ? 'business' : 'email'); }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) { return showError('El email no parece correcto. Revisa que tenga @ y dominio.', 'email'); }
+    if (!form.consent.checked) { return showError('Marca la casilla para que podamos responderte.', 'consent'); }
     submit.disabled = true; submit.textContent = 'Enviando…';
     try {
       var res = await fetch(API + '/api/contact', {
@@ -632,16 +481,19 @@
       });
       if (!res.ok) {
         var body = await res.json().catch(function () { return {}; });
-        throw new Error(body.message || 'No se pudo enviar.');
+        throw new Error(body.message || 'No se ha podido enviar.');
       }
       document.getElementById('access-fields').hidden = true;
-      document.getElementById('access-ok').hidden = false;
+      var ok = document.getElementById('access-ok'); ok.hidden = false; ok.focus();
     } catch (ex) {
-      showError((ex && ex.message ? ex.message : 'No se pudo enviar.') + ' Si sigue fallando, escríbenos desde la página de contacto.');
+      showError((ex && ex.message ? ex.message : 'No se ha podido enviar.') + ' Vuelve a intentarlo o escríbenos desde la página de contacto.');
       submit.disabled = false; submit.textContent = 'Enviar solicitud';
     }
   });
-  function showError(msg) { err.textContent = msg; err.hidden = false; }
+  function showError(msg, field) {
+    err.textContent = msg; err.hidden = false;
+    if (field && form[field]) form[field].focus();
+  }
 })();
 </script>
 </body>
