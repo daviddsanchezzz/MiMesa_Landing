@@ -16,8 +16,8 @@
 ## Precios (por negocio y mes)
 
 - Prueba: 14 días de Pro gratis, sin tarjeta. No hay plan gratuito permanente.
-- Basic: 19 €. Reservas y citas ilimitadas, emails automáticos, reserva dentro de la web del negocio, 1 usuario.
-- Pro: 39 €. Todo lo de Basic, equipo ilimitado, recordatorios automáticos, cobros por adelantado, campañas, estadísticas, personal y finanzas.
+- Basic: 24,99 €/mes + IVA. 1 profesional; citas, reservas y clientes ilimitados; página de reservas; recordatorios por email; caja y cobros.
+- Pro: 39,99 €/mes + IVA con 3 profesionales incluidos (+5 €/mes por cada uno más). Todo lo de Basic, agenda por profesional, «te toca volver», reseñas automáticas, estadísticas por profesional, roles; en restaurantes, cobros por adelantado.
 - Sin comisiones por reserva y sin permanencia. Alta mediante solicitud de acceso: https://www.vetrareserve.com/#acceso
 
 ## Contacto
