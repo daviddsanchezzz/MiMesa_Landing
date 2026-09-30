@@ -3,1234 +3,646 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vetra — Software de reservas para restaurantes sin comisiones</title>
-  <meta name="description" content="Software de gestión de reservas para restaurantes. Panel en tiempo real, emails automáticos y página de reservas online. Sin comisiones por reserva. Prueba gratis 14 días." />
+  <title>Vetra — Reservas, agenda y clientes para restaurantes y negocios con cita</title>
+  <meta name="description" content="Software de reservas y agenda para restaurantes, peluquerías, centros de estética y cualquier negocio que trabaje con cita. Reserva online con tu marca, recordatorios, clientes y caja. Sin comisiones por reserva." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://vetrareserve.com/" />
+  <meta name="theme-color" content="#7c3aed" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://vetrareserve.com/" />
   <meta property="og:site_name" content="Vetra" />
-  <meta property="og:title" content="Vetra — Software de reservas para restaurantes" />
-  <meta property="og:description" content="Gestiona reservas, mesas, turnos y emails desde un panel. Sin comisiones por reserva. Prueba 14 días gratis." />
+  <meta property="og:title" content="Vetra — Reservas, agenda y clientes en un solo sitio" />
+  <meta property="og:description" content="Para restaurantes y negocios con cita. Reserva online con tu marca, recordatorios y clientes. Sin comisiones por reserva." />
   <meta property="og:image" content="https://vetrareserve.com/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="es_ES" />
-
-  <!-- Twitter / X -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vetra — Software de reservas para restaurantes" />
-  <meta name="twitter:description" content="Panel en tiempo real, emails automáticos y página de reservas online. Sin comisiones. Listo en 5 minutos." />
+  <meta name="twitter:title" content="Vetra — Reservas, agenda y clientes en un solo sitio" />
+  <meta name="twitter:description" content="Para restaurantes y negocios con cita. Sin comisiones por reserva." />
   <meta name="twitter:image" content="https://vetrareserve.com/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo.svg" />
+  <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" href="/logo.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Vetra",
+    "url": "https://vetrareserve.com/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Reservas, agenda, clientes y caja para restaurantes y negocios con cita.",
+    "offers": [
+      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Basic", "price": "19", "priceCurrency": "EUR" },
+      { "@type": "Offer", "name": "Pro", "price": "39", "priceCurrency": "EUR" }
+    ]
+  }
+  </script>
 </head>
 <body>
 
-<!-- --- Navigation -------------------------------------------- -->
-<nav class="nav" aria-label="Navegación principal">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">
-      <img src="logo.svg" alt="Vetra" width="28" height="28" />
-      Vetra
+<!-- ───────────────────────── Navigation ───────────────────────── -->
+<header class="nav" id="top">
+  <div class="wrap nav-inner">
+    <a href="/" class="brand" aria-label="Vetra, inicio">
+      <img src="/logo.svg" alt="" width="30" height="30" />
+      <span>Vetra</span>
     </a>
-
-    <ul class="nav-links">
-      <li><a href="#funciones">Funciones</a></li>
-      <li><a href="#como-funciona">Cómo funciona</a></li>
-      <li><a href="#precios">Precios</a></li>
-      <li><a href="/contact">Contacto</a></li>
-    </ul>
-
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#citas">Negocios con cita</a>
+      <a href="#restaurantes">Restaurantes</a>
+      <a href="#precios">Precios</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
     <div class="nav-actions">
-      <a href="#" class="js-login nav-login">Iniciar sesión</a>
-      <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
-      <button class="nav-burger" onclick="openMobileNav()" aria-label="Menú">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="https://app.vetrareserve.com/login" class="link-quiet">Iniciar sesión</a>
+      <a href="#acceso" class="btn btn-primary btn-sm">Solicitar acceso</a>
+    </div>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="#citas">Negocios con cita</a>
+    <a href="#restaurantes">Restaurantes</a>
+    <a href="#precios">Precios</a>
+    <a href="#faq">Preguntas</a>
+    <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    <a href="#acceso" class="btn btn-primary">Solicitar acceso</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ───────────────────────── Hero ───────────────────────── -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Para restaurantes y negocios con cita</p>
+      <h1>Reservas, agenda y clientes. <span class="grad">En un solo sitio.</span></h1>
+      <p class="lead">
+        Vetra es el programa con el que restaurantes, peluquerías, centros de estética y cualquier negocio que trabaje con cita
+        llenan su agenda sin comisiones por reserva, sin papel y sin perseguir a nadie por WhatsApp.
+      </p>
+      <div class="hero-ctas">
+        <a href="#acceso" class="btn btn-primary btn-lg">Solicitar acceso</a>
+        <a href="#como-empezar" class="btn btn-ghost btn-lg">Cómo empezar</a>
+      </div>
+      <ul class="hero-points">
+        <li>Sin comisiones por reserva</li>
+        <li>Te lo dejamos configurado</li>
+        <li>Desde el móvil o el ordenador</li>
+      </ul>
+    </div>
+
+    <!-- Product: the agenda of one day, coloured by state -->
+    <div class="hero-visual" aria-hidden="true">
+      <div class="browser">
+        <div class="browser-bar"><i></i><i></i><i></i><span>app.vetrareserve.com/agenda</span></div>
+        <div class="app">
+          <div class="app-top">
+            <div>
+              <p class="app-title">Agenda</p>
+              <p class="app-sub">Miércoles, 14 de octubre · 14 citas · 412 €</p>
+            </div>
+            <span class="app-btn">+ Cita</span>
+          </div>
+          <div class="grid-day">
+            <div class="gd-times"><span>9:00</span><span>10:00</span><span>11:00</span><span>12:00</span><span>13:00</span></div>
+            <div class="gd-col">
+              <div class="gd-head"><b class="av" style="background:#7c3aed">M</b>Marta</div>
+              <div class="blk st-paid" style="top:0;height:62px"><b>9:00 · Laia Font</b><span>Corte y color</span></div>
+              <div class="blk st-unpaid" style="top:70px;height:44px"><b>10:15 · Nerea G.</b><span>Peinado</span></div>
+              <div class="blk st-next" style="top:150px;height:58px"><b>11:30 · Clara Puig</b><span>Mechas</span></div>
+              <div class="blk st-other" style="top:218px;height:40px"><b>12:45 · Sergi R.</b><span>Corte hombre</span></div>
+            </div>
+            <div class="gd-col">
+              <div class="gd-head"><b class="av" style="background:#db2777">L</b>Laura</div>
+              <div class="blk st-paid" style="top:20px;height:40px"><b>9:15 · Pol V.</b><span>Barba</span></div>
+              <div class="blk st-lost" style="top:70px;height:40px"><b>10:15 · Iván M.</b><span>Corte hombre</span></div>
+              <div class="blk st-away" style="top:118px;height:140px"><b>Ausente</b><span>Formación</span></div>
+            </div>
+            <div class="gd-col hide-sm">
+              <div class="gd-head"><b class="av" style="background:#0891b2">P</b>Pau</div>
+              <div class="blk st-paid" style="top:40px;height:58px"><b>9:30 · Anna R.</b><span>Tratamiento facial</span></div>
+              <div class="blk st-other" style="top:150px;height:40px"><b>11:30 · Joan C.</b><span>Masaje 30 min</span></div>
+              <div class="blk st-pending" style="top:200px;height:58px"><b>12:15 · Marta V.</b><span>Por confirmar</span></div>
+            </div>
+            <div class="gd-now" style="top:132px"></div>
+          </div>
+          <div class="legend">
+            <span><i style="background:#7c3aed"></i>Siguiente</span>
+            <span><i style="background:#10b981"></i>Cobrada</span>
+            <span><i style="background:#f59e0b"></i>Sin cobrar</span>
+            <span><i style="background:#f43f5e"></i>No vino</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- The customer's side: the public booking page on a phone -->
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="bp-head">
+            <b class="bp-logo">E</b>
+            <div><p class="bp-name">Estudio Marta</p><p class="bp-sub">Reserva tu cita</p></div>
+          </div>
+          <p class="bp-label">Servicio</p>
+          <div class="bp-service sel"><span>Corte y color</span><em>75 min · 55 €</em></div>
+          <div class="bp-service"><span>Corte mujer</span><em>45 min · 28 €</em></div>
+          <p class="bp-label">Jueves 15</p>
+          <div class="bp-slots"><span>10:00</span><span class="sel">10:30</span><span>11:45</span><span>16:00</span><span>17:15</span><span>18:30</span></div>
+          <span class="bp-cta">Confirmar cita</span>
+        </div>
+      </div>
     </div>
   </div>
-</nav>
+</section>
 
-<!-- --- Mobile nav drawer -------------------------------------- -->
-<div id="mobile-nav" class="mobile-nav-overlay" onclick="closeMobileNav()">
-  <div class="mobile-nav-drawer" onclick="event.stopPropagation()">
-    <button class="mobile-nav-close" onclick="closeMobileNav()">?</button>
-    <ul class="mobile-nav-links">
-      <li><a href="#funciones" onclick="closeMobileNav()">Funciones</a></li>
-      <li><a href="#como-funciona" onclick="closeMobileNav()">Cómo funciona</a></li>
-      <li><a href="#precios" onclick="closeMobileNav()">Precios</a></li>
-      <li><a href="/contact">Contacto</a></li>
+<!-- ───────────────────────── Who it's for ───────────────────────── -->
+<section class="sectors-strip" aria-label="Para quién es Vetra">
+  <div class="wrap">
+    <p>Pensado para</p>
+    <ul>
+      <li>Restaurantes</li>
+      <li>Peluquerías y barberías</li>
+      <li>Centros de estética</li>
+      <li>Uñas y pestañas</li>
+      <li>Fisioterapia y masajes</li>
+      <li>Estudios y academias</li>
     </ul>
-    <div class="mobile-nav-footer">
-      <a href="#" class="js-login mobile-nav-login" onclick="closeMobileNav()">Iniciar sesión</a>
-      <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Empezar gratis</a>
+  </div>
+</section>
+
+<!-- ───────────────────────── Appointments ───────────────────────── -->
+<section class="section" id="citas">
+  <div class="wrap split">
+    <div class="split-copy">
+      <p class="eyebrow">Negocios con cita</p>
+      <h2>La agenda de todo tu equipo, clara de un vistazo</h2>
+      <p class="section-lead">
+        Cada profesional con su columna, cada cita con un color que te dice cómo va: la siguiente, la cobrada, la que falta por cobrar,
+        la que no vino. Sin leyendas raras ni hojas de cálculo.
+      </p>
+      <ul class="checks">
+        <li><b>Agenda por profesional</b> en vista día, semana o lista, también en el móvil.</li>
+        <li><b>Servicios encadenados</b>: corte + color seguidos, con la misma persona.</li>
+        <li><b>«Cualquiera disponible»</b> reparte las citas según la carga de cada uno.</li>
+        <li><b>Ausencias</b>: cada empleado bloquea su tiempo y mueves sus citas a otro compañero.</li>
+        <li><b>Caja y cierre del día</b>: cobra en efectivo o tarjeta y cuadra al final.</li>
+        <li><b>Cada empleado ve su agenda</b> desde su propio móvil.</li>
+      </ul>
+    </div>
+    <div class="split-visual" aria-hidden="true">
+      <div class="card-app">
+        <div class="ca-head">
+          <p class="app-title">Hoy</p>
+          <div class="ca-chips"><span class="on">Todo el equipo</span><span>Mi agenda</span></div>
+        </div>
+        <ul class="list-rows">
+          <li><div class="lr-time">9:00<small>9:45</small></div><i style="background:#10b981"></i><div class="lr-main"><b>Laia Font</b><span>Corte y color</span></div><b class="av" style="background:#7c3aed">M</b></li>
+          <li><div class="lr-time">10:15<small>10:45</small></div><i style="background:#f59e0b"></i><div class="lr-main"><b>Nerea Gil</b><span>Peinado</span></div><b class="av" style="background:#7c3aed">M</b></li>
+          <li class="lost"><div class="lr-time">10:15<small>10:45</small></div><i style="background:#f43f5e"></i><div class="lr-main"><b>Iván Martí</b><span>Corte hombre</span></div><b class="av" style="background:#db2777">L</b></li>
+          <li class="next"><div class="lr-time">11:30<small>12:30</small></div><i style="background:#7c3aed"></i><div class="lr-main"><b>Clara Puig</b><span>Mechas</span></div><b class="av" style="background:#7c3aed">M</b></li>
+          <li><div class="lr-time">12:15<small>13:00</small></div><i class="dashed"></i><div class="lr-main"><b>Marta Vidal</b><span>Tratamiento facial · por confirmar</span></div><b class="av" style="background:#0891b2">P</b></li>
+        </ul>
+      </div>
+      <div class="float-note">
+        <b>Te toca volver</b>
+        <span>Hace 6 semanas de tu último corte. ¿Reservamos?</span>
+      </div>
     </div>
   </div>
-</div>
-
-<!-- --- Main content ------------------------------------------- -->
-<main id="main-content">
-
-<!-- --- Hero -------------------------------------------------- -->
-<section class="hero" aria-label="Presentación de Vetra">
-  <div class="container">
-    <div class="hero-split">
-
-      <!-- Left: copy -->
-      <div class="hero-left">
-        <h1>Gestión de reservas<br>para tu restaurante</h1>
-        <ul class="hero-bullets">
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Reservas ilimitadas, sin comisiones por reserva
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Emails automáticos, marketing y códigos promo
-          </li>
-          <li>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
-            Listo en 5 minutos, funciona desde el navegador
-          </li>
-        </ul>
-        <div class="hero-cta">
-          <a href="#" class="btn btn-primary btn-lg js-register">
-            Empezar gratis
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          <p class="hero-sub">14 días de Basic gratis · Sin tarjeta · Cancela cuando quieras</p>
-        </div>
-      </div>
-
-      <!-- Right: product mockup -->
-      <div class="hero-right">
-        <div class="sf-browser">
-          <div class="sf-browser-bar">
-            <div class="sf-dot" style="background:#ff5f57"></div>
-            <div class="sf-dot" style="background:#febc2e"></div>
-            <div class="sf-dot" style="background:#28c840"></div>
-            <div class="sf-url">app.vetrareserve.com/reservas</div>
-          </div>
-          <div class="sf-app">
-            <div class="sf-sidebar">
-              <div class="sf-sb-brand">
-                <div class="sf-sb-logo"></div>
-                <div><div class="sf-sb-title">Vetra</div><div class="sf-sb-sub">La Brasserie</div></div>
-              </div>
-              <div class="sf-new-rsv-btn">+ Nueva reserva</div>
-              <div class="sf-sb-section-label">Menú</div>
-              <div class="sf-sb-item">Dashboard</div>
-              <div class="sf-sb-item sf-sb-item--active">Reservas</div>
-              <div class="sf-sb-item">Calendario</div>
-              <div class="sf-sb-item">Clientes</div>
-              <div class="sf-sb-item">Equipo</div>
-              <div class="sf-sb-item">Finanzas</div>
-              <div class="sf-sb-item">Estadísticas</div>
-              <div class="sf-sb-item">Publicidad</div>
-              <div class="sf-sb-bottom">
-                <div class="sf-sb-item">Configuración</div>
-                <div class="sf-sb-user">
-                  <div class="sf-sb-avatar">M</div>
-                  <div><div class="sf-sb-uname">Marc Soler</div><div class="sf-sb-uemail">marc@labrasserie...</div></div>
-                </div>
-              </div>
-            </div>
-            <div class="sf-main">
-              <div class="sf-main-header">
-                <div><div class="sf-main-title">Reservas</div><div class="sf-main-sub">7 reservas · 18/04/2026</div></div>
-                <div class="sf-main-actions">
-                  <div class="sf-select">Día concreto ?</div>
-                  <div class="sf-select">18/04/2026</div>
-                </div>
-              </div>
-              <div class="sf-chips">
-                <div class="sf-chip sf-chip--outline">0 Confirmadas</div>
-                <div class="sf-chip sf-chip--green">6 Sentadas</div>
-                <div class="sf-chip sf-chip--red">1 No show</div>
-                <div class="sf-chip sf-chip--outline">0 Canceladas</div>
-              </div>
-              <div class="sf-shift-block">
-                <div class="sf-shift-header">
-                  <span class="sf-shift-name">Mediodía</span>
-                  <span class="sf-shift-count">1 reserva activa</span>
-                  <span class="sf-shift-pax">?? 6 pax</span>
-                </div>
-                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--amber">P</div><div><div class="sf-cname">Pedro</div><div class="sf-cphone">665 930 365</div></div></div>
-                  <div>13:30</div><div>?? 7</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">—</span></div>
-                  <div><span class="sf-status sf-status--red">No show</span></div><div><span class="sf-actions">Acciones ?</span></div>
-                </div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--teal">A</div><div><div class="sf-cname">Albert Nasarre</div><div class="sf-cphone">678 814 960</div></div></div>
-                  <div>14:00</div><div>?? 6</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">12</span></div>
-                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ?</span></div>
-                </div>
-              </div>
-              <div class="sf-shift-block">
-                <div class="sf-shift-header">
-                  <span class="sf-shift-name">Noche</span>
-                  <span class="sf-shift-count">2 reservas activas</span>
-                  <span class="sf-shift-pax">?? 13 pax</span>
-                </div>
-                <div class="sf-thead"><span>Cliente</span><span>Hora</span><span>Pax</span><span>Sala</span><span>Mesa</span><span>Estado</span><span></span></div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--teal">R</div><div><div class="sf-cname">Ruben</div><div class="sf-cphone">635 821 906</div></div></div>
-                  <div>20:00</div><div>?? 8</div><div><span class="sf-tag">Terraza</span></div><div><span class="sf-mesa-num">9</span></div>
-                  <div><span class="sf-status sf-status--green">Sentada</span></div><div><span class="sf-actions">Acciones ?</span></div>
-                </div>
-                <div class="sf-row">
-                  <div class="sf-client"><div class="sf-avatar sf-avatar--violet">L</div><div><div class="sf-cname">Lucia</div><div class="sf-cphone">629 374 736</div></div></div>
-                  <div>20:30</div><div>?? 5</div><div><span class="sf-tag">Interior</span></div><div><span class="sf-mesa-num">4</span></div>
-                  <div><span class="sf-status sf-status--purple">Confirmada</span></div><div><span class="sf-actions">Acciones ?</span></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Mobile phone mockup (visible only on mobile) -->
-      <div class="phone-mock">
-        <!-- App header -->
-        <div class="pm-topbar">
-          <div class="pm-hamburger"><span></span><span></span><span></span></div>
-          <div class="pm-logo">
-            <div class="pm-logo-icon">
-              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="20" height="20"><circle cx="12" cy="12" r="10" fill="#7c3aed"/><circle cx="9" cy="10" r="1.8" fill="white"/><circle cx="14.5" cy="8.5" r="1.2" fill="white"/><circle cx="14" cy="13.5" r="1.5" fill="white"/></svg>
-            </div>
-            <span>Vetra</span>
-          </div>
-          <div class="pm-add-btn">+ Reserva</div>
-        </div>
-
-        <!-- Restaurant + date -->
-        <div class="pm-biz">
-          <div class="pm-biz-name">Casanita Vilassar</div>
-          <div class="pm-biz-date">Miércoles, 22 De Abril</div>
-        </div>
-
-        <!-- Tabs -->
-        <div class="pm-tabs">
-          <div class="pm-tab">Hoy</div>
-          <div class="pm-tab pm-tab--active">Próximos 7 días</div>
-        </div>
-
-        <!-- Badge -->
-        <div class="pm-section-badge">2 próximos 7d</div>
-
-        <!-- Day card 1: expanded -->
-        <div class="pm-day-card">
-          <div class="pm-day-hdr">
-            <span><strong>Viernes</strong> <span class="pm-day-date">24 abr</span></span>
-            <span class="pm-day-count">1 reserva</span>
-          </div>
-          <div class="pm-rsv pm-rsv--open">
-            <div class="pm-rsv-bar"></div>
-            <div class="pm-rsv-body">
-              <div class="pm-rsv-main">
-                <div class="pm-rsv-time">20:30</div>
-                <div class="pm-rsv-info">
-                  <div class="pm-rsv-name">Oscar</div>
-                  <div class="pm-rsv-meta">
-                    <span class="pm-status pm-status--confirmed">Confirmada</span>
-                    <span class="pm-meta-item">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                      4 pax
-                    </span>
-                    <span class="pm-mesa-pill">7</span>
-                    <span class="pm-meta-item">Terraza</span>
-                  </div>
-                </div>
-                <div class="pm-chevron">&#8964;</div>
-              </div>
-              <div class="pm-rsv-detail">
-                <div class="pm-detail-phone">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.8a16 16 0 0 0 5.66 5.65l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.28 16z"/></svg>
-                  610498463
-                </div>
-                <div class="pm-detail-mesa">Mesa: <span class="pm-mesa-tag">? 7</span></div>
-                <div class="pm-actions">
-                  <button class="pm-action pm-action--noshow">No show</button>
-                  <button class="pm-action pm-action--default">Editar</button>
-                  <button class="pm-action pm-action--cancel">Cancelar</button>
-                  <button class="pm-action pm-action--default">Eliminar</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Day card 2 -->
-        <div class="pm-day-card">
-          <div class="pm-day-hdr">
-            <span><strong>Sábado</strong> <span class="pm-day-date">25 abr</span></span>
-            <span class="pm-day-count">1 reserva</span>
-          </div>
-          <div class="pm-rsv">
-            <div class="pm-rsv-bar"></div>
-            <div class="pm-rsv-body">
-              <div class="pm-rsv-main">
-                <div class="pm-rsv-time">13:30</div>
-                <div class="pm-rsv-info">
-                  <div class="pm-rsv-name">Valverde carlos</div>
-                  <div class="pm-rsv-meta">
-                    <span class="pm-status pm-status--confirmed">Confirmada</span>
-                    <span class="pm-meta-item">
-                      <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                      2 pax
-                    </span>
-                    <span class="pm-meta-item pm-text-muted">sin mesa</span>
-                    <span class="pm-meta-item">Terraza</span>
-                  </div>
-                </div>
-                <div class="pm-chevron pm-chevron--right">›</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+  <div class="wrap mini-grid">
+    <div class="mini">
+      <b>Clientes que vuelven</b>
+      <p>Cuando a alguien le toca repetir, Vetra le manda un email para que reserve. Solo a quien lo aceptó.</p>
+    </div>
+    <div class="mini">
+      <b>Más reseñas en Google</b>
+      <p>Tras la cita, un email amable pidiendo la reseña con tu enlace. Tú decides si activarlo.</p>
+    </div>
+    <div class="mini">
+      <b>Menos citas perdidas</b>
+      <p>Confirmación con invitación al calendario del cliente y recordatorio antes de la cita.</p>
     </div>
   </div>
 </section>
 
-<!-- --- Stats -------------------------------------------------- -->
-<div class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number">0€</div>
-        <div class="stat-desc">comisiones por reserva</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">5 min</div>
-        <div class="stat-desc">para configurar tu restaurante</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">8</div>
-        <div class="stat-desc">reservas, mesas y clientes</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">RGPD</div>
-        <div class="stat-desc">cumplimiento legal incluido</div>
-      </div>
+<!-- ───────────────────────── Restaurants ───────────────────────── -->
+<section class="section section-tint" id="restaurantes">
+  <div class="wrap split reverse">
+    <div class="split-copy">
+      <p class="eyebrow">Restaurantes</p>
+      <h2>Tu sala, tus turnos y tus reservas, sin libreta</h2>
+      <p class="section-lead">
+        Vetra nació en un restaurante. Todas las reservas del día ordenadas por turno, con su mesa y su estado,
+        y una página donde tus clientes reservan solos a cualquier hora.
+      </p>
+      <ul class="checks">
+        <li><b>Reservas por turno</b>: mediodía y noche, con personas, mesa y estado.</li>
+        <li><b>Salas y mesas</b> con capacidades, y plano de sala.</li>
+        <li><b>Aprobación manual</b> para grupos grandes o días especiales.</li>
+        <li><b>Pagos por adelantado</b> para cenas especiales, shows y eventos.</li>
+        <li><b>Campañas y códigos promo</b> a quien aceptó recibirlos.</li>
+        <li><b>Personal y finanzas</b>: turnos del equipo, gastos y caja diaria.</li>
+      </ul>
     </div>
-  </div>
-</div>
-
-<!-- --- Features ---------------------------------------------- -->
-<section class="section" id="funciones" aria-labelledby="funciones-h2">
-  <div class="container">
-    <div class="features-intro">
-      <span class="label">Funciones</span>
-      <h2 id="funciones-h2">Todo lo que necesita tu restaurante para gestionar reservas</h2>
-      <p class="lead">Sin módulos extra, sin curva de aprendizaje.</p>
-    </div>
-
-    <div class="features-areas">
-
-      <div class="feature-area">
-        <div class="feature-area-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <div class="split-visual" aria-hidden="true">
+      <div class="card-app">
+        <div class="ca-head">
+          <p class="app-title">Reservas · sábado</p>
+          <p class="app-sub">9 reservas · 34 personas</p>
         </div>
-        <h3>Reservas y sala</h3>
-        <ul class="feature-area-list">
-          <li>Panel en tiempo real por turnos y mesas</li>
-          <li>Salas, mesas y capacidades configurables</li>
-          <li>Turnos, vacaciones y cierres puntuales</li>
+        <p class="shift">Mediodía <span>3 reservas · 11 pax</span></p>
+        <ul class="res-rows">
+          <li><span class="rt">13:30</span><div><b>Pedro Gómez</b><small>Terraza · mesa 7</small></div><span class="pax">4</span><span class="pill p-seated">Sentada</span></li>
+          <li><span class="rt">14:00</span><div><b>Albert Nasarre</b><small>Interior · mesa 12</small></div><span class="pax">6</span><span class="pill p-conf">Confirmada</span></li>
+          <li><span class="rt">14:30</span><div><b>Sara Puig</b><small>Terraza · sin mesa</small></div><span class="pax">1</span><span class="pill p-pend">Pendiente</span></li>
         </ul>
-      </div>
-
-      <div class="feature-area">
-        <div class="feature-area-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <h3>Clientes y equipo</h3>
-        <ul class="feature-area-list">
-          <li>Base de clientes con historial de visitas</li>
-          <li>Emails automáticos de confirmación y cancelación</li>
-          <li>Roles de equipo: staff, manager, propietario</li>
-          <li>Una sola cuenta para gestionar varios negocios</li>
+        <p class="shift">Noche <span>6 reservas · 23 pax</span></p>
+        <ul class="res-rows">
+          <li><span class="rt">20:30</span><div><b>Lucía Mas</b><small>Interior · mesa 4</small></div><span class="pax">2</span><span class="pill p-conf">Confirmada</span></li>
+          <li><span class="rt">21:00</span><div><b>Cumpleaños Elsa</b><small>Terraza · mesas 1-2</small></div><span class="pax">13</span><span class="pill p-paid">Pagada</span></li>
         </ul>
-      </div>
-
-      <div class="feature-area">
-        <div class="feature-area-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-        </div>
-        <h3>Online y fidelización</h3>
-        <ul class="feature-area-list">
-          <li>Página pública de reservas con tu marca</li>
-          <li>Campañas de email a suscriptores (RGPD incluido)</li>
-          <li>Códigos promocionales con expiración y usos</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- --- Feature blocks ----------------------------------------- -->
-<section class="section fb-section">
-  <div class="container">
-
-    <div class="fb-intro">
-      <span class="label">El producto</span>
-      <h2>Hecho para el día a día de un restaurante</h2>
-    </div>
-
-    <div class="fb-blocks">
-
-    <!-- Block 1: Desktop reservation panel -->
-    <div class="fb-block">
-      <div class="fb-copy">
-        <span class="fb-label">Panel de reservas</span>
-        <h3>Panel de reservas del restaurante, de un vistazo</h3>
-        <p>Sin buscar en papel ni en WhatsApp. Todas las reservas del día, organizadas por turno, con estado en tiempo real.</p>
-        <ul class="fb-list">
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Confirma, sienta o cancela con un clic</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Mesas, salas y aforo en tiempo real</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Aviso instantáneo cuando llega una reserva</li>
-        </ul>
-      </div>
-      <div class="fb-visual">
-        <div class="sf-browser">
-          <div class="sf-browser-bar">
-            <div class="sf-dot" style="background:#ff5f57"></div>
-            <div class="sf-dot" style="background:#febc2e"></div>
-            <div class="sf-dot" style="background:#28c840"></div>
-            <div class="sf-url">app.vetrareserve.com/calendario</div>
-          </div>
-          <div class="sf-app">
-            <div class="sf-sidebar">
-              <div class="sf-sb-brand">
-                <div class="sf-sb-logo"></div>
-                <div><div class="sf-sb-title">Vetra</div><div class="sf-sb-sub">La Brasserie</div></div>
-              </div>
-              <div class="sf-new-rsv-btn">+ Nueva reserva</div>
-              <div class="sf-sb-section-label">Menú</div>
-              <div class="sf-sb-item">Dashboard</div>
-              <div class="sf-sb-item">Reservas</div>
-              <div class="sf-sb-item sf-sb-item--active">Calendario</div>
-              <div class="sf-sb-item">Clientes</div>
-              <div class="sf-sb-item">Equipo</div>
-              <div class="sf-sb-item">Finanzas</div>
-              <div class="sf-sb-item">Estadísticas</div>
-              <div class="sf-sb-item">Publicidad</div>
-              <div class="sf-sb-bottom">
-                <div class="sf-sb-item">Configuración</div>
-                <div class="sf-sb-user">
-                  <div class="sf-sb-avatar">M</div>
-                  <div><div class="sf-sb-uname">Marc Soler</div><div class="sf-sb-uemail">marc@labrasserie...</div></div>
-                </div>
-              </div>
-            </div>
-            <!-- Calendar / timeline view -->
-            <div class="sf-cal-main">
-              <div class="sf-cal-topbar">
-                <div class="sf-cal-nav">
-                  <span class="sf-cal-nav-arrow">‹</span>
-                  <div>
-                    <div class="sf-cal-date-title">Sábado, 18 De Abril</div>
-                    <div class="sf-cal-today">Volver a hoy</div>
-                  </div>
-                  <span class="sf-cal-nav-arrow">›</span>
-                </div>
-                <div class="sf-select">18/04/2026</div>
-              </div>
-              <div class="sf-cal-scroll">
-                <div class="sf-cal-times-row">
-                  <div class="sf-cal-time-empty"></div>
-                  <div class="sf-cal-time-cell">16:00</div>
-                  <div class="sf-cal-time-cell">17:00</div>
-                  <div class="sf-cal-time-cell">18:00</div>
-                  <div class="sf-cal-time-cell">19:00</div>
-                  <div class="sf-cal-time-cell">20:00</div>
-                  <div class="sf-cal-time-cell">21:00</div>
-                  <div class="sf-cal-time-cell">22:00</div>
-                </div>
-                <div class="sf-cal-section-hdr">Interior</div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">51</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:42.9%;width:21.4%"><span>Marc S.</span><span class="sf-cal-block-time">19:00 · 3 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">52</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block sf-cal-block--purple" style="left:57.1%;width:14.3%"><span>Sara P.</span><span class="sf-cal-block-time">20:00 · 4 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">53</div><div class="sf-cal-row-pax">6 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:71.4%;width:14.3%"><span>Carol M.</span><span class="sf-cal-block-time">21:00 · 5 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">54</div><div class="sf-cal-row-pax">6 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block sf-cal-block--purple" style="left:35.7%;width:21.4%"><span>Jordi F.</span><span class="sf-cal-block-time">18:30 · 6 pax</span></div><div class="sf-cal-block" style="left:71.4%;width:14.3%"><span>Elena R.</span><span class="sf-cal-block-time">21:00 · 4 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">55</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:50%;width:21.4%"><span>Ruben A.</span><span class="sf-cal-block-time">19:30 · 3 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">56</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block sf-cal-block--purple" style="left:71.4%;width:14.3%"><span>Anna V.</span><span class="sf-cal-block-time">21:00 · 2 pax</span></div></div></div>
-                <div class="sf-cal-section-hdr">Terraza</div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">1</div><div class="sf-cal-row-pax">14 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:71.4%;width:14.3%"><span>Elsa B.</span><span class="sf-cal-block-time">21:00 · 13 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">2</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block sf-cal-block--purple" style="left:57.1%;width:21.4%"><span>Pedro G.</span><span class="sf-cal-block-time">20:00 · 4 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">3</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:50%;width:14.3%"><span>Albert N.</span><span class="sf-cal-block-time">19:30 · 3 pax</span></div></div></div>
-                <div class="sf-cal-row"><div class="sf-cal-row-label"><div class="sf-cal-row-num">4</div><div class="sf-cal-row-pax">4 pax</div></div><div class="sf-cal-row-timeline"><div class="sf-cal-block" style="left:64.3%;width:14.3%"><span>Lucia M.</span><span class="sf-cal-block-time">20:30 · 2 pax</span></div></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Block 2: Mobile (reversed) -->
-    <div class="fb-block fb-block--rev">
-      <div class="fb-copy">
-        <span class="fb-label">Desde el móvil</span>
-        <h3>Gestiona las reservas desde el móvil</h3>
-        <p>En la barra, en la terraza o fuera del local. El panel funciona igual de bien en el teléfono que en el ordenador.</p>
-        <ul class="fb-list">
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Toda la semana de un vistazo</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Pendientes, confirmadas y sentadas en una pantalla</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Sin instalar nada — funciona desde el navegador</li>
-        </ul>
-      </div>
-      <div class="fb-visual fb-visual--center">
-        <div class="sf-phone">
-          <div class="sf-phone-pill"></div>
-          <div class="sf-phone-screen">
-            <div class="sfm-statusbar"><span>22:42</span><span class="sfm-icons">? ? ???</span></div>
-            <div class="sfm-topbar">
-              <span class="sfm-hamburger">?</span>
-              <div class="sfm-brand"><div class="sfm-logo"></div><span class="sfm-appname">Vetra</span></div>
-            </div>
-            <div class="sfm-toolbar">
-              <div class="sfm-week-select"><span>Esta semana</span><span class="sfm-chevron">^</span></div>
-              <div class="sfm-add-btn">+</div>
-            </div>
-            <div class="sfm-stats">
-              <div class="sfm-stat"><div class="sfm-stat-n">2</div><div class="sfm-stat-l">Total</div></div>
-              <div class="sfm-stat sfm-stat--yellow"><div class="sfm-stat-n">0</div><div class="sfm-stat-l">Pend.</div></div>
-              <div class="sfm-stat sfm-stat--purple"><div class="sfm-stat-n">1</div><div class="sfm-stat-l">Conf.</div></div>
-              <div class="sfm-stat sfm-stat--green"><div class="sfm-stat-n">1</div><div class="sfm-stat-l">Sentadas</div></div>
-              <div class="sfm-stat sfm-stat--red"><div class="sfm-stat-n">0</div><div class="sfm-stat-l">No show</div></div>
-            </div>
-            <div class="sfm-date-row"><span class="sfm-date-label">LUNES, 23 DE MARZO</span><span class="sfm-date-count">1 reserva</span></div>
-            <div class="sfm-card sfm-card--green">
-              <div class="sfm-card-left">
-                <div class="sfm-card-time">21:00</div>
-                <div class="sfm-card-status sfm-card-status--green">Sentada</div>
-              </div>
-              <div class="sfm-card-right">
-                <div class="sfm-card-name">Sara Puig</div>
-                <div class="sfm-card-meta">
-                  <span class="sfm-meta-pax">?? 3 pax</span>
-                  <span class="sfm-table-badge">T-3</span>
-                  <span class="sfm-meta-sala">Terraza</span>
-                </div>
-              </div>
-              <div class="sfm-card-arrow">›</div>
-            </div>
-            <div class="sfm-date-row"><span class="sfm-date-label">VIERNES, 28 DE MARZO</span><span class="sfm-date-count">1 reserva</span></div>
-            <div class="sfm-card sfm-card--purple">
-              <div class="sfm-card-left">
-                <div class="sfm-card-time">13:00</div>
-                <div class="sfm-card-status sfm-card-status--purple">Confirmada</div>
-              </div>
-              <div class="sfm-card-right">
-                <div class="sfm-card-name">Miquel Font</div>
-                <div class="sfm-card-meta">
-                  <span class="sfm-meta-pax">?? 4 pax</span>
-                  <span class="sfm-meta-sala">sin mesa</span>
-                </div>
-              </div>
-              <div class="sfm-card-arrow">›</div>
-            </div>
-            <div class="sfm-urlbar">app.vetrareserve.com</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Block 3: Public booking page -->
-    <div class="fb-block">
-      <div class="fb-copy">
-        <span class="fb-label">Reservas online</span>
-        <h3>El cliente reserva solo.<br>Tú recibes la reserva.</h3>
-        <p>Tu página pública funciona las 24h. El cliente elige día, hora y personas en 30 segundos — sin crear cuenta, sin descargar nada.</p>
-        <ul class="fb-list">
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Con el nombre y colores de tu restaurante</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Email de confirmación automático al cliente</li>
-          <li><svg viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>Se incrusta en tu web con una línea de código</li>
-        </ul>
-      </div>
-      <div class="fb-visual fb-visual--center">
-        <!-- Public booking widget mockup -->
-        <div class="bw">
-          <div class="bw-header">
-            <div class="bw-langs"><span class="bw-lang bw-lang--active">ES</span><span class="bw-lang">CA</span><span class="bw-lang">EN</span></div>
-          </div>
-          <div class="bw-body">
-            <h4 class="bw-title">Reservar mesa</h4>
-            <p class="bw-rest">La Brasserie</p>
-            <div class="bw-steps">
-              <div class="bw-step bw-step--active">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-                Fecha
-              </div>
-              <div class="bw-step-sep">›</div>
-              <div class="bw-step">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
-                Hora
-              </div>
-              <div class="bw-step-sep">›</div>
-              <div class="bw-step">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-                Personas
-              </div>
-              <div class="bw-step-sep">›</div>
-              <div class="bw-step">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
-              </div>
-            </div>
-            <p class="bw-sub">Elige el día que desees</p>
-            <div class="bw-cal">
-              <div class="bw-cal-header">
-                <span class="bw-cal-nav">‹</span>
-                <span class="bw-cal-month">Marzo 2026</span>
-                <span class="bw-cal-nav">›</span>
-              </div>
-              <div class="bw-cal-days">
-                <span>lun</span><span>mar</span><span>mié</span><span>jue</span><span>vie</span><span>sáb</span><span>dom</span>
-              </div>
-              <div class="bw-cal-grid">
-                <span></span><span></span><span></span><span></span><span></span><span></span><span class="bw-day bw-day--past">1</span>
-                <span class="bw-day bw-day--past">2</span><span class="bw-day bw-day--past">3</span><span class="bw-day bw-day--past">4</span><span class="bw-day bw-day--past">5</span><span class="bw-day bw-day--past">6</span><span class="bw-day bw-day--past">7</span><span class="bw-day bw-day--past">8</span>
-                <span class="bw-day bw-day--past">9</span><span class="bw-day bw-day--past">10</span><span class="bw-day bw-day--past">11</span><span class="bw-day bw-day--past">12</span><span class="bw-day bw-day--past">13</span><span class="bw-day bw-day--past">14</span><span class="bw-day bw-day--past">15</span>
-                <span class="bw-day bw-day--past">16</span><span class="bw-day bw-day--past">17</span><span class="bw-day bw-day--past">18</span><span class="bw-day bw-day--past">19</span><span class="bw-day bw-day--past">20</span><span class="bw-day bw-day--past">21</span><span class="bw-day bw-day--past">22</span>
-                <span class="bw-day bw-day--today">23</span><span class="bw-day bw-day--past">24</span><span class="bw-day bw-day--past">25</span><span class="bw-day">26</span><span class="bw-day bw-day--sel">27</span><span class="bw-day">28</span><span class="bw-day">29</span>
-                <span class="bw-day">30</span><span class="bw-day">31</span><span></span><span></span><span></span><span></span><span></span>
-              </div>
-            </div>
-          </div>
-          <div class="bw-footer">
-            <span>+34 612 341 782 · labrasserie@gmail.com</span>
-            <span class="bw-powered">Powered by <strong>Vetra</strong></span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    </div><!-- /fb-blocks -->
-  </div>
-</section>
-
-<!-- --- Módulos Pro: Personal + Finanzas ---------------------- -->
-<section class="section modules-section">
-  <div class="container">
-    <div class="modules-intro">
-      <span class="label label--gold">Exclusivo Pro</span>
-      <h2>Más que reservas</h2>
-      <p class="lead">Gestiona tu equipo y tus números desde el mismo sitio donde gestionas tu sala.</p>
-    </div>
-
-    <div class="modules-grid">
-
-      <!-- Personal -->
-      <div class="module-card">
-        <div class="module-card-header">
-          <div class="module-card-icon module-card-icon--blue">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
-          <div>
-            <p class="module-card-tag">Módulo Personal</p>
-            <h3 class="module-card-title">Tu equipo, organizado</h3>
-          </div>
-        </div>
-        <p class="module-card-desc">Asigna turnos, gestiona roles y ten siempre claro quién trabaja hoy y en qué sala.</p>
-
-        <!-- Mini mockup: staff list -->
-        <div class="module-mock module-mock--staff">
-          <div class="mm-row mm-row--header">
-            <span>Empleado</span><span>Turno</span><span>Rol</span>
-          </div>
-          <div class="mm-row">
-            <span class="mm-avatar mm-avatar--green">CM</span>
-            <span class="mm-name">Carlos M.</span>
-            <span class="mm-shift">18:00 – 23:00</span>
-            <span class="mm-role">Manager</span>
-          </div>
-          <div class="mm-row">
-            <span class="mm-avatar mm-avatar--purple">LG</span>
-            <span class="mm-name">Lucía G.</span>
-            <span class="mm-shift">19:00 – 24:00</span>
-            <span class="mm-role">Staff</span>
-          </div>
-          <div class="mm-row">
-            <span class="mm-avatar mm-avatar--amber">RP</span>
-            <span class="mm-name">Rubén P.</span>
-            <span class="mm-shift">20:00 – 01:00</span>
-            <span class="mm-role">Staff</span>
-          </div>
-          <div class="mm-row">
-            <span class="mm-avatar mm-avatar--blue">AN</span>
-            <span class="mm-name">Ana N.</span>
-            <span class="mm-shift">18:00 – 22:00</span>
-            <span class="mm-role">Staff</span>
-          </div>
-        </div>
-
-        <ul class="module-list">
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Turnos y horarios por empleado</li>
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Roles: propietario, manager y staff</li>
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Visibilidad del equipo en tiempo real</li>
-        </ul>
-      </div>
-
-      <!-- Finanzas -->
-      <div class="module-card">
-        <div class="module-card-header">
-          <div class="module-card-icon module-card-icon--green">
-            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-          </div>
-          <div>
-            <p class="module-card-tag">Módulo Finanzas</p>
-            <h3 class="module-card-title">Tus números, de un vistazo</h3>
-          </div>
-        </div>
-        <p class="module-card-desc">Lleva el control de la caja diaria, ingresos y gastos sin salir de Vetra.</p>
-
-        <!-- Mini mockup: finance summary -->
-        <div class="module-mock module-mock--finance">
-          <div class="mm-finance-row">
-            <div class="mm-finance-kpi">
-              <span class="mm-kpi-label">Ingresos hoy</span>
-              <span class="mm-kpi-value mm-kpi-value--green">+1.840€</span>
-            </div>
-            <div class="mm-finance-kpi">
-              <span class="mm-kpi-label">Gastos hoy</span>
-              <span class="mm-kpi-value mm-kpi-value--red">-320€</span>
-            </div>
-          </div>
-          <div class="mm-finance-bar-label">
-            <span>Beneficio neto</span><span class="mm-kpi-value--green" style="font-size:.78rem;font-weight:700;">1.520€</span>
-          </div>
-          <div class="mm-finance-bar">
-            <div class="mm-finance-bar-fill"></div>
-          </div>
-          <div class="mm-finance-items">
-            <div class="mm-fi-row"><span class="mm-fi-dot mm-fi-dot--green"></span><span>Cena servicio noche</span><span class="mm-fi-amt">+960€</span></div>
-            <div class="mm-fi-row"><span class="mm-fi-dot mm-fi-dot--green"></span><span>Comida mediodía</span><span class="mm-fi-amt">+880€</span></div>
-            <div class="mm-fi-row"><span class="mm-fi-dot mm-fi-dot--red"></span><span>Proveedor bebidas</span><span class="mm-fi-amt">-190€</span></div>
-            <div class="mm-fi-row"><span class="mm-fi-dot mm-fi-dot--red"></span><span>Gastos varios</span><span class="mm-fi-amt">-130€</span></div>
-          </div>
-        </div>
-
-        <ul class="module-list">
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Caja diaria con ingresos y gastos</li>
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Resumen mensual y por servicio</li>
-          <li><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>Sin hojas de cálculo ni Excel</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- --- Cómo funciona ------------------------------------------ -->
-<section class="section how-section" id="como-funciona" aria-labelledby="como-funciona-h2">
-  <div class="container">
-    <div class="how-intro">
-      <span class="label">Cómo funciona</span>
-      <h2 id="como-funciona-h2">Tu sistema de reservas, listo en menos de 10 minutos</h2>
-      <p class="lead">Sin instalaciones. Sin formación. Sin llamar a nadie.</p>
-    </div>
-
-    <div class="steps-grid">
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Crea tu restaurante</h3>
-        <p>Regístrate, configura tus salas, mesas y turnos. En minutos, no en horas.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Comparte el enlace</h3>
-        <p>Pon tu página de reservas en Instagram, Google Maps o tu web. También funciona con iframe.</p>
-      </div>
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Gestiona y fideliza</h3>
-        <p>Las reservas llegan en tiempo real. Cuando quieras, lanza una promo o campaña de email.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- --- Pricing ------------------------------------------------ -->
-<section class="section" id="precios" aria-labelledby="precios-h2">
-  <div class="container">
-    <div class="pricing-intro">
-      <span class="label">Precios</span>
-      <h2 id="precios-h2">Precios del software de reservas para restaurantes</h2>
-      <p class="lead">Sin comisiones por reserva. Sin letra pequeña. Cancela cuando quieras.</p>
+<!-- ───────────────────────── Shared features ───────────────────────── -->
+<section class="section" id="funciones">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Para todos</p>
+      <h2>Lo que necesita cualquier negocio que vive de sus reservas</h2>
     </div>
-
-    <div class="pricing-grid">
-
-      <!-- Free -->
-      <div class="plan-card">
-        <p class="plan-name">Free</p>
-        <p class="plan-price">0€ <span>/ mes</span></p>
-        <p class="plan-desc">Para empezar sin compromiso. Sin tarjeta.</p>
-        <ul class="plan-features">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Hasta 30 reservas al mes
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Página pública de reservas
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Hasta 15 mesas · 2 turnos
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            1 usuario
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Emails automáticos a clientes
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Embed en tu web (iframe)
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Marketing y códigos promo
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Cobros automáticos por cancelación
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Estadísticas avanzadas
-          </li>
-        </ul>
-        <a href="#" class="btn btn-outline js-register" style="text-align:center;justify-content:center;">Empezar gratis</a>
-        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">Sin tarjeta · Sin compromiso.</p>
-      </div>
-
-      <!-- Basic -->
-      <div class="plan-card featured">
-        <div class="plan-badge">14 días gratis</div>
-        <p class="plan-name">Basic</p>
-        <p class="plan-price">19€ <span>/ mes</span></p>
-        <p class="plan-desc">Organiza tus reservas sin caos.</p>
-        <ul class="plan-features">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Reservas ilimitadas</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Página pública + embed en tu web
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Mesas, salas y turnos ilimitados
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Emails automáticos básicos</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Configuración completa
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            1 usuario
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Cobros automáticos por cancelación
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Marketing y códigos promo
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Estadísticas avanzadas
-          </li>
-          <li class="disabled">
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Equipo y múltiples usuarios
-          </li>
-        </ul>
-        <a href="#" class="btn btn-primary js-register" style="text-align:center;justify-content:center;">Probar Basic 14 días gratis</a>
-        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">
-          Tarjeta requerida · Sin cargo durante el trial · Cancela cuando quieras
-        </p>
-      </div>
-
-      <!-- Pro -->
-      <div class="plan-card plan-card--pro">
-        <div class="plan-badge plan-badge--gold">Más popular ?</div>
-        <p class="plan-name">Pro</p>
-        <p class="plan-price">39€ <span>/ mes</span></p>
-        <p class="plan-desc">Protege tu negocio y controla cada detalle.</p>
-
-        <div class="plan-noshow-box">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-          <div>
-            <strong>Cobros automáticos</strong>
-            <span>Para cuando alguien cancela tarde o no aparece.</span>
-          </div>
-        </div>
-
-        <ul class="plan-features">
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Todo lo de Basic
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Marketing y códigos promo</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Estadísticas avanzadas</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Recordatorios automáticos 24h antes</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Equipo y roles ilimitados</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Gestión de turnos del personal</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            <strong>Módulo de finanzas y caja diaria</strong>
-          </li>
-          <li>
-            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 8l3.5 3.5L13 4.5"/></svg>
-            Soporte prioritario
-          </li>
-        </ul>
-        <a href="#" class="btn btn-pro js-register" style="text-align:center;justify-content:center;">Probar Pro 14 días gratis</a>
-        <p style="text-align:center;font-size:.8rem;color:var(--muted);margin-top:.75rem;">
-          Tarjeta requerida · Sin cargo durante el trial · Cancela cuando quieras
-        </p>
-      </div>
-
+    <div class="features">
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-9-9h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+        </span>
+        <h3>Reserva online con tu marca</h3>
+        <p>Tu página con tu logo y tus colores. Tus clientes reservan en 30 segundos, sin crear cuenta ni descargar nada. La enlazas en Instagram, Google o tu web.</p>
+      </article>
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><path d="M4 6h16v12H4zM4 7l8 6 8-6"/></svg>
+        </span>
+        <h3>Emails que parecen tuyos</h3>
+        <p>Confirmación, cambios y cancelaciones con el nombre de tu negocio, un diseño cuidado y la cita lista para añadir al calendario del cliente.</p>
+      </article>
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm13 10v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg>
+        </span>
+        <h3>Clientes con historial</h3>
+        <p>Quién viene, cada cuánto, qué se hace y cuánto gasta. Las notas de cada cliente, a mano cuando las necesitas.</p>
+      </article>
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
+        <h3>Equipo con permisos</h3>
+        <p>Propietario, encargado y personal. Cada uno ve lo que le toca, y cada profesional su propia agenda.</p>
+      </article>
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><path d="M3 3v18h18M7 15l4-4 3 3 5-6"/></svg>
+        </span>
+        <h3>Tus números del día</h3>
+        <p>Previsto, cobrado, ocupación y lo que llega por la reserva online, en el panel de inicio.</p>
+      </article>
+      <article class="feature">
+        <span class="f-ico">
+          <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+        </span>
+        <h3>RGPD de serie</h3>
+        <p>Consentimiento guardado con fecha y texto, baja con un clic en cada email y contrato de encargado del tratamiento incluido.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- --- FAQ ---------------------------------------------------- -->
-<section class="section faq-section" id="faq" aria-labelledby="faq-h2">
-  <div class="container">
-    <div class="faq-intro">
-      <span class="label">FAQ</span>
-      <h2 id="faq-h2">Preguntas frecuentes sobre el software de reservas</h2>
+<!-- ───────────────────────── Stats band ───────────────────────── -->
+<section class="band" aria-label="Vetra en cifras">
+  <div class="wrap band-grid">
+    <div><b>0 €</b><span>de comisión por reserva</span></div>
+    <div><b>24 h</b><span>reservando solos, también de noche</span></div>
+    <div><b>Tu marca</b><span>en tu página de reservas y en cada email</span></div>
+    <div><b>Sin app</b><span>funciona en el navegador del móvil y del ordenador</span></div>
+  </div>
+</section>
+
+<!-- ───────────────────────── How to start ───────────────────────── -->
+<section class="section" id="como-empezar">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Cómo empezar</p>
+      <h2>Tú nos cuentas tu negocio. Nosotros te lo dejamos listo.</h2>
+      <p class="section-lead">Sin instalaciones y sin pasarte una tarde configurando.</p>
     </div>
+    <ol class="steps">
+      <li>
+        <span class="step-n">1</span>
+        <h3>Solicita acceso</h3>
+        <p>Rellena el formulario de abajo. Te escribimos en menos de 24 horas laborables.</p>
+      </li>
+      <li>
+        <span class="step-n">2</span>
+        <h3>Te lo preparamos</h3>
+        <p>Creamos tu negocio con tus servicios, profesionales y horarios, o tus salas, mesas y turnos.</p>
+      </li>
+      <li>
+        <span class="step-n">3</span>
+        <h3>Activas y compartes</h3>
+        <p>Te llega un email para activar tu cuenta. Pones tu enlace de reservas donde quieras y a trabajar.</p>
+      </li>
+    </ol>
+  </div>
+</section>
 
-    <div class="faq-list">
+<!-- ───────────────────────── Pricing ───────────────────────── -->
+<section class="section section-tint" id="precios">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Precios</p>
+      <h2>Sin comisiones por reserva. Sin permanencia.</h2>
+      <p class="section-lead">Precio por negocio y mes. Cambia de plan o cancela cuando quieras.</p>
+    </div>
+    <div class="plans">
+      <article class="plan">
+        <h3>Free</h3>
+        <p class="price"><b>0 €</b><span>/ mes</span></p>
+        <p class="plan-for">Para probar Vetra sin compromiso.</p>
+        <ul>
+          <li>Página de reservas online</li>
+          <li>Hasta 30 reservas al mes</li>
+          <li>Panel de reservas y agenda</li>
+          <li>1 usuario</li>
+        </ul>
+        <a href="#acceso" class="btn btn-outline js-plan" data-plan="Free">Solicitar acceso</a>
+      </article>
+      <article class="plan">
+        <h3>Basic</h3>
+        <p class="price"><b>19 €</b><span>/ mes</span></p>
+        <p class="plan-for">Para trabajar a diario sin límites.</p>
+        <ul>
+          <li>Reservas y citas ilimitadas</li>
+          <li>Emails automáticos a tus clientes</li>
+          <li>Reserva online dentro de tu web</li>
+          <li>Aprobación manual de solicitudes</li>
+          <li>Control de no presentados</li>
+          <li>Exporta tus datos cuando quieras</li>
+          <li>1 usuario</li>
+        </ul>
+        <a href="#acceso" class="btn btn-outline js-plan" data-plan="Basic">Solicitar acceso</a>
+      </article>
+      <article class="plan plan-pro">
+        <span class="plan-badge">El más completo</span>
+        <h3>Pro</h3>
+        <p class="price"><b>39 €</b><span>/ mes</span></p>
+        <p class="plan-for">Para negocios con equipo que quieren crecer.</p>
+        <ul>
+          <li><b>Todo lo de Basic</b></li>
+          <li>Equipo y usuarios ilimitados</li>
+          <li>Recordatorios automáticos antes de la cita</li>
+          <li>Cobros por adelantado y por cancelación tardía</li>
+          <li>Campañas de email y códigos promo</li>
+          <li>Estadísticas avanzadas</li>
+          <li>Personal y finanzas</li>
+          <li>Soporte prioritario</li>
+        </ul>
+        <a href="#acceso" class="btn btn-primary js-plan" data-plan="Pro">Solicitar acceso</a>
+      </article>
+    </div>
+    <p class="plans-note">Basic y Pro incluyen 14 días de prueba. ¿Tienes varios locales o necesitas algo a medida? <a href="#acceso">Escríbenos</a>.</p>
+  </div>
+</section>
 
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Necesito instalar algo?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          No. Vetra funciona en el navegador, en ordenador, móvil y tablet. Sin apps, sin actualizaciones manuales.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Cómo reciben las reservas mis clientes?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          Al completar la reserva, el cliente recibe un correo de confirmación con los detalles y un enlace para cancelar con un clic. El email aparece con el nombre de tu restaurante, no con el de Vetra.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Es legal enviar emails de marketing a mis clientes?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          Sí. Al reservar online, el cliente puede marcar voluntariamente la casilla de marketing. Vetra guarda la fecha, el texto del consentimiento y genera un enlace de baja automático en cada email — todo lo que exige el RGPD.
-        </div>
-      </div>
-
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Puedo gestionar varios negocios con una sola cuenta?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          Sí. Puedes crear y gestionar varios negocios desde el mismo usuario, y cambiar de uno a otro desde tu perfil.
-        </div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question" onclick="toggleFaq(this)">
-          ¿Puedo cambiar de plan o cancelar?
-          <svg class="faq-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-        </button>
-        <div class="faq-answer">
-          Sí, en cualquier momento. Si cancelas, tu cuenta pasa al plan gratuito al terminar el periodo pagado. Sin permanencia ni penalizaciones.
-        </div>
-      </div>
-
+<!-- ───────────────────────── FAQ ───────────────────────── -->
+<section class="section" id="faq">
+  <div class="wrap faq-wrap">
+    <div class="section-head left">
+      <p class="eyebrow">Preguntas</p>
+      <h2>Preguntas frecuentes</h2>
+      <p class="section-lead">¿No encuentras la tuya? <a href="/contact">Escríbenos</a>.</p>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>¿Por qué hay que solicitar acceso?</summary>
+        <p>Porque preferimos dejarte Vetra funcionando desde el primer día. Hablamos contigo, configuramos tu negocio (servicios y horarios, o salas y mesas) y te enviamos la invitación para activar tu cuenta.</p>
+      </details>
+      <details>
+        <summary>¿Sirve para mi tipo de negocio?</summary>
+        <p>Si trabajas con reservas o citas, casi seguro que sí: restaurantes, peluquerías, barberías, estética, uñas, fisioterapia, masajes, estudios… Si tienes dudas, cuéntanos cómo trabajas en el formulario.</p>
+      </details>
+      <details>
+        <summary>¿Necesito instalar algo?</summary>
+        <p>No. Vetra funciona en el navegador del ordenador, la tablet y el móvil. Si quieres, la puedes añadir a la pantalla de inicio del móvil como una app más.</p>
+      </details>
+      <details>
+        <summary>¿Mis clientes tienen que crearse una cuenta?</summary>
+        <p>No. Eligen servicio, día y hora y dejan su nombre y contacto. Reciben un email de confirmación con tu nombre y un enlace para cancelar si lo necesitan.</p>
+      </details>
+      <details>
+        <summary>¿Cobráis comisión por reserva?</summary>
+        <p>No. Pagas tu plan mensual y ya está, recibas diez reservas o mil.</p>
+      </details>
+      <details>
+        <summary>¿Es legal enviar emails a mis clientes?</summary>
+        <p>Sí, a los que lo aceptan. Vetra guarda cuándo y con qué texto aceptó cada cliente, y cada email de promociones o de seguimiento lleva un enlace para darse de baja con un clic.</p>
+      </details>
+      <details>
+        <summary>¿Puedo gestionar varios negocios?</summary>
+        <p>Sí, con un mismo usuario, y cambias de uno a otro desde tu perfil.</p>
+      </details>
+      <details>
+        <summary>¿Puedo cambiar de plan o cancelar?</summary>
+        <p>Cuando quieras, sin permanencia ni penalizaciones. Si cancelas, pasas al plan gratuito al terminar el periodo pagado y tus datos siguen siendo tuyos.</p>
+      </details>
     </div>
   </div>
 </section>
 
-<!-- --- CTA banner --------------------------------------------- -->
-<section class="cta-section">
-  <div class="container">
-    <div class="cta-inner">
-      <h2>Sigues gestionando las reservas en papel?</h2>
-      <p>Crea tu cuenta, configura tus mesas y recibe tu primera reserva online hoy mismo.</p>
-      <div class="cta-actions">
-        <a href="#" class="btn btn-white btn-lg js-register">Empezar gratis — 14 días</a>
-        <span class="cta-note">Sin tarjeta · Sin permanencia · Cancela cuando quieras</span>
-      </div>
+<!-- ───────────────────────── Request access ───────────────────────── -->
+<section class="section access" id="acceso">
+  <div class="wrap access-grid">
+    <div class="access-copy">
+      <p class="eyebrow light">Solicitar acceso</p>
+      <h2>Cuéntanos tu negocio y te lo dejamos listo</h2>
+      <p>Te respondemos en menos de 24 horas laborables para ver qué necesitas y preparar tu cuenta.</p>
+      <ul class="access-points">
+        <li>Sin compromiso</li>
+        <li>Configuración incluida</li>
+        <li>Te ayudamos a pasar tus clientes y reservas</li>
+      </ul>
     </div>
+
+    <form class="access-form" id="access-form" novalidate>
+      <div id="access-fields">
+        <div class="row2">
+          <label>Tu nombre<input name="name" required maxlength="100" autocomplete="name" placeholder="Marta Soler" /></label>
+          <label>Nombre del negocio<input name="business" required maxlength="100" autocomplete="organization" placeholder="Estudio Marta" /></label>
+        </div>
+        <div class="row2">
+          <label>Tipo de negocio
+            <select name="type">
+              <option>Peluquería o barbería</option>
+              <option>Centro de estética</option>
+              <option>Uñas y pestañas</option>
+              <option>Fisioterapia o masajes</option>
+              <option>Restaurante</option>
+              <option>Otro negocio con citas</option>
+            </select>
+          </label>
+          <label>Plan que te interesa
+            <select name="plan">
+              <option value="">Aún no lo sé</option>
+              <option>Free</option>
+              <option>Basic</option>
+              <option>Pro</option>
+            </select>
+          </label>
+        </div>
+        <div class="row2">
+          <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email" placeholder="tu@email.com" /></label>
+          <label>Teléfono <span class="opt">(opcional)</span><input name="phone" type="tel" maxlength="30" autocomplete="tel" placeholder="600 00 00 00" /></label>
+        </div>
+        <label>¿Algo que debamos saber? <span class="opt">(opcional)</span>
+          <textarea name="message" rows="3" maxlength="2000" placeholder="Cuántas personas sois, qué usáis ahora, qué te gustaría mejorar…"></textarea>
+        </label>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>Acepto que Vetra use estos datos para responder a mi solicitud, según la <a href="/privacy" target="_blank" rel="noopener">política de privacidad</a>.</span>
+        </label>
+        <p class="form-error" id="access-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="access-submit">Enviar solicitud</button>
+      </div>
+      <div class="form-ok" id="access-ok" hidden>
+        <span class="ok-ico">
+          <svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg>
+        </span>
+        <h3>¡Recibido!</h3>
+        <p>Te escribimos en menos de 24 horas laborables al email que nos has dejado.</p>
+      </div>
+    </form>
   </div>
 </section>
 
 </main>
 
-<!-- --- Footer ------------------------------------------------- -->
-<footer class="footer" aria-label="Pie de página">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <div class="footer-logo">
-          <img src="logo.svg" alt="Vetra — Software de reservas para restaurantes" width="26" height="26" loading="lazy" />
-          Vetra
-        </div>
-        <p>Gestión de reservas para restaurantes. Sin comisiones, sin complicaciones.</p>
-      </div>
-
-      <div class="footer-col">
-        <h4>Producto</h4>
-        <ul>
-          <li><a href="#funciones">Funciones</a></li>
-          <li><a href="#como-funciona">Cómo funciona</a></li>
-          <li><a href="#precios">Precios</a></li>
-          <li><a href="#faq">Preguntas frecuentes</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Empresa</h4>
-        <ul>
-          <li><a href="/contact">Contacto</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="/privacy">Política de privacidad</a></li>
-          <li><a href="/terms">Términos de servicio</a></li>
-          <li><a href="/cookies">Política de cookies</a></li>
-        </ul>
-      </div>
+<!-- ───────────────────────── Footer ───────────────────────── -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="/" class="brand"><img src="/logo.svg" alt="" width="26" height="26" /><span>Vetra</span></a>
+      <p class="footer-tag">Reservas, agenda y clientes para restaurantes y negocios con cita.</p>
     </div>
-
-    <div class="footer-bottom">
-      <span>© <span id="year"></span> Vetra. Todos los derechos reservados.</span>
-      <div class="footer-legal">
-        <a href="/privacy">Privacidad</a>
-        <a href="/terms">Términos</a>
-        <a href="/cookies">Cookies</a>
-        <a href="/contact">Contacto</a>
-      </div>
-    </div>
+    <nav aria-label="Producto">
+      <p>Producto</p>
+      <a href="#citas">Negocios con cita</a>
+      <a href="#restaurantes">Restaurantes</a>
+      <a href="#precios">Precios</a>
+      <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    </nav>
+    <nav aria-label="Ayuda">
+      <p>Ayuda</p>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="/contact">Contacto</a>
+      <a href="#acceso">Solicitar acceso</a>
+    </nav>
+    <nav aria-label="Legal">
+      <p>Legal</p>
+      <a href="/terms">Términos</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/cookies">Cookies</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year">2026</span> Vetra</span>
   </div>
 </footer>
 
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://vetrareserve.com/#organization",
-      "name": "Vetra",
-      "url": "https://vetrareserve.com",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://vetrareserve.com/logo.svg"
-      },
-      "description": "Software de gestión de reservas para restaurantes. Sin comisiones por reserva.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "url": "https://vetrareserve.com/contact.html",
-        "availableLanguage": "Spanish"
-      },
-      "areaServed": "ES"
-    },
-    {
-      "@type": "SoftwareApplication",
-      "@id": "https://vetrareserve.com/#software",
-      "name": "Vetra",
-      "applicationCategory": "BusinessApplication",
-      "applicationSubCategory": "Restaurant Management Software",
-      "operatingSystem": "Web",
-      "url": "https://vetrareserve.com",
-      "description": "Vetra es un software de gestión de reservas para restaurantes. Incluye panel de reservas en tiempo real, emails automáticos de confirmación, página pública de reservas online, marketing por email, códigos promocionales y estadísticas. Sin comisiones por reserva.",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "Free",
-          "price": "0",
-          "priceCurrency": "EUR",
-          "description": "Hasta 30 reservas al mes. Sin tarjeta de crédito.",
-          "availability": "https://schema.org/InStock"
-        },
-        {
-          "@type": "Offer",
-          "name": "Basic",
-          "price": "19",
-          "priceCurrency": "EUR",
-          "description": "Reservas ilimitadas, emails automáticos, página pública y embed en tu web.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "19",
-            "priceCurrency": "EUR",
-            "unitText": "MO"
-          },
-          "availability": "https://schema.org/InStock"
-        },
-        {
-          "@type": "Offer",
-          "name": "Pro",
-          "price": "39",
-          "priceCurrency": "EUR",
-          "description": "Todo lo de Basic más marketing, estadísticas avanzadas, cobros automáticos y gestión de equipo.",
-          "priceSpecification": {
-            "@type": "UnitPriceSpecification",
-            "price": "39",
-            "priceCurrency": "EUR",
-            "unitText": "MO"
-          },
-          "availability": "https://schema.org/InStock"
-        }
-      ],
-      "featureList": [
-        "Gestión de reservas en tiempo real",
-        "Página pública de reservas online",
-        "Emails automáticos de confirmación y cancelación",
-        "Marketing por email a suscriptores",
-        "Códigos promocionales",
-        "Control de mesas y salas",
-        "Gestión de turnos",
-        "Estadísticas avanzadas",
-        "Sin comisiones por reserva",
-        "Compatible con RGPD"
-      ],
-      "publisher": {
-        "@id": "https://vetrareserve.com/#organization"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://vetrareserve.com/#faq",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "¿Necesito instalar algo para usar Vetra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Vetra funciona en el navegador, en ordenador, móvil y tablet. Sin apps, sin actualizaciones manuales."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cómo reciben las reservas mis clientes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Al completar la reserva, el cliente recibe un correo de confirmación con los detalles y un enlace para cancelar con un clic. El email aparece con el nombre de tu restaurante, no con el de Vetra."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Es legal enviar emails de marketing a mis clientes?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Al reservar online, el cliente puede marcar voluntariamente la casilla de marketing. Vetra guarda la fecha, el texto del consentimiento y genera un enlace de baja automático en cada email, cumpliendo con el RGPD."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo gestionar varios restaurantes con una sola cuenta?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí. Puedes crear y gestionar varios negocios desde el mismo usuario, y cambiar de uno a otro desde tu perfil."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Puedo cambiar de plan o cancelar?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sí, en cualquier momento. Si cancelas, tu cuenta pasa al plan gratuito al terminar el periodo pagado. Sin permanencia ni penalizaciones."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "¿Cuánto cuesta el software de reservas Vetra?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Vetra tiene un plan gratuito hasta 30 reservas al mes, el plan Basic por 19€/mes con reservas ilimitadas, y el plan Pro por 39€/mes con marketing, estadísticas avanzadas y cobros automáticos. Todos los planes incluyen 14 días de prueba gratis del plan Basic."
-          }
-        }
-      ]
-    }
-  ]
-}
-</script>
-
 <script>
-  var VETRA_API = 'http://api.vetrareserve.com';
-  var VETRA_APP = 'http://app.vetrareserve.com';
-
-  document.querySelectorAll('.js-register').forEach(function (el) {
-    el.href = VETRA_APP + '/register';
-  });
-  document.querySelectorAll('.js-login').forEach(function (el) {
-    el.href = VETRA_APP + '/login';
-  });
+(function () {
+  var API = 'https://api.vetrareserve.com';
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    item.classList.toggle('open');
+  // Mobile menu
+  var toggle = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobile-nav');
+  function setMenu(open) {
+    menu.hidden = !open;
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
   }
+  toggle.addEventListener('click', function () { setMenu(menu.hidden); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
 
-  function openMobileNav() {
-    document.getElementById('mobile-nav').classList.add('open');
-    document.body.style.overflow = 'hidden';
-  }
+  // Nav gets a border once you scroll
+  var nav = document.querySelector('.nav');
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
 
-  function closeMobileNav() {
-    document.getElementById('mobile-nav').classList.remove('open');
-    document.body.style.overflow = '';
-  }
+  // Pricing buttons preselect the plan in the form
+  var form = document.getElementById('access-form');
+  document.querySelectorAll('.js-plan').forEach(function (btn) {
+    btn.addEventListener('click', function () { form.plan.value = btn.getAttribute('data-plan'); });
+  });
 
+  // Request access → /api/contact (same inbox as the app's form)
+  var err = document.getElementById('access-error');
+  var submit = document.getElementById('access-submit');
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    err.hidden = true;
+    var v = function (k) { return (form[k].value || '').trim(); };
+    if (!v('name') || !v('business') || !v('email')) { return showError('Rellena tu nombre, el del negocio y tu email.'); }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) { return showError('Revisa el email.'); }
+    if (!form.consent.checked) { return showError('Necesitamos tu permiso para responderte.'); }
+    submit.disabled = true; submit.textContent = 'Enviando…';
+    try {
+      var res = await fetch(API + '/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: v('name'),
+          email: v('email'),
+          subject: 'Solicitud de acceso: ' + v('business'),
+          message: [
+            'Negocio: ' + v('business'),
+            'Tipo: ' + v('type'),
+            'Plan: ' + (v('plan') || 'aún no lo sabe'),
+            'Teléfono: ' + (v('phone') || '-'),
+            'Origen: vetrareserve.com',
+            '',
+            v('message') || '(sin mensaje)'
+          ].join('\n')
+        })
+      });
+      if (!res.ok) {
+        var body = await res.json().catch(function () { return {}; });
+        throw new Error(body.message || 'No se pudo enviar.');
+      }
+      document.getElementById('access-fields').hidden = true;
+      document.getElementById('access-ok').hidden = false;
+    } catch (ex) {
+      showError((ex && ex.message ? ex.message : 'No se pudo enviar.') + ' Si sigue fallando, escríbenos desde la página de contacto.');
+      submit.disabled = false; submit.textContent = 'Enviar solicitud';
+    }
+  });
+  function showError(msg) { err.textContent = msg; err.hidden = false; }
+})();
 </script>
-
 </body>
 </html>
-
