@@ -15,7 +15,7 @@
 
 ## Precios (por negocio y mes)
 
-- Free: 0 €. Página de reservas, hasta 30 reservas al mes, 1 usuario.
+- Prueba: 14 días de Pro gratis, sin tarjeta. No hay plan gratuito permanente.
 - Basic: 19 €. Reservas y citas ilimitadas, emails automáticos, reserva dentro de la web del negocio, 1 usuario.
 - Pro: 39 €. Todo lo de Basic, equipo ilimitado, recordatorios automáticos, cobros por adelantado, campañas, estadísticas, personal y finanzas.
 - Sin comisiones por reserva y sin permanencia. Alta mediante solicitud de acceso: https://www.vetrareserve.com/#acceso
