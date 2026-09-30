@@ -3,48 +3,200 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vetra | Reservas, agenda y clientes para restaurantes y negocios con cita</title>
-  <meta name="description" content="Software de reservas y agenda para restaurantes, peluquerías, centros de estética y cualquier negocio que trabaje con cita. Reserva online con tu marca, recordatorios, clientes y caja. Sin comisiones por reserva." />
+  <title>Software de reservas y citas sin comisiones | Vetra</title>
+  <meta name="description" content="Reservas online para restaurantes y agenda de citas para peluquerías, estética y fisio. Recordatorios, clientes y caja, sin comisiones por reserva." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://vetrareserve.com/" />
+  <link rel="canonical" href="https://www.vetrareserve.com/" />
+  <link rel="alternate" hreflang="es" href="https://www.vetrareserve.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.vetrareserve.com/" />
   <meta name="theme-color" content="#ffffff" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vetrareserve.com/" />
+  <meta property="og:url" content="https://www.vetrareserve.com/" />
   <meta property="og:site_name" content="Vetra" />
-  <meta property="og:title" content="Vetra | Reservas, agenda y clientes en un solo sitio" />
+  <meta property="og:title" content="Vetra: reservas, agenda y clientes en un solo sitio" />
   <meta property="og:description" content="Para restaurantes y negocios con cita. Reserva online con tu marca, recordatorios y clientes. Sin comisiones por reserva." />
-  <meta property="og:image" content="https://vetrareserve.com/og-image.png" />
+  <meta property="og:image" content="https://www.vetrareserve.com/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Agenda de citas de Vetra con las citas del día coloreadas por estado." />
   <meta property="og:locale" content="es_ES" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Vetra | Reservas, agenda y clientes en un solo sitio" />
+  <meta name="twitter:title" content="Vetra: reservas, agenda y clientes en un solo sitio" />
   <meta name="twitter:description" content="Para restaurantes y negocios con cita. Sin comisiones por reserva." />
-  <meta name="twitter:image" content="https://vetrareserve.com/og-image.png" />
+  <meta name="twitter:image" content="https://www.vetrareserve.com/og-image.png" />
+  <meta name="twitter:image:alt" content="Agenda de citas de Vetra con las citas del día coloreadas por estado." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" as="image" href="/img/agenda-dia.webp" type="image/webp" fetchpriority="high" />
   <link rel="stylesheet" href="/site.css" />
-  <link rel="icon" href="/logo.svg" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Vetra",
-    "url": "https://vetrareserve.com/",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "description": "Reservas, agenda, clientes y caja para restaurantes y negocios con cita.",
-    "offers": [
-      { "@type": "Offer", "name": "Free", "price": "0", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Basic", "price": "19", "priceCurrency": "EUR" },
-      { "@type": "Offer", "name": "Pro", "price": "39", "priceCurrency": "EUR" }
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.vetrareserve.com/#org",
+      "name": "Vetra",
+      "url": "https://www.vetrareserve.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.vetrareserve.com/icon-512.png",
+        "width": 512,
+        "height": 512
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer support",
+        "url": "https://www.vetrareserve.com/contact",
+        "availableLanguage": [
+          "es"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.vetrareserve.com/#website",
+      "url": "https://www.vetrareserve.com/",
+      "name": "Vetra",
+      "inLanguage": "es-ES",
+      "publisher": {
+        "@id": "https://www.vetrareserve.com/#org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.vetrareserve.com/#app",
+      "name": "Vetra",
+      "url": "https://www.vetrareserve.com/",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Software de reservas y agenda de citas",
+      "operatingSystem": "Web, iOS, Android",
+      "inLanguage": "es-ES",
+      "description": "Reservas online, agenda de citas, clientes y caja para restaurantes y negocios con cita, sin comisiones por reserva.",
+      "screenshot": [
+        "https://www.vetrareserve.com/img/agenda-dia.webp",
+        "https://www.vetrareserve.com/img/reserva-online.webp",
+        "https://www.vetrareserve.com/img/restaurante-reservas.webp"
+      ],
+      "featureList": [
+        "Reserva online con la marca del negocio",
+        "Agenda de citas por profesional",
+        "Reservas por turno, sala y mesa",
+        "Plano de sala",
+        "Recordatorios y emails automáticos",
+        "Clientes con historial",
+        "Caja y cierre del día",
+        "Equipo con permisos",
+        "Cumplimiento RGPD"
+      ],
+      "publisher": {
+        "@id": "https://www.vetrareserve.com/#org"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "EUR",
+          "url": "https://www.vetrareserve.com/#precios",
+          "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "Basic",
+          "price": "19",
+          "priceCurrency": "EUR",
+          "url": "https://www.vetrareserve.com/#precios",
+          "category": "subscription"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "39",
+          "priceCurrency": "EUR",
+          "url": "https://www.vetrareserve.com/#precios",
+          "category": "subscription"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://www.vetrareserve.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Por qué hay que solicitar acceso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porque preferimos dejarte Vetra funcionando desde el primer día. Hablamos contigo, configuramos tu negocio (servicios y horarios, o salas y mesas) y te enviamos la invitación para activar tu cuenta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Sirve para mi tipo de negocio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Si trabajas con reservas o citas, casi seguro que sí: restaurantes, peluquerías, barberías, estética, uñas, fisioterapia, masajes, estudios. Si tienes dudas, cuéntanos cómo trabajas en el formulario."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Necesito instalar algo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Vetra funciona en el navegador del ordenador, la tablet y el móvil. Si quieres, la añades a la pantalla de inicio del móvil como una app más."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mis clientes tienen que crearse una cuenta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Eligen servicio, día y hora y dejan su nombre y contacto. Reciben un email de confirmación con tu nombre y un enlace para cancelar si lo necesitan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Cobráis comisión por reserva?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Pagas tu plan mensual y ya está, recibas diez reservas o mil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Es legal enviar emails a mis clientes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, a los que lo aceptan. Vetra guarda cuándo y con qué texto aceptó cada cliente, y cada email de promociones o de seguimiento lleva un enlace para darse de baja con un clic."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo gestionar varios negocios?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sí, con un mismo usuario, y cambias de uno a otro desde tu perfil."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Puedo cambiar de plan o cancelar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cuando quieras, sin permanencia ni penalizaciones. Si cancelas, pasas al plan gratuito al terminar el periodo pagado y tus datos siguen siendo tuyos."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -86,7 +238,7 @@
 <section class="hero">
   <div class="wrap hero-copy">
     <h1>Reservas, agenda y clientes <span>en un solo sitio.</span></h1>
-    <p class="lead">Para restaurantes y negocios con cita. Tus clientes reservan online con tu marca y tú lo llevas todo desde el móvil.</p>
+    <p class="lead">El programa de reservas y citas para restaurantes, peluquerías y negocios con cita. Tus clientes reservan online con tu marca y tú lo llevas todo desde el móvil.</p>
     <div class="hero-ctas">
       <a href="#acceso" class="btn btn-primary btn-lg">Solicitar acceso</a>
       <a href="#precios" class="btn btn-ghost btn-lg">Ver precios</a>
@@ -99,7 +251,7 @@
            alt="Agenda de Vetra de una peluquería: una columna por profesional y cada cita coloreada según su estado." />
     </figure>
     <figure class="shot shot-phone">
-      <img src="/img/reserva-online.webp" width="780" height="1600" fetchpriority="high"
+      <img src="/img/reserva-online.webp" width="780" height="1600" decoding="async"
            alt="Página de reserva online de la peluquería en el móvil: el cliente elige el servicio y ve precio y duración." />
     </figure>
   </div>
@@ -110,7 +262,7 @@
 <section class="section" id="citas">
   <div class="wrap split">
     <div class="split-copy">
-      <h2>Negocios con cita: la agenda de todo tu equipo, clara de un vistazo</h2>
+      <h2>Agenda de citas para peluquerías, estética y fisio, con todo tu equipo a la vista</h2>
       <p class="section-lead">El color de cada cita te dice cómo va. Lila, la siguiente. Verde, cobrada. Ámbar, atendida sin cobrar. Rojo, no vino.</p>
       <ul class="checks">
         <li><b>Agenda por profesional</b> en vista día, semana o lista, también en el móvil.</li>
@@ -145,7 +297,7 @@
 <section class="section section-tint" id="restaurantes">
   <div class="wrap split reverse">
     <div class="split-copy">
-      <h2>Restaurantes: tu sala, tus turnos y tus reservas, sin libreta</h2>
+      <h2>Reservas para restaurantes: tu sala, tus turnos y tus mesas, sin libreta</h2>
       <p class="section-lead">Vetra nació en un restaurante. Todas las reservas del día con su mesa y su estado, y una página donde tus clientes reservan solos a cualquier hora.</p>
       <ul class="checks">
         <li><b>Reservas por turno</b>, con personas, sala, mesa y estado.</li>
@@ -171,7 +323,7 @@
 <!-- What both get -->
 <section class="section" id="funciones">
   <div class="wrap shared">
-    <h2>Lo que tienen los dos</h2>
+    <h2>Incluido para restaurantes y negocios con cita</h2>
     <dl class="shared-list">
       <div>
         <dt>Reserva online con tu marca</dt>
@@ -229,7 +381,7 @@
 <section class="section" id="precios">
   <div class="wrap">
     <div class="section-head">
-      <h2>Sin comisiones por reserva. Sin permanencia.</h2>
+      <h2>Precios sin comisiones por reserva ni permanencia</h2>
       <p class="section-lead">Precio por negocio y mes. Cambia de plan o cancela cuando quieras.</p>
     </div>
     <div class="plans">

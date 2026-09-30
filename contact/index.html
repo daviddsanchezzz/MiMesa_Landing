@@ -3,169 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto - Vetra</title>
+  <title>Contacto | Vetra</title>
+  <meta name="description" content="Escríbenos para dudas de soporte, facturación o sobre cómo usar Vetra en tu restaurante o negocio con cita. Respondemos en menos de 24 horas laborables." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://vetrareserve.com/contact" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/logo.svg" />
+  <link rel="canonical" href="https://www.vetrareserve.com/contact" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vetra" />
+  <meta property="og:url" content="https://www.vetrareserve.com/contact" />
+  <meta property="og:title" content="Contacto | Vetra" />
+  <meta property="og:description" content="Escríbenos para dudas de soporte, facturación o sobre cómo usar Vetra en tu restaurante o negocio con cita. Respondemos en menos de 24 horas laborables." />
+  <meta property="og:image" content="https://www.vetrareserve.com/og-image.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">
-      <img src="/logo.svg" alt="Vetra" width="28" height="28" />
-      Vetra
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="brand" aria-label="Vetra, inicio">
+      <img src="/logo.svg" alt="" width="28" height="28" />
+      <span>Vetra</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="/#funciones">Funciones</a></li>
-      <li><a href="/#como-funciona">Cómo funciona</a></li>
-      <li><a href="/#precios">Precios</a></li>
-      <li><a href="/contact">Contacto</a></li>
-    </ul>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="/#citas">Negocios con cita</a>
+      <a href="/#restaurantes">Restaurantes</a>
+      <a href="/#precios">Precios</a>
+      <a href="/#faq">Preguntas</a>
+    </nav>
     <div class="nav-actions">
-      <a href="#" class="js-login nav-login">Iniciar sesión</a>
-      <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
+      <a href="https://app.vetrareserve.com/login" class="link-quiet">Iniciar sesión</a>
+      <a href="/#acceso" class="btn btn-primary btn-sm">Solicitar acceso</a>
     </div>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span>
+    </button>
   </div>
-</nav>
-
-<section class="contact-hero">
-  <div class="container">
-    <div class="contact-hero-inner">
-      <span class="label">Contacto</span>
-      <h1>Â¿En qué podemos ayudarte?</h1>
-      <p>Somos un equipo pequeño y respondemos personalmente.<br>Normalmente en menos de 24 horas en días laborables.</p>
-    </div>
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="/#citas">Negocios con cita</a>
+    <a href="/#restaurantes">Restaurantes</a>
+    <a href="/#precios">Precios</a>
+    <a href="/#faq">Preguntas</a>
+    <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    <a href="/#acceso" class="btn btn-primary">Solicitar acceso</a>
   </div>
-</section>
+</header>
+<main id="main" class="page">
+  <div class="wrap page-narrow">
+    <h1>¿En qué podemos ayudarte?</h1>
+    <p class="section-lead">Somos un equipo pequeño y respondemos personalmente, normalmente en menos de 24 horas laborables. Si quieres empezar a usar Vetra, <a href="/#acceso">solicita acceso aquí</a>.</p>
 
-<div class="container">
-  <div class="contact-form-wrap">
-
-    <div id="success-screen" style="display:none; text-align:center; padding:3rem 1rem;">
-      <div style="width:64px;height:64px;background:#dcfce7;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem;">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>
-      </div>
-      <h2 style="font-size:1.25rem;margin-bottom:.5rem;">Mensaje enviado</h2>
-      <p style="color:var(--muted);font-size:.9375rem;">Te contestamos lo antes posible. Revisa también tu carpeta de spam.</p>
-    </div>
-
-    <div id="form-section">
-      <div id="error-msg" class="alert alert-error" style="display:none;margin-bottom:1.5rem;"></div>
-
-      <form id="contact-form" novalidate>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Nombre *</label>
-            <input type="text" id="name" name="name" required placeholder="Tu nombre" />
-          </div>
-          <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="tu@email.com" />
-          </div>
+    <form class="access-form contact-form" id="contact-form" novalidate>
+      <div id="contact-fields">
+        <div class="row2">
+          <label>Nombre<input name="name" required maxlength="100" autocomplete="name" placeholder="Tu nombre" /></label>
+          <label>Email<input name="email" type="email" required maxlength="200" autocomplete="email" placeholder="tu@email.com" /></label>
         </div>
-
-        <div class="form-group">
-          <label for="subject">Asunto *</label>
-          <select id="subject" name="subject" required>
-            <option value="">Selecciona un tema...</option>
-            <option value="soporte">Soporte técnico</option>
-            <option value="facturacion">Facturación o suscripción</option>
-            <option value="producto">Pregunta sobre el producto</option>
-            <option value="privacidad">Privacidad o datos personales</option>
-            <option value="prensa">Prensa o colaboraciones</option>
-            <option value="otro">Otro</option>
+        <label>Tema
+          <select name="subject" required>
+            <option value="">Elige un tema</option>
+            <option>Soporte técnico</option>
+            <option>Facturación o suscripción</option>
+            <option>Pregunta sobre el producto</option>
+            <option>Privacidad o datos personales</option>
+            <option>Prensa o colaboraciones</option>
+            <option>Otro</option>
           </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Mensaje *</label>
-          <textarea id="message" name="message" required placeholder="Cuéntanos en qué podemos ayudarte..." rows="5"></textarea>
-        </div>
-
-        <div class="form-group" style="margin-bottom:1.5rem;">
-          <label style="display:flex;align-items:flex-start;gap:.625rem;font-weight:400;cursor:pointer;">
-            <input type="checkbox" id="privacy" name="privacy" required style="width:auto;margin-top:3px;accent-color:var(--primary);" />
-            <span style="font-size:.875rem;color:var(--muted);">
-              He leído y acepto la <a href="/privacy" target="_blank" style="color:var(--primary);">política de privacidad</a>. Los datos se usarán únicamente para gestionar tu consulta.
-            </span>
-          </label>
-        </div>
-
-        <button type="submit" id="submit-btn" class="btn btn-primary" style="width:100%;justify-content:center;padding:.85rem;">
-          Enviar mensaje
-        </button>
-      </form>
-    </div>
-
-  </div>
-</div>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-bottom" style="border-top:none; padding-top:0;">
-      <span>Â© <span id="year"></span> Vetra. Todos los derechos reservados.</span>
-      <div class="footer-legal">
-        <a href="/privacy">Privacidad</a>
-        <a href="/terms">Términos</a>
-        <a href="/cookies">Cookies</a>
-        <a href="/contact">Contacto</a>
+        </label>
+        <label>Mensaje<textarea name="message" required rows="5" maxlength="5000" placeholder="Cuéntanos en qué podemos ayudarte"></textarea></label>
+        <label class="consent">
+          <input type="checkbox" name="consent" required />
+          <span>He leído y acepto la <a href="/privacy" target="_blank" rel="noopener">política de privacidad</a>. Usaremos tus datos solo para responder a tu consulta.</span>
+        </label>
+        <p class="form-error" id="contact-error" role="alert" hidden></p>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="contact-submit">Enviar mensaje</button>
       </div>
-    </div>
+      <div class="form-ok" id="contact-ok" hidden tabindex="-1">
+        <span class="ok-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 5 5 9-10"/></svg></span>
+        <h2>Mensaje enviado</h2>
+        <p>Te contestamos lo antes posible. Si no lo ves, revisa la carpeta de spam.</p>
+      </div>
+    </form>
   </div>
+</main>
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="/" class="brand"><img src="/logo.svg" alt="" width="24" height="24" /><span>Vetra</span></a>
+      <p class="footer-tag">Reservas, agenda y clientes para restaurantes y negocios con cita.</p>
+    </div>
+    <nav aria-label="Enlaces">
+      <a href="/#precios">Precios</a>
+      <a href="/#faq">Preguntas</a>
+      <a href="/contact">Contacto</a>
+      <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="/terms">Términos</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/cookies">Cookies</a>
+    </nav>
+  </div>
+  <div class="wrap footer-bottom">© <span id="year">2026</span> Vetra</div>
 </footer>
-
 <script>
-  var VETRA_API = 'https://mimesa-backend.onrender.com';
-  var VETRA_APP = 'http://app.vetrareserve.com';
-  document.querySelectorAll('.js-register').forEach(function(el){ el.href = VETRA_APP + '/register'; });
-  document.querySelectorAll('.js-login').forEach(function(el){ el.href = VETRA_APP + '/login'; });
+(function () {
   document.getElementById('year').textContent = new Date().getFullYear();
-
-  document.getElementById('contact-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
-
-    var name    = document.getElementById('name').value.trim();
-    var email   = document.getElementById('email').value.trim();
-    var subject = document.getElementById('subject').value;
-    var message = document.getElementById('message').value.trim();
-    var privacy = document.getElementById('privacy').checked;
-
-    var errorEl   = document.getElementById('error-msg');
-    var submitBtn = document.getElementById('submit-btn');
-
-    errorEl.style.display = 'none';
-
-    if (!name || !email || !subject || !message || !privacy) {
-      errorEl.textContent = 'Por favor, completa todos los campos obligatorios.';
-      errorEl.style.display = 'block';
-      return;
-    }
-
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Enviando...';
-
+  var toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('mobile-nav'), nav = document.querySelector('.nav');
+  function setMenu(open) { menu.hidden = !open; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); toggle.classList.toggle('open', open); document.body.classList.toggle('menu-open', open); }
+  toggle.addEventListener('click', function () { setMenu(menu.hidden); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); } });
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
+</script>
+<script>
+(function () {
+  var API = 'https://api.vetrareserve.com';
+  var form = document.getElementById('contact-form'), err = document.getElementById('contact-error'), btn = document.getElementById('contact-submit');
+  function fail(msg, field) { err.textContent = msg; err.hidden = false; if (field && form[field]) form[field].focus(); }
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); err.hidden = true;
+    var v = function (k) { return (form[k].value || '').trim(); };
+    if (!v('name')) return fail('Escribe tu nombre.', 'name');
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v('email'))) return fail('El email no parece correcto. Revisa que tenga @ y dominio.', 'email');
+    if (!v('subject')) return fail('Elige un tema.', 'subject');
+    if (!v('message')) return fail('Escribe tu mensaje.', 'message');
+    if (!form.consent.checked) return fail('Marca la casilla para que podamos responderte.', 'consent');
+    btn.disabled = true; btn.textContent = 'Enviando…';
     try {
-      var res = await fetch(VETRA_API + '/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, subject, message }),
-      });
-      if (!res.ok) throw new Error('error');
-      document.getElementById('form-section').style.display = 'none';
-      document.getElementById('success-screen').style.display = 'block';
-    } catch {
-      errorEl.textContent = 'Algo ha fallado. Inténtalo de nuevo en unos minutos.';
-      errorEl.style.display = 'block';
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Enviar mensaje';
+      var res = await fetch(API + '/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: v('name'), email: v('email'), subject: v('subject'), message: v('message') }) });
+      if (!res.ok) { var b = await res.json().catch(function () { return {}; }); throw new Error(b.message || 'No se ha podido enviar.'); }
+      document.getElementById('contact-fields').hidden = true;
+      var ok = document.getElementById('contact-ok'); ok.hidden = false; ok.focus();
+    } catch (ex) {
+      fail((ex && ex.message ? ex.message : 'No se ha podido enviar.') + ' Vuelve a intentarlo en unos minutos.');
+      btn.disabled = false; btn.textContent = 'Enviar mensaje';
     }
   });
+})();
 </script>
-
 </body>
 </html>

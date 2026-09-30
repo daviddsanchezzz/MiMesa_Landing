@@ -1,0 +1,25 @@
+# Vetra
+
+> Vetra es un software de reservas y agenda de citas para restaurantes y negocios que trabajan con cita (peluquerías, barberías, centros de estética, uñas y pestañas, fisioterapia, masajes, estudios y academias). Funciona en el navegador del móvil y del ordenador, sin comisiones por reserva.
+
+- Web: https://www.vetrareserve.com/
+- App (acceso de clientes): https://app.vetrareserve.com/
+- Idioma: español. Mercado: España.
+
+## Qué hace
+
+- Página de reserva online con la marca de cada negocio (logo y colores), sin que el cliente tenga que crear cuenta.
+- Negocios con cita: agenda por profesional (día, semana y lista), servicios encadenados con la misma persona, reparto de citas «me da igual» según la carga de cada profesional, ausencias, caja y cierre del día, avisos «te toca volver» y peticiones de reseña en Google.
+- Restaurantes: reservas por turno con sala, mesa y estado, plano de sala, aprobación manual, pagos por adelantado para eventos, campañas de email y códigos promocionales, personal y finanzas.
+- Común: emails de confirmación con el nombre del negocio e invitación de calendario, recordatorios, clientes con historial, equipo con permisos (propietario, encargado, personal), cumplimiento RGPD.
+
+## Precios (por negocio y mes)
+
+- Free: 0 €. Página de reservas, hasta 30 reservas al mes, 1 usuario.
+- Basic: 19 €. Reservas y citas ilimitadas, emails automáticos, reserva dentro de la web del negocio, 1 usuario.
+- Pro: 39 €. Todo lo de Basic, equipo ilimitado, recordatorios automáticos, cobros por adelantado, campañas, estadísticas, personal y finanzas.
+- Sin comisiones por reserva y sin permanencia. Alta mediante solicitud de acceso: https://www.vetrareserve.com/#acceso
+
+## Contacto
+
+- https://www.vetrareserve.com/contact

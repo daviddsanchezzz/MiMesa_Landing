@@ -3,44 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Términos de servicio - Vetra</title>
-  <meta name="robots" content="noindex" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css" />
-  <link rel="icon" href="/logo.svg" />
+  <title>Términos de servicio | Vetra</title>
+  <meta name="description" content="Condiciones de uso de Vetra, el software de reservas y agenda de citas para restaurantes y negocios con cita." />
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="https://www.vetrareserve.com/terms" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Vetra" />
+  <meta property="og:url" content="https://www.vetrareserve.com/terms" />
+  <meta property="og:title" content="Términos de servicio | Vetra" />
+  <meta property="og:description" content="Condiciones de uso de Vetra, el software de reservas y agenda de citas para restaurantes y negocios con cita." />
+  <meta property="og:image" content="https://www.vetrareserve.com/og-image.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="preload" href="/fonts/geist.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="/site.css" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
 </head>
 <body>
-
-<nav class="nav">
-  <div class="container nav-inner">
-    <a href="/" class="nav-logo">
-      <img src="/logo.svg" alt="Vetra" width="28" height="28" />
-      Vetra
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="/" class="brand" aria-label="Vetra, inicio">
+      <img src="/logo.svg" alt="" width="28" height="28" />
+      <span>Vetra</span>
     </a>
-    <ul class="nav-links">
-      <li><a href="/#funciones">Funciones</a></li>
-      <li><a href="/#como-funciona">Cómo funciona</a></li>
-      <li><a href="/#precios">Precios</a></li>
-      <li><a href="/contact">Contacto</a></li>
-    </ul>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="/#citas">Negocios con cita</a>
+      <a href="/#restaurantes">Restaurantes</a>
+      <a href="/#precios">Precios</a>
+      <a href="/#faq">Preguntas</a>
+    </nav>
     <div class="nav-actions">
-      <a href="#" class="js-login nav-login">Iniciar sesión</a>
-      <a href="#" class="btn btn-primary js-register" style="padding:.5rem 1.25rem; font-size:.875rem;">Empezar gratis</a>
+      <a href="https://app.vetrareserve.com/login" class="link-quiet">Iniciar sesión</a>
+      <a href="/#acceso" class="btn btn-primary btn-sm">Solicitar acceso</a>
     </div>
+    <button class="nav-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span>
+    </button>
   </div>
-</nav>
-
-<div class="page-header">
-  <div class="container">
+  <div class="mobile-nav" id="mobile-nav" hidden>
+    <a href="/#citas">Negocios con cita</a>
+    <a href="/#restaurantes">Restaurantes</a>
+    <a href="/#precios">Precios</a>
+    <a href="/#faq">Preguntas</a>
+    <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    <a href="/#acceso" class="btn btn-primary">Solicitar acceso</a>
+  </div>
+</header>
+<main id="main" class="page">
+  <div class="wrap page-narrow">
     <h1>Términos de servicio</h1>
-    <p class="meta">Ãšltima actualización: marzo de 2025</p>
-  </div>
-</div>
-
-<div class="container">
-  <div class="prose">
+    <p class="page-meta">Última actualización: marzo de 2025</p>
+    <div class="prose">
 
     <p>Estos Términos de Servicio regulan el acceso y el uso de la plataforma <strong>Vetra</strong> (en adelante, "el servicio" o "la plataforma"). Al crear una cuenta o al usar el servicio, aceptas estos términos en su totalidad. Si no estás de acuerdo, no debes usar Vetra.</p>
 
@@ -97,30 +114,42 @@
 
     <hr />
 
-    <p>Â¿Tienes alguna pregunta sobre estos términos? <a href="/contact">Escríbenos</a>.</p>
+    <p>¿Tienes alguna pregunta sobre estos términos? <a href="/contact">Escríbenos</a>.</p>
 
   </div>
-</div>
-
+  </div>
+</main>
 <footer class="footer">
-  <div class="container">
-    <div class="footer-bottom" style="border-top:none; padding-top:0;">
-      <span>Â© <span id="year"></span> Vetra. Todos los derechos reservados.</span>
-      <div class="footer-legal">
-        <a href="/privacy">Privacidad</a>
-        <a href="/terms">Términos</a>
-        <a href="/cookies">Cookies</a>
-        <a href="/contact">Contacto</a>
-      </div>
+  <div class="wrap footer-grid">
+    <div>
+      <a href="/" class="brand"><img src="/logo.svg" alt="" width="24" height="24" /><span>Vetra</span></a>
+      <p class="footer-tag">Reservas, agenda y clientes para restaurantes y negocios con cita.</p>
     </div>
+    <nav aria-label="Enlaces">
+      <a href="/#precios">Precios</a>
+      <a href="/#faq">Preguntas</a>
+      <a href="/contact">Contacto</a>
+      <a href="https://app.vetrareserve.com/login">Iniciar sesión</a>
+    </nav>
+    <nav aria-label="Legal">
+      <a href="/terms">Términos</a>
+      <a href="/privacy">Privacidad</a>
+      <a href="/cookies">Cookies</a>
+    </nav>
   </div>
+  <div class="wrap footer-bottom">© <span id="year">2026</span> Vetra</div>
 </footer>
-
 <script>
-  var VETRA_APP = 'http://app.vetrareserve.com';
-  document.querySelectorAll('.js-register').forEach(function(el){ el.href = VETRA_APP + '/register'; });
-  document.querySelectorAll('.js-login').forEach(function(el){ el.href = VETRA_APP + '/login'; });
+(function () {
   document.getElementById('year').textContent = new Date().getFullYear();
+  var toggle = document.querySelector('.nav-toggle'), menu = document.getElementById('mobile-nav'), nav = document.querySelector('.nav');
+  function setMenu(open) { menu.hidden = !open; toggle.setAttribute('aria-expanded', String(open)); toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú'); toggle.classList.toggle('open', open); document.body.classList.toggle('menu-open', open); }
+  toggle.addEventListener('click', function () { setMenu(menu.hidden); });
+  menu.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); } });
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 8); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+})();
 </script>
 </body>
 </html>
